@@ -1201,7 +1201,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6698f5;
+  background: #e4b325;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1441,9 +1441,10 @@ pre .javascript .function {
   }
 }
 .with-love {
-  color: #808080;
+  color: #ff0000;
   display: inline-block;
   margin: 0 5px;
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .powered-by,
 .theme-info {
@@ -2717,6 +2718,7 @@ ul.breadcrumb li + li:last-child {
 }
 .site-meta {
   opacity: 90%;
+  padding: 18px 0;
   background-image: url("/images/log-big.jpg");
 }
 @media (min-width: 992px) {
@@ -2726,4 +2728,17 @@ ul.breadcrumb li + li:last-child {
 }
 .site-title {
   color: #f5f5f5;
+}
+.headband {
+  height: 0px;
+}
+@media (min-width: 1200px) {
+  .post-body {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1440px) {
+  .post-body {
+    font-size: 1.1em;
+  }
 }

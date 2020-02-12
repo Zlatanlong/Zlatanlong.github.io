@@ -3,12 +3,22 @@
   <entry>
     <title>todo</title>
     <url>/2020/02/12/todo/</url>
-    <content><![CDATA[<p>2月12日 todo</p>
+    <content><![CDATA[<p>未来计划：</p>
 <ul>
-<li><input disabled="" type="checkbox"> lean或者busuanzi的文章阅读统计</li>
-<li><input disabled="" type="checkbox"> 左上角一条黑线</li>
-<li><input disabled="" type="checkbox"> 文章字体大小格式</li>
+<li><input disabled="" type="checkbox"> 喂爬虫</li>
+<li><input disabled="" type="checkbox"> github项目分支</li>
+</ul>
+<p>2月12日 todo</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> lean或者busuanzi的文章阅读统计</li>
+<li><input checked="" disabled="" type="checkbox"> 左上角一条黑线</li>
+<li><input checked="" disabled="" type="checkbox"> 文章字体大小格式</li>
 <li><input disabled="" type="checkbox"> 如何优雅的本地写作后上传</li>
+<li><input checked="" disabled="" type="checkbox"> 评论头像怎么弄的gravatar网站上传</li>
+<li><input checked="" disabled="" type="checkbox"> busuanzi网站总访问量设置</li>
+<li><input checked="" disabled="" type="checkbox"> 网站的小图标</li>
+<li><input disabled="" type="checkbox"> 关于更新NexT版本问题</li>
+<li><input checked="" disabled="" type="checkbox"> 上面3px的黑线给去了 </li>
 </ul>
 ]]></content>
   </entry>
@@ -35,8 +45,8 @@
         <category>t1</category>
       </categories>
       <tags>
-        <tag>test2</tag>
         <tag>test1k1</tag>
+        <tag>test2</tag>
       </tags>
   </entry>
   <entry>
