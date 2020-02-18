@@ -1,9 +1,10 @@
 ---
-title: jiaoliu
-date: 2020-02-11 16:17:40
+title: 2月8日与18级同学分享直播
+date: 2020-02-08 16:17:40
+updated: 2020-02-08 16:17:40
 tags: 
-  - test2
-categories: t2
+  - 学习
+categories: 本科学习
 ---
 # 简单谈编程动手能力（软件为主）
 
