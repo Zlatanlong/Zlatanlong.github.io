@@ -101,7 +101,7 @@ deploy:
   type: git
   repo: 
     github: git@github.com:Zlatanlong/Zlatanlong.github.io.git,master
-    coding: git@e.coding.net:zlatanlong/myblog.git,master
+    # coding: git@e.coding.net:zlatanlong/myblog.git,master
 
 # wordcounts
 symbols_count_time:

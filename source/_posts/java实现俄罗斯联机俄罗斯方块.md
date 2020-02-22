@@ -2,7 +2,7 @@
 title: java实现俄罗斯联机俄罗斯方块
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
-date: 2018-02-17 21:24:34
+date: 2018-11-17 21:24:34
 updated:
 tags:
   - socket
@@ -15,6 +15,8 @@ categories:
 本科上java课时做的俄罗斯方块，计算机网络课又把俄罗斯方块改造成了联机对打。房主创建房间，对手通过输入房主的ip来加入对战。其中俄罗斯方块主体部分用到了NetBeans的图形化开发工具，使用idea要装插件。
 
 [github地址](https://github.com/Zlatanlong/JAVA-tetris)
+
+<!-- more -->
 
 # 项目结构
 
