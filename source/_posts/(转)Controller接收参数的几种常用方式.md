@@ -13,13 +13,13 @@ typora-root-url: ../../source
 
 # 第一类：请求路径参数
 
-## 1、@PathVariable
-
-获取路径参数。即url/{id}这种形式。
-
-## 2、@RequestParam
+## 1、@RequestParam
 
 获取查询参数。即url?name=这种形式
+
+## 2、@PathVariable REST风格
+
+获取路径参数。即url/{id}这种形式。
 
 <!-- more -->
 
@@ -92,7 +92,7 @@ public void demo1(@RequestBody Map<String, String> person) {
 
 suki_rong
 
-## 2、无注解
+## 2、无注解 对应form-data
 
 ### 例子
 

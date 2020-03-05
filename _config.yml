@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://j04s9h.coding-pages.com
+url: https://zlatanlong.gitee.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -100,8 +100,9 @@ theme: next
 deploy:
   type: git
   repo: 
+    gitee: git@gitee.com:zlatanlong/zlatanlong.git,master
     github: git@github.com:Zlatanlong/Zlatanlong.github.io.git,master
-    # coding: git@e.coding.net:zlatanlong/myblog.git,master
+    coding: git@e.coding.net:zlatanlong/myblog.git,master
 
 # wordcounts
 symbols_count_time:

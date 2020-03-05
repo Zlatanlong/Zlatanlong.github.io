@@ -9,7 +9,7 @@ type: "resume"
 
 专业：通信工程                                     
 
-博客：[j04s9h.coding-pages.com](https://j04s9h.coding-pages.com/)         
+博客：[BigDragon](https://zlatanlong.gitee.io/)         
 
 邮箱：[long-txgc@foxmail.com](mailto:long-txgc@foxmail.com)  
 
@@ -53,7 +53,7 @@ type: "resume"
 
 ## **基于vue.js前端+微信小程序+springboot后端的菜品评价系统   2018.8 - 2019.7**
 
-该项目从idea，项目设计，代码实现，服务器部署维护，到整理开发文档均为个人完成，开始是大二暑假我为了参加软件比赛而自学了前后端开发各种技术，大三小学期又开发了小程序端。地址： [http://94k0pl.coding-pages.com](http://94k0pl.coding-pages.com/)。
+该项目从idea，项目设计，代码实现，服务器部署维护，到整理开发文档均为个人完成，开始是大二暑假我为了参加软件比赛而自学了前后端开发各种技术，大三小学期又开发了小程序端。地址： [U菜](http://zlatanlong.gitee.io/qi_front_end)。
 
 收获：学会springboot框架使用，前后端分离开发与服务器相关技术，还有小程序开发经验，通过这个项目，有信心完成其他小中型web项目。
 
