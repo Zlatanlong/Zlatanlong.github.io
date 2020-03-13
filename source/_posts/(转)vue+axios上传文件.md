@@ -5,11 +5,11 @@ typora-root-url: ../../source
 date: 2018-09-04 17:07:03
 updated: 2018-09-04 17:07:03
 tags:
-  - iview
+  - iView
   - axios
   - 上传文件
 categories:
-  - vue.js
+  - Vue.js
 ---
 
 ## 单独上传文件：

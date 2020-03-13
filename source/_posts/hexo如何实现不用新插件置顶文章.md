@@ -1,13 +1,14 @@
 ---
-title: hexo如何实现不用新插件置顶文章
+title: Hexo如何实现不用新插件置顶文章
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 date: 2020-02-14 16:16:07
 updated:
 tags:
-  - hexo
+  - Hexo
   - 修改样式
-categories: hexo
+categories:
+  - Hexo
 ---
 
 > 基于hexo 4 ，NexT 7

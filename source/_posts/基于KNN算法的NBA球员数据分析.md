@@ -5,7 +5,7 @@ typora-root-url: ../../source
 date: 2019-06-1 16:21:35
 updated: 2019-06-1 16:21:35
 tags:
- - python
+ - Python
  - knn
 categories:
  - 大数据

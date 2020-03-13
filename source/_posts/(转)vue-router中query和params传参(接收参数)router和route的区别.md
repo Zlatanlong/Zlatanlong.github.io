@@ -5,9 +5,9 @@ typora-root-url: ../../source
 date: 2018-08-27 17:07:03
 updated: 2018-08-27 17:07:03
 tags:
-  - vue-router
+  - Vue-router
 categories:
-  - vue.js
+  - Vue.js
 
 ---
 

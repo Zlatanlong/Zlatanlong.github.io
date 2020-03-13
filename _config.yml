@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Big Dragon
-subtitle: '永不止步'
-description: '写给自己看的笔记'
+title: 湖人总冠军
+subtitle: '好好学习，天天向上'
+description: '生活就像巧克力🍫'
 keywords:
-author: Big Dragon
+author: zlatanlong
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -41,7 +41,8 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+# 新建文章是否建一个资源文件夹
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:

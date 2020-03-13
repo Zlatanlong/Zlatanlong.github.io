@@ -4,7 +4,7 @@ date: 2018-9-30 18:53:12
 updated: 2018-9-30 18:53:12
 tags:
   - 多线程
-categories: java
+categories: Java
 ---
 # 【多线程】ThreadLocal原理
 

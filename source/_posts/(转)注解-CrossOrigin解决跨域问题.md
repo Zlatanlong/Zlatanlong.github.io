@@ -5,11 +5,11 @@ typora-root-url: ../../source
 date: 2018-9-4 22:14:31
 updated:
 tags:
-  - springboot
+  - Spring Boot
   - 跨域访问
 categories:
-  - java
-  - springboot
+  - Java
+  - Spring Boot
 ---
 
 # 注解@CrossOrigin

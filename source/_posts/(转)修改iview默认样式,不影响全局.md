@@ -5,11 +5,11 @@ typora-root-url: ../../source
 date: 2019-01-08 17:07:03
 updated: 2019-01-08 17:07:03
 tags:
-  - iview
+  - iView
   - 修改样式
 categories:
-  - vue.js
-  - iview
+  - Vue.js
+  - iView
 ---
 
 `<style scoped>`只作用于当前组件

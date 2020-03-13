@@ -7,8 +7,8 @@ updated: 2018-08-19 11:35:08
 tags:
   - servlet
 categories:
-  - java
-  - jsp
+  - Java
+  - Jsp
 ---
 
 # Servlet允许跨域处理

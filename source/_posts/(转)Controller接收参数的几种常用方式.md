@@ -3,10 +3,10 @@ title: (转)Controller接收参数的几种常用方式
 date: 2018-9-3 18:53:12
 updated: 2018-9-3 18:53:12
 tags:
-  - springboot
+  - Spring Boot
 categories:
-  - java
-  - springboot
+  - Java
+  - Spring Boot
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 ---

@@ -3,10 +3,10 @@ title: (转)vue打包压缩体积
 date: 2018-9-13 18:53:12
 updated: 2018-9-13 18:53:12
 tags:
-  - vue.js
+  - Vue.js
   - 体积优化
 categories:
-  - vue.js
+  - Vue.js
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 ---

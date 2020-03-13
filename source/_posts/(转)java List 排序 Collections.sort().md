@@ -1,10 +1,11 @@
 ---
-title: (转)java List 排序 Collections.sort()
+title: (转)Java List 排序 Collections.sort()
 date: 2018-10-7
 updated: 2018-10-7
 tags: 
   - 排序
-categories: java
+categories:
+	- Java
 ---
 ### 用Collections.sort方法对list排序有两种方法第一种是list中的对象实现Comparable接口，如下：
 <!-- more -->

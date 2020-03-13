@@ -2,10 +2,10 @@
 title: springboot整合swagger2
 date: 2020-02-29 01:41:22
 tags:
-  - springboot
+  - Spring Boot
 categories:
-  - java
-  - springboot
+  - Java
+  - Spring Boot
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 ---

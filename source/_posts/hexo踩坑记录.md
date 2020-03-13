@@ -1,12 +1,13 @@
 ---
-title: hexo踩坑记录(持续更新)
+title: Hexo踩坑记录(持续更新)
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 date: 2018-12-30 17:37:33
 updated:
 tags:
-  - hexo
-categories: hexo
+  - Hexo
+categories:
+  - Hexo
 ---
 
 ### Unhandled rejection Template render error: (unknown path) parseIf: expected elif, else, or endif, got end of file

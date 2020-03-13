@@ -1,13 +1,13 @@
 ---
-title: node.js 并行处理promise
+title: Node.js 并行处理promise
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 date: 2020-03-02 09:48:51
 updated:
 tags:
-  - node.js
+  - Node.js
 categories:
-  - node.js
+  - Node.js
 ---
 
 ### 情景解释

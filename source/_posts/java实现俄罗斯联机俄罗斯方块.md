@@ -1,5 +1,5 @@
 ---
-title: java实现俄罗斯联机俄罗斯方块
+title: Java实现俄罗斯联机俄罗斯方块
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 date: 2018-11-17 21:24:34
@@ -7,7 +7,7 @@ updated:
 tags:
   - socket
 categories:
-  - java
+  - Java
 ---
 
 # 简介

@@ -1,11 +1,11 @@
 ---
-title: nginx下ssl证书安装
+title: Nginx下ssl证书安装
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
 date: 2018-08-20 11:28:21
 updated: 2018-08-20 11:28:21
 tags:
-  - nginx
+  - Nginx
 categories:
   - linux
 ---
