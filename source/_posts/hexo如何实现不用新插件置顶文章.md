@@ -35,7 +35,7 @@ categories:
 
 最后效果如下:
 
-![top](/assets/top.png)
+![top](top.png)
 
 # 修改archives显示文件
 

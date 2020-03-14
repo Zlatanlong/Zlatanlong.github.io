@@ -56,7 +56,7 @@ name=suki_rong
 
 ### 例子
 
-![t1](/assets/t1.png)
+![t1](t1.png)
 
 对应的java代码：
 
@@ -96,7 +96,7 @@ suki_rong
 
 ### 例子
 
-![t2](/assets/t2.png)
+![t2](t2.png)
 
 对应的java代码：
 

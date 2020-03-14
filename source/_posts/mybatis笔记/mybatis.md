@@ -1,7 +1,5 @@
 ---
 title: Mybatis 从零到∞
-typora-copy-images-to: ../../../source/assets
-typora-root-url: ../../../source
 date: 2020-03-13 22:07:03
 tags:
   - Mybatis
@@ -9,10 +7,9 @@ categories:
   - Java
   - Mybatis
 ---
-
-> 本篇是从B站狂神说Mybatis教学视频评论区转载的笔记
+> 这是B站狂神说Mybatis教学视频的笔记（转载）
 > 视频地址：https://www.bilibili.com/video/av69742084
-> [完整代码Github仓库](https://github.com/Zlatanlong/mybatis-study)
+> [完整代码](https://github.com/Zlatanlong/mybatis-study)（fork于评论区仓库）
 
 基础知识：
 
@@ -30,7 +27,7 @@ categories:
 
 ## 1.1、什么是MyBatis
 
-![mybatis](/assets/mybatis.png)
+![mybatis](mybatis.png)
 
 ## 简介
 
@@ -44,6 +41,7 @@ categories:
 如何获得MyBatis？
 
 - Maven仓库
+
 ```xml
 <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 <dependency>
@@ -646,7 +644,7 @@ public class Author {
 
 这是 MyBatis 中极为重要的调整设置，它们会改变 MyBatis 的运行时行为。
 
-![Settings](/assets/Settings.png)
+![Settings](Settings.png)
 
 
 
@@ -659,7 +657,7 @@ public class Author {
 - 一旦创建了SqlSessionFactory，就不再需要它了
 - 局部变量
 
-![mybatis运行流程](/assets/mybatis运行流程.png)**SqlSessionFactory：**
+![mybatis运行流程](mybatis运行流程.png)**SqlSessionFactory：**
 
 - 可以想象为：数据库连接池
 - SqlSessionFactory 一旦被创建就应该在应用的运行期间一直存在，**没有任何理由丢弃它或重新创建另一个实例**。
@@ -676,7 +674,7 @@ public class Author {
 
 - 用完之后需要赶紧关闭，否则会占用资源
 
-  ![SqlSessionFactory](/assets/SqlSessionFactory.png)
+  ![SqlSessionFactory](SqlSessionFactory.png)
 
 这里的每一个Mapper，就代表一个具体的业务！
 
@@ -686,7 +684,7 @@ public class Author {
 
 数据库中的字段
 
-![数据库中的字段](/assets/数据库中的字段.png)
+![数据库中的字段](数据库中的字段.png)
 
 新建一个项目，拷贝之前的，测试实体类字段`password`不一致的情况。
 
@@ -698,7 +696,7 @@ public class User {
 }
 ```
 
-![测试错误](/assets/测试错误.png)
+![测试错误](测试错误.png)
 
 ```java
 //select * from mybatis.user where id = #{id}
@@ -758,7 +756,7 @@ id name password
 
 现在：日志工厂
 
-![日志](/assets/日志.png)
+![日志](日志.png)
 
 - SLF4J 
 - **LOG4J**【掌握】
@@ -782,7 +780,7 @@ id name password
 
 
 
-![日志配置](/assets/日志配置.png)
+![日志配置](日志配置.png)
 
 
 
@@ -981,7 +979,7 @@ select * from user limit startIndex,pageSize
 
 ## 7.3、分页插件
 
-![image-20191203175719275](/assets/image-20191203175719275.png)
+![image-20191203175719275](image-20191203175719275.png)
 
 了解即可，万一以后公司的架构师，说要使用，只需要知道它是什么东西！
 
@@ -1549,7 +1547,7 @@ Where,set,choose,when
    (id=1 or id=2 or id=3)
    ```
 
-   ![image-20191205141204114](/assets/image-20191205141204114.png)
+   ![image-20191205141204114](image-20191205141204114.png)
 
 
 
@@ -1695,7 +1693,7 @@ Where,set,choose,when
 
 ## 13.5、缓存原理
 
-![image-20191205170549715](/assets/image-20191205170549715.png)
+![image-20191205170549715](image-20191205170549715.png)
 
 
 

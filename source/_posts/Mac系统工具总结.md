@@ -5,11 +5,11 @@ typora-root-url: ../../source
 date: 2019-05-03 11:20:20
 updated:
 tags:
-  - mac工具
-  - mac命令
-  - mac快捷键
+  - Mac工具
+  - Mac命令
+  - Mac快捷键
 categories:
-  - mac
+  - Mac
 ---
 
 ## 工具类
@@ -52,6 +52,9 @@ git remote set-url origin https://github.com/Homebrew/homebrew-core.git
 
 `git lens`无与伦比的git插件。
 
+`shift + command + p` 命令行快捷键，有你想要的
+`command + p` 快速跳转文件，禅模式下很爽
+
 ### 命令行
 
 iTerm2
@@ -71,15 +74,15 @@ export PATH
 
 ### Alfred4
 
-### 其他：
+### 其他
 
 #### gif图制作：igif builder
 
 #### 截图：jietu
 
-这个工具是Tencent集成到mac版qq中的，其中保存到粘贴板，可以直接用来粘贴到typora中写博客，并且图片质量刚刚好。
+这个工具是Tencent集成到Mac版qq中的，其中保存到粘贴板，可以直接用来粘贴到typora中写博客，并且图片质量刚刚好。
 
-![image-20200306230921579](/assets/image-20200306230921579.png)
+![百度爬到](image-20200306230921579.png)
 
 #### ftp/sftp传输： filezilla
 
@@ -87,13 +90,13 @@ export PATH
 
 #### 数据库GUI：Sequel Pro (开发版本)
 
-开发版本解决了sequel在高版本macos中每次关闭报错。
+开发版本解决了sequel在高版本Macos中每次关闭报错。
 
 #### 接口测试：postman
 
 #### 系统管理：lemon
 
-Tencent推出的系统清理管理工具lemon，你问我为什么不用cleanmymacX ？lemon免费
+Tencent推出的系统清理管理工具lemon，你问我为什么不用cleanmyMacX ？lemon免费
 
 #### magnet pro
 

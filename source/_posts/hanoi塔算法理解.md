@@ -101,6 +101,6 @@ public class DirTree {
 
 运行效果如下:
 
-![48697D36-D378-4CB9-ABA0-49D53A00270F](/assets/48697D36-D378-4CB9-ABA0-49D53A00270F.png)
+![结果](48697D36-D378-4CB9-ABA0-49D53A00270F.png)
 
 和文件结构一样，运行成功。

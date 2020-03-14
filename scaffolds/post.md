@@ -4,6 +4,7 @@ date: {{ date }}
 updated: 
 tags:
 categories:
-typora-copy-images-to: ../../source/assets
-typora-root-url: ../../source
+typora-copy-images-to: './'
+typora-root-url: './'
 ---
+
