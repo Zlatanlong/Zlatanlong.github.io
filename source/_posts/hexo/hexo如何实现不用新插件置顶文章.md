@@ -1,7 +1,7 @@
 ---
 title: Hexo如何实现不用新插件置顶文章
-typora-copy-images-to: ../../source/assets
-typora-root-url: ../../source
+typora-copy-images-to: ./Hexo如何实现不用新插件置顶文章
+typora-root-url: ./Hexo如何实现不用新插件置顶文章
 date: 2020-02-14 16:16:07
 updated:
 tags:

@@ -179,7 +179,9 @@ public Boolean ifDevEnvironment() {
 
 ## 1.在entity中使用
 
-首先我们要知道的是，只要我们的controller中映射的接口返回了一个实体类，他都会在Models中出现
+首先我们要知道的是，==只要我们的controller中映射的接口返回了一个实体类==，他都会在Models中出现，
+
+但是如果只是实体类上标注了，但是controller并没有返回，就不会出现在models中。
 
 ```java
 package com.sblearning.swagger2.entity;
@@ -205,13 +207,25 @@ public class User {
 
 ### @Api
 
-对一个java类进行解释说明
+对一个controller进行说明，一个controller表示一组，所以用tag标注
 
 ```java
-@Api(description = "API接口")
+@Api(tag = "API接口")
 @RestController
 public class HelloController {
 
+}
+```
+
+### @ApiOperation
+
+```java
+@ApiOperation(value = "根据OV模型返回", response = UserTeacher.class, notes = "一端注解")
+@GetMapping(value = "/ov/{teacherId}/{page}/{size}")
+public Page<?> getOA(@PathVariable Integer teacherId,
+                     @PathVariable Integer page,
+                     @PathVariable Integer size){
+    return userService.seletOA(new Page<>(page,size), teacherId);
 }
 ```
 
