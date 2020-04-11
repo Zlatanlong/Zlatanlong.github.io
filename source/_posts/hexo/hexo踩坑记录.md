@@ -27,3 +27,7 @@ categories:
 ### 只是添加文章后，主页无法加载并且无报错
 
 原因是在文章正文中有`<***>`，应该是next或者hexo会自动解析尖括号。
+
+### Hexo 部署到 Github Pages 文件夹大小写问题
+
+https://segmentfault.com/q/1010000004339851

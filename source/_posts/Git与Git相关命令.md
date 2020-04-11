@@ -61,6 +61,8 @@ git push`
 
 `git remote add origin git@github.com:User/project.git`
 
+`git push -u origin master`
+
 ## 分支相关
 
 `git checkout -b newbranch`

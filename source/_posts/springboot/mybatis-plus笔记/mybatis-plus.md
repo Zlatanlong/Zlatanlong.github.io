@@ -175,3 +175,7 @@ public interface UserMapper extends BaseMapper<User> {
 | INSERT        | 插入时填充字段       |
 | UPDATE        | 更新时填充字段       |
 | INSERT_UPDATE | 插入和更新时填充字段 |
+
+在更新时候遇到一个小发现
+
+用Lambda方法进行更新时，用set()某个值不会进行自动填充，必须new一个新的对象才会进行自动填充update
