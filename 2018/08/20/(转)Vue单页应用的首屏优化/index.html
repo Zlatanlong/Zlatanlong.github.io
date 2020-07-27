@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="WTTWi2XnJ5">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="对于单页应用，要在一个页面上为用户提供产品的所有功能，在这个页面加载的时候，首先要加载大量的静态资源，这个加载时间相对比较长。所以我们需要做一些相应的优化，减少响应时间，尽快把首屏显示出来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(转)vue+axios上传文件">
+<meta property="og:url" content="https://www.lclong.top/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
+<meta property="og:description" content="对于单页应用，要在一个页面上为用户提供产品的所有功能，在这个页面加载的时候，首先要加载大量的静态资源，这个加载时间相对比较长。所以我们需要做一些相应的优化，减少响应时间，尽快把首屏显示出来。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-08-20T09:07:03.000Z">
+<meta property="article:modified_time" content="2018-08-20T09:07:03.000Z">
+<meta property="article:author" content="Zlatanlong">
+<meta property="article:tag" content="体积优化">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.lclong.top/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>(转)vue+axios上传文件 | Zlatanlong's T-blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zlatanlong's T-blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Lakers is Championship!</h1>
+      
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">13</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-aboutme">
+
+    <a href="/aboutme/" rel="section"><i class="fa fa-fw fa-user"></i>博主</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          (转)vue+axios上传文件
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-08-20 17:07:03" itemprop="dateCreated datePublished" datetime="2018-08-20T17:07:03+08:00">2018-08-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue.js</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/" class="post-meta-item leancloud_visitors" data-flag-title="(转)vue+axios上传文件" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>对于单页应用，要在一个页面上为用户提供产品的所有功能，在这个页面加载的时候，首先要加载大量的静态资源，这个加载时间相对比较长。所以我们需要做一些相应的优化，减少响应时间，尽快把首屏显示出来。</p>
+<a id="more"></a>
+
+<h3 id="1、压缩代码"><a href="#1、压缩代码" class="headerlink" title="1、压缩代码"></a>1、压缩代码</h3><p>无论是否为单页应用，代码的压缩都是要做的。<br>对于vue-cli生成的项目，在Webpack配置文件中使用了UglifyJsPlugin进行代码的压缩：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.prod.conf.js</span></span><br><span class="line">plugins: [</span><br><span class="line">    ......</span><br><span class="line">    <span class="keyword">new</span> UglifyJsPlugin(&#123;</span><br><span class="line">      uglifyOptions: &#123;</span><br><span class="line">        compress: &#123;</span><br><span class="line">          warnings: <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      sourceMap: config.build.productionSourceMap,</span><br><span class="line">      parallel: <span class="literal">true</span></span><br><span class="line">    &#125;),</span><br><span class="line">    ......</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、框架和插件按需加载"><a href="#2、框架和插件按需加载" class="headerlink" title="2、框架和插件按需加载"></a>2、框架和插件按需加载</h3><p>对于项目中用到的一些UI框架，比如 Onsen UI 、Mint UI 等等。如果我们只使用框架的部分组件，那么可以不要引入整个框架，按需引入用到的组件。<br>以Mint UI为例：</p>
+<h4 id="引入全部组件"><a href="#引入全部组件" class="headerlink" title="// 引入全部组件"></a>// 引入全部组件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Mint <span class="keyword">from</span> <span class="string">'mint-ui'</span>;  </span><br><span class="line"><span class="keyword">import</span> <span class="string">'mint-ui/lib/style.css'</span>  </span><br><span class="line">Vue.use(Mint);</span><br></pre></td></tr></table></figure>
+
+<h4 id="按需引入部分组件"><a href="#按需引入部分组件" class="headerlink" title="// 按需引入部分组件"></a>// 按需引入部分组件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; CellSwipe &#125; <span class="keyword">from</span> <span class="string">'mint-ui'</span>;  </span><br><span class="line">Vue.component(CellSwipe.name, CellSwipe);</span><br></pre></td></tr></table></figure>
+
+
+<p>对于一些插件，比如表单验证插件Vuelidate，如果只是在个别组件中用的到，也可以不要在main.js里面引入，而是在组件中按需引入</p>
+<h4 id="main-js中全部引入"><a href="#main-js中全部引入" class="headerlink" title="// main.js中全部引入"></a>// main.js中全部引入</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuelidate <span class="keyword">from</span> <span class="string">'vuelidate'</span></span><br><span class="line">Vue.use(Vuelidate)</span><br></pre></td></tr></table></figure>
+
+<h4 id="组件中按需引入"><a href="#组件中按需引入" class="headerlink" title="// 组件中按需引入"></a>// 组件中按需引入</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; validationMixin &#125; <span class="keyword">from</span> <span class="string">'vuelidate'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、框架和插件从cdn中引入"><a href="#3、框架和插件从cdn中引入" class="headerlink" title="3、框架和插件从cdn中引入"></a>3、框架和插件从cdn中引入</h3><p>在开发过程中，我们其实不会要去更改这些第三方库，所以可以把它们放到cdn中，不参与打包。<br>在 index.html 中使用cdn引入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.example.com/vue/2.5.3/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.example.com/vuex/3.0.1/vuex.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.example.com/axios/0.17.1/axios.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>在webpack.config.js（webpack.base.config.js）中添加externals，表示这些文件可以被引用，但不参与打包。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">externals: &#123;</span><br><span class="line">  <span class="string">'vue'</span>: <span class="string">'Vue'</span>,</span><br><span class="line">  <span class="string">'vuex'</span>: <span class="string">'Vuex'</span>,</span><br><span class="line">  <span class="string">'axios'</span>: <span class="string">'axios'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>这样配置之后，我们依然可以用<code>import Vuex from &#39;vuex&#39;</code>来引入模块。</p>
+<p>具有外部依赖<code>(external dependency)</code>的 bundle 可以在各种模块上下文(module context)中使用，例如 CommonJS, AMD, 全局变量和 ES2015 模块。</p>
+<p>externals也支持string、array、object、function和regex等各种语法，详情参见webpack Externals中文文档。</p>
+<h3 id="4、路由懒加载"><a href="#4、路由懒加载" class="headerlink" title="4、路由懒加载"></a>4、路由懒加载</h3><p>官方文档在此，更详细的内容参见文档。</p>
+<p>路由懒加载也就是 把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件。<br>结合 Vue 的异步组件和 Webpack 的代码分割功能，轻松实现路由组件的懒加载。<br>在router中，我们平时是这样引入组件的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foo <span class="keyword">from</span> <span class="string">'./Foo.vue'</span></span><br></pre></td></tr></table></figure>
+
+<p>文档中指出，如下定义一个能够被 Webpack 自动代码分割的异步组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在路由配置中什么都不需要改变，只需要像往常一样使用 Foo：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>暂时先记下这四种方法，优化这件事，还要在项目里好好钻研~</p>
+<blockquote>
+<p>版权声明：本文为CSDN博主「latency_cheng」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xhdGVuY3lfY2hlbmcvYXJ0aWNsZS9kZXRhaWxzLzgwMDMxMjgz" title="https://blog.csdn.net/latency_cheng/article/details/80031283">https://blog.csdn.net/latency_cheng/article/details/80031283<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2018\09\13\(转)vue打包压缩体积\" rel="bookmark">(转)vue打包压缩体积</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Zlatanlong
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lclong.top/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/" title="(转)vue+axios上传文件">https://www.lclong.top/2018/08/20/(转)Vue单页应用的首屏优化/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%BD%93%E7%A7%AF%E4%BC%98%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> 体积优化</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/" rel="prev" title="Nginx下ssl证书安装">
+      <i class="fa fa-chevron-left"></i> Nginx下ssl证书安装
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/08/27/(%E8%BD%AC)vue-router%E4%B8%ADquery%E5%92%8Cparams%E4%BC%A0%E5%8F%82(%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0)router%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="(转)vue-router中query和params传参(接收参数)router和route的区别">
+      (转)vue-router中query和params传参(接收参数)router和route的区别 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、压缩代码"><span class="nav-number">1.</span> <span class="nav-text">1、压缩代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、框架和插件按需加载"><span class="nav-number">2.</span> <span class="nav-text">2、框架和插件按需加载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引入全部组件"><span class="nav-number">2.1.</span> <span class="nav-text">&#x2F;&#x2F; 引入全部组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按需引入部分组件"><span class="nav-number">2.2.</span> <span class="nav-text">&#x2F;&#x2F; 按需引入部分组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#main-js中全部引入"><span class="nav-number">2.3.</span> <span class="nav-text">&#x2F;&#x2F; main.js中全部引入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件中按需引入"><span class="nav-number">2.4.</span> <span class="nav-text">&#x2F;&#x2F; 组件中按需引入</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、框架和插件从cdn中引入"><span class="nav-number">3.</span> <span class="nav-text">3、框架和插件从cdn中引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、路由懒加载"><span class="nav-number">4.</span> <span class="nav-text">4、路由懒加载</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zlatanlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Zlatanlong</p>
+  <div class="site-description" itemprop="description">生活就像巧克力🍫</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3psYXRhbmxvbmc=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zlatanlong"><i class="fa fa-fw fa-github"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxvbmctdHhnY0Bmb3htYWlsLmNvbQ==" title="E-Mail → mailto:long-txgc@foxmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      关注列表
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9sZWZsYWNvbi5naXRodWIuaW8v" title="https:&#x2F;&#x2F;leflacon.github.io&#x2F;">leflacon</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9ib2Jib3NzLmdpdGh1Yi5pby8=" title="https:&#x2F;&#x2F;bobboss.github.io&#x2F;">BobBoss</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL29wdGltaXN0aWNhdC54eXovdXNlcj91c2VySWQ9bHpkY2w=" title="http:&#x2F;&#x2F;optimisticat.xyz&#x2F;user?userId&#x3D;lzdcl">lzdcl</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zlatanlong</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">130k</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'H5inyassVpcpItLTuMJH9aBg-gzGzoHsz',
+      appKey     : 'mBzB6QB3deD6zw8YEIKVQdzz',
+      placeholder: "快来说两句吧。。。",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

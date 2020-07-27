@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="WTTWi2XnJ5">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="操作场景本文档指导您如何在 Nginx 服务器中安装 SSL 证书。  说明：  本文档以证书名称 www.domain.com 为例。 Nginx 版本以 nginx&#x2F;1.16.0 为例。 当前服务器的操作系统为 CentOS 7，由于操作系统的版本不同，详细操作步骤略有区别。   前提条件 已准备文件远程拷贝软件，例如 WinSCP（建议从官方网站获取最新版本）。  已准备远程登录工具，例如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx下ssl证书安装">
+<meta property="og:url" content="https://www.lclong.top/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
+<meta property="og:description" content="操作场景本文档指导您如何在 Nginx 服务器中安装 SSL 证书。  说明：  本文档以证书名称 www.domain.com 为例。 Nginx 版本以 nginx&#x2F;1.16.0 为例。 当前服务器的操作系统为 CentOS 7，由于操作系统的版本不同，详细操作步骤略有区别。   前提条件 已准备文件远程拷贝软件，例如 WinSCP（建议从官方网站获取最新版本）。  已准备远程登录工具，例如">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-08-20T03:28:21.000Z">
+<meta property="article:modified_time" content="2018-08-20T03:28:21.000Z">
+<meta property="article:author" content="Zlatanlong">
+<meta property="article:tag" content="Nginx">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.lclong.top/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Nginx下ssl证书安装 | Zlatanlong's T-blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zlatanlong's T-blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Lakers is Championship!</h1>
+      
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">13</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-aboutme">
+
+    <a href="/aboutme/" rel="section"><i class="fa fa-fw fa-user"></i>博主</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          Nginx下ssl证书安装
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-08-20 11:28:21" itemprop="dateCreated datePublished" datetime="2018-08-20T11:28:21+08:00">2018-08-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/" class="post-meta-item leancloud_visitors" data-flag-title="Nginx下ssl证书安装" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="操作场景"><a href="#操作场景" class="headerlink" title="操作场景"></a>操作场景</h2><p>本文档指导您如何在 Nginx 服务器中安装 SSL 证书。</p>
+<blockquote>
+<p>说明：</p>
+<ul>
+<li>本文档以证书名称 <code>www.domain.com</code> 为例。</li>
+<li>Nginx 版本以 <code>nginx/1.16.0</code> 为例。</li>
+<li>当前服务器的操作系统为 CentOS 7，由于操作系统的版本不同，详细操作步骤略有区别。</li>
+</ul>
+</blockquote>
+<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
+<li><p>已准备文件远程拷贝软件，例如 WinSCP（建议从官方网站获取最新版本）。</p>
+</li>
+<li><p>已准备远程登录工具，例如 PuTTY 或者 Xshell（建议从官方网站获取最新版本）。</p>
+</li>
+<li><p>已在当前服务器中安装配置 Nginx 服务。</p>
+</li>
+<li><p>安装 SSL 证书前需准备的数据如下：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>服务器的 IP 地址</td>
+<td>服务器的 IP 地址，用于 PC 连接到服务器。</td>
+</tr>
+<tr>
+<td>用户名</td>
+<td>登录服务器的用户名。</td>
+</tr>
+<tr>
+<td>密码</td>
+<td>登录服务器的密码。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="证书安装"><a href="#证书安装" class="headerlink" title="证书安装"></a>证书安装</h3><ol>
+<li>已在</li>
+</ol>
+<p>   SSL 证书管理控制台</p>
+<p>   中下载并解压缩</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www.domain.com</span><br></pre></td></tr></table></figure>
+
+
+
+<p>   证书文件包到本地目录。</p>
+<p>   解压缩后，可获得相关类型的证书文件。其中包含 Nginx 文件夹和 CSR 文件：</p>
+<ul>
+<li><p><strong>文件夹名称</strong>：Nginx</p>
+</li>
+<li><p>文件夹内容：</p>
+<ul>
+<li><code>1_www.domain.com_bundle.crt</code> 证书文件</li>
+<li><code>2_www.domain.com.key</code> 私钥文件</li>
+</ul>
+</li>
+<li><p>CSR 文件内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www.domain.com.csr</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<pre><code>文件
+
+&gt; 说明：
+&gt;
+&gt; CSR 文件是申请证书时由您上传或系统在线生成的，提供给 CA 机构。安装时可忽略该文件。</code></pre><ol start="2">
+<li><p>使用 “WinSCP”（即本地与远程计算机间的复制文件工具）登录 Nginx 服务器。</p>
+</li>
+<li><p>将已获取到的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1_www.domain.com_bundle.crt</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<p>   证书文件和 </p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2_www.domain.com.key</span><br></pre></td></tr></table></figure>
+
+
+
+<p>   私钥文件从本地目录拷贝到 Nginx 服务器的</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>   目录（此处为默认安装目录，请根据实际情况操作）下。</p>
+<blockquote>
+<p>说明：</p>
+<p>若无 <code>/usr/local/nginx/conf</code> 目录，可通过执行 <code>mkdir -p /usr/local/nginx/conf</code> 命令行创建。</p>
+</blockquote>
+<ol start="4">
+<li><p>远程登录 Nginx 服务器。例如，使用 <span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzIxMy8zNTY5OSMuRTYuOTMuOEQuRTQuQkQuOUMuRTYuQUQuQTUuRTkuQUEuQTQ=" title="https://cloud.tencent.com/document/product/213/35699#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4">“PuTTY” 工具<i class="fa fa-external-link"></i></span> 登录。</p>
+</li>
+<li><p>编辑 Nginx 根目录下的</p>
+</li>
+</ol>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conf&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>   文件。修改内容如下：</p>
+<blockquote>
+<p>说明：</p>
+<ul>
+<li>此操作可通过执行 <code>vim /usr/local/nginx/conf/nginx.conf</code> 命令行编辑该文件。</li>
+<li>由于版本问题，配置文件可能存在不同的写法。例如：Nginx 版本为 <code>nginx/1.15.0</code> 以上请使用 <code>listen 443 ssl</code> 代替 <code>listen 443</code> 和 <code>ssl on</code>。</li>
+</ul>
+</blockquote>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">     #SSL 访问端口号为 443</span><br><span class="line">     listen 443 ssl; </span><br><span class="line">     #填写绑定证书的域名</span><br><span class="line">     server_name www.domain.com; </span><br><span class="line">     #证书文件名称</span><br><span class="line">     ssl_certificate 1_www.domain.com_bundle.crt; </span><br><span class="line">     #私钥文件名称</span><br><span class="line">     ssl_certificate_key 2_www.domain.com.key; </span><br><span class="line">     ssl_session_timeout 5m;</span><br><span class="line">     #请按照以下协议配置</span><br><span class="line">     ssl_protocols TLSv1 TLSv1.1 TLSv1.2; </span><br><span class="line">     #请按照以下套件配置，配置加密套件，写法遵循 openssl 标准。</span><br><span class="line">     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE; </span><br><span class="line">     ssl_prefer_server_ciphers on;</span><br><span class="line">     location &#x2F; &#123;</span><br><span class="line">        #网站主页路径。此路径仅供参考，具体请您按照实际目录操作。</span><br><span class="line">         root &#x2F;var&#x2F;www&#x2F;www.domain.com; </span><br><span class="line">         index  index.html index.htm;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ol start="6">
+<li><p>在 Nginx 根目录下，通过执行以下命令验证配置文件问题。</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;sbin&#x2F;nginx -t</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>若存在，请您重新配置或者根据提示修改存在问题。</p>
+</li>
+<li><p>若不存在，请执行 <span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzQwMC8zNTI0NCNzdGVwNw==" title="https://cloud.tencent.com/document/product/400/35244#step7">步骤7<i class="fa fa-external-link"></i></span>。</p>
+</li>
+</ul>
+</li>
+<li><p>重启 Nginx，即可使用 <code>https://www.domain.com</code> 进行访问。</p>
+</li>
+</ol>
+<h3 id="HTTP-自动跳转-HTTPS-的安全配置（可选）"><a href="#HTTP-自动跳转-HTTPS-的安全配置（可选）" class="headerlink" title="HTTP 自动跳转 HTTPS 的安全配置（可选）"></a>HTTP 自动跳转 HTTPS 的安全配置（可选）</h3><p>若您不了解通过 HTTPS 访问网站的方式，可以通过配置服务器，让其自动将 HTTP 的请求重定向到 HTTPS。您可以通过以下操作设置：</p>
+<ol>
+<li><p>根据实际需求，选择以下配置方式：</p>
+<ul>
+<li><p>在页面中添加 JS 脚本。</p>
+</li>
+<li><p>在后端程序中添加重定向。</p>
+</li>
+<li><p>通过 Web 服务器实现跳转。</p>
+</li>
+<li><p>Nginx 支持 rewrite 功能。若您在编译时没有去掉 pcre，您可在 HTTP 的 server 中增加</p>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rewrite ^(.*) https:&#x2F;&#x2F;$host$1 permanent;</span><br></pre></td></tr></table></figure>
+
+，即可将默认80端口的请求重定向为 HTTPS。修改如下内容：
+
+- 
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 443 ssl;</span><br><span class="line">#填写绑定证书的域名</span><br><span class="line">server_name www.domain.com; </span><br><span class="line">#网站主页路径。此路径仅供参考，具体请您按照实际目录操作。</span><br><span class="line">root &#x2F;var&#x2F;www&#x2F;www.domain.com; </span><br><span class="line">index index.html index.htm;   </span><br><span class="line">#证书文件名称</span><br><span class="line">ssl_certificate  1_www.domain.com_bundle.crt; </span><br><span class="line">#私钥文件名称</span><br><span class="line">ssl_certificate_key 2_www.domain.com.key; </span><br><span class="line">ssl_session_timeout 5m;</span><br><span class="line">ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location &#x2F; &#123;</span><br><span class="line">   index index.html index.htm;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">listen 80;</span><br><span class="line">#填写绑定证书的域名</span><br><span class="line">server_name www.domain.com; </span><br><span class="line">#把http的域名请求转成https</span><br><span class="line">return 301 https:&#x2F;&#x2F;$host$request_uri; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+&gt; 说明：
+&gt;
+&gt; 未添加注释的配置语句，您按照上述配置即可。</code></pre><ol start="2">
+<li>若修改完成，重启 Nginx。即可使用 <code>http://www.domain.com</code> 进行访问。</li>
+</ol>
+<blockquote>
+<p>参考：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzQwMC8zNTI0NA==" title="https://cloud.tencent.com/document/product/400/35244">腾讯云文档中心<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+      
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Zlatanlong
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lclong.top/2018/08/20/nginx%E4%B8%8Bssl%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85/" title="Nginx下ssl证书安装">https://www.lclong.top/2018/08/20/nginx下ssl证书安装/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Nginx/" rel="tag"><i class="fa fa-tag"></i> Nginx</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/08/19/Servlet%E5%85%81%E8%AE%B8%E8%B7%A8%E5%9F%9F%E5%A4%84%E7%90%86/" rel="prev" title="Servlet允许跨域处理">
+      <i class="fa fa-chevron-left"></i> Servlet允许跨域处理
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/08/20/(%E8%BD%AC)Vue%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/" rel="next" title="(转)vue+axios上传文件">
+      (转)vue+axios上传文件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作场景"><span class="nav-number">1.</span> <span class="nav-text">操作场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前提条件"><span class="nav-number">2.</span> <span class="nav-text">前提条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作步骤"><span class="nav-number">3.</span> <span class="nav-text">操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#证书安装"><span class="nav-number">3.1.</span> <span class="nav-text">证书安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-自动跳转-HTTPS-的安全配置（可选）"><span class="nav-number">3.2.</span> <span class="nav-text">HTTP 自动跳转 HTTPS 的安全配置（可选）</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zlatanlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Zlatanlong</p>
+  <div class="site-description" itemprop="description">生活就像巧克力🍫</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3psYXRhbmxvbmc=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zlatanlong"><i class="fa fa-fw fa-github"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxvbmctdHhnY0Bmb3htYWlsLmNvbQ==" title="E-Mail → mailto:long-txgc@foxmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      关注列表
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9sZWZsYWNvbi5naXRodWIuaW8v" title="https:&#x2F;&#x2F;leflacon.github.io&#x2F;">leflacon</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9ib2Jib3NzLmdpdGh1Yi5pby8=" title="https:&#x2F;&#x2F;bobboss.github.io&#x2F;">BobBoss</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL29wdGltaXN0aWNhdC54eXovdXNlcj91c2VySWQ9bHpkY2w=" title="http:&#x2F;&#x2F;optimisticat.xyz&#x2F;user?userId&#x3D;lzdcl">lzdcl</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zlatanlong</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">130k</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'H5inyassVpcpItLTuMJH9aBg-gzGzoHsz',
+      appKey     : 'mBzB6QB3deD6zw8YEIKVQdzz',
+      placeholder: "快来说两句吧。。。",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
