@@ -2280,4 +2280,30 @@
         <tag>跨域访问</tag>
       </tags>
   </entry>
+  <entry>
+    <title>使用nvm管理node版本</title>
+    <url>/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用mvn下载老版本的node，然后使用老版本的node运行。</p>
+<a id="more"></a>
+
+<ol>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NvcmV5YnV0bGVyL252bS13aW5kb3dzL3JlbGVhc2Vz" title="https://github.com/coreybutler/nvm-windows/releases">nvm-windows下载<i class="fa fa-external-link"></i></span> nvm实际上只能在linux/mac系统上运行，如果windows系统需要下载这个nvm-setup.zip，安装时会自动配好环境变量。</p>
+</li>
+<li><p>安装nvm 直接安装即可，第一个目录是以后个版本nodejs的安装目录，第二个目录实际上是第一个目录的快捷方式.</p>
+</li>
+</ol>
+<p>更改setting.txt文件，修改nodejs的镜像和npm的镜像,注意这里阿里淘宝镜像源已经都更新为<strong>https</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root: D:\env\nvm</span><br><span class="line">path: D:\env\nvm\nodejs</span><br><span class="line">node_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>通过nvm安装node<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm -v // 查看nvm版本</span><br><span class="line">nvm install 8.12.0 // 下载指定版本 </span><br><span class="line">nvm install latest安装最新版本</span><br><span class="line">nvm use 8.12.0 // 使用指定版本</span><br><span class="line">nvm ls // 查看已经安装的nodejs版本</span><br><span class="line">node -v // 查看nodejs版本</span><br></pre></td></tr></table></figure></li>
+<li>安装全局npm<br>　　安装node的时候，npm其实也已经一起安装了。因为nvm可以管理多个版本的node，如果每次添加一个node版本都要安装一堆的包很麻烦,如果有一个npm可以让各个版本的node共用，就不会这么麻烦了，这就是为什么我们要配置一个全局的npm的原因。简单的三步就可以配置一个全局的npm。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1.  npm config <span class="built_in">set</span> prefix <span class="string">"D:\env\nvm"</span>//配置用npm下载包时全局安装的包路径</span><br><span class="line">2.  npm install npm -g//安装全局npm,不同的node都使用这个npm，想更新全局的npm的话首先删除全局路径(就是上一行命令的地址,可以使用npm config ls查看)下的npm,再执行一次这个命令即可</span><br><span class="line">3.  在用户变量中添加 NPM_HOME=D:\env\nvm，path中添加%NPM-HOME%</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+      </tags>
+  </entry>
 </search>
