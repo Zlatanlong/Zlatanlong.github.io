@@ -2306,4 +2306,28 @@
         <tag>nvm</tag>
       </tags>
   </entry>
+  <entry>
+    <title>cmder的使用</title>
+    <url>/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
+<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
+<ol>
+<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
+<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
+<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
+<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
+ 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
+<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>cmder</tag>
+      </tags>
+  </entry>
 </search>
