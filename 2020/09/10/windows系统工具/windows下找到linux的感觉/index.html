@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="WTTWi2XnJ5">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。  WSL 适用于linux的windows子系统 升级到wsl2 windows terminal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows下找到linux的感觉">
+<meta property="og:url" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/index.html">
+<meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
+<meta property="og:description" content="前言对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。  WSL 适用于linux的windows子系统 升级到wsl2 windows terminal">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png">
+<meta property="og:image" content="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png">
+<meta property="og:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png">
+<meta property="article:published_time" content="2020-09-10T09:53:16.928Z">
+<meta property="article:modified_time" content="2020-09-12T07:59:30.006Z">
+<meta property="article:author" content="Zlatanlong">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png">
+
+<link rel="canonical" href="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>windows下找到linux的感觉 | Zlatanlong's T-blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zlatanlong's T-blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Lakers is Championship!</h1>
+      
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">29</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">15</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">30</span></a>
+
+  </li>
+        <li class="menu-item menu-item-aboutme">
+
+    <a href="/aboutme/" rel="section"><i class="fa fa-fw fa-user"></i>博主</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          windows下找到linux的感觉
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-10 17:53:16" itemprop="dateCreated datePublished" datetime="2020-09-10T17:53:16+08:00">2020-09-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-12 15:59:30" itemprop="dateModified" datetime="2020-09-12T15:59:30+08:00">2020-09-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/windows/" itemprop="url" rel="index">
+                    <span itemprop="name">windows</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-meta-item leancloud_visitors" data-flag-title="windows下找到linux的感觉" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。</p>
+<ul>
+<li>WSL 适用于linux的windows子系统</li>
+<li>升级到wsl2</li>
+<li>windows terminal</li>
+<li>zsh</li>
+</ul>
+<h2 id="1-安装WSl"><a href="#1-安装WSl" class="headerlink" title="1. 安装WSl"></a>1. 安装WSl</h2><p>WSL是在windows下进行开发，并使用linux中的bash等功能的最好的解决方案之一。</p>
+<h2 id="1-1-打开系统功能"><a href="#1-1-打开系统功能" class="headerlink" title="1.1 打开系统功能"></a>1.1 打开系统功能</h2><p><strong>控制面板\所有控制面板项\程序和功能</strong> 中选择 <strong>启用或者关闭Windows功能</strong></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png" alt="image-20200912150736512"></p>
+<p>然后勾选 <strong>适用于Linux的Windows子系统</strong> </p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png" alt="image-20200912150852217"></p>
+<p>经过系统一段时间的自动下载后，重启计算机。</p>
+<h2 id="1-2-下载Ubuntu"><a href="#1-2-下载Ubuntu" class="headerlink" title="1.2 下载Ubuntu"></a>1.2 下载Ubuntu</h2><h3 id="1-2-1-下载"><a href="#1-2-1-下载" class="headerlink" title="1.2.1 下载"></a>1.2.1 下载</h3><p>直接在<strong>Microsoft store</strong>中搜索<strong>Ubuntu</strong>，并启动即可。我使用的是18.04版本。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png" alt="image-20200912151114333"></p>
+<h3 id="1-2-2-设置新分发版"><a href="#1-2-2-设置新分发版" class="headerlink" title="1.2.2 设置新分发版"></a>1.2.2 设置新分发版</h3><p>首次启动新安装的 Linux 分发版时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，以便文件解压缩并存储到电脑上。 未来的所有启动时间应不到一秒。然后，需要为新的 Linux 分发版创建用户帐户和密码。</p>
+<p><img src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png" alt="Windows 控制台中的 Ubuntu 解包"></p>
+<h2 id="1-3-更新WSL到WSL2"><a href="#1-3-更新WSL到WSL2" class="headerlink" title="1.3 更新WSL到WSL2"></a>1.3 更新WSL到WSL2</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvd3NsMi1pbmRleA==" title="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-index">参考微软官方文档<i class="fa fa-external-link"></i></span></p>
+<h3 id="1-3-1-启用“虚拟机平台”可选组件"><a href="#1-3-1-启用“虚拟机平台”可选组件" class="headerlink" title="1.3.1 启用“虚拟机平台”可选组件"></a>1.3.1 启用“虚拟机平台”可选组件</h3><p>安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。</p>
+<p>以管理员身份打开 PowerShell 并运行：</p>
+<p>PowerShell复制</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
+
+<p><strong>重新启动</strong>计算机，以完成 WSL 安装并更新到 WSL 2。</p>
+<h3 id="1-3-2-将-WSL-2-设置为默认版本"><a href="#1-3-2-将-WSL-2-设置为默认版本" class="headerlink" title="1.3.2 将 WSL 2 设置为默认版本"></a>1.3.2 将 WSL 2 设置为默认版本</h3><p>以管理员的身份打开 PowerShell，然后在安装新的 Linux 发行版时运行以下命令，将 WSL 2 设置为默认版本：</p>
+<p>PowerShell复制</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>运行该命令后，你可能会看到此消息：<code>WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel</code>。 跟随链接（<span class="exturl" data-url="aHR0cHM6Ly9ha2EubXMvd3NsMmtlcm5lbO+8ie+8jOWcqOaWh+aho+S4reWuieijheadpeiHquivpemhtemdoueahA==" title="https://aka.ms/wsl2kernel），在文档中安装来自该页面的">https://aka.ms/wsl2kernel），在文档中安装来自该页面的<i class="fa fa-external-link"></i></span> MSI，以便在计算机上安装 Linux 内核供 WSL 2 使用。 安装内核后，请再次运行该命令，该命令应会成功完成而不显示消息。</p>
+<p> 备注</p>
+<p>从 WSL 1 更新到 WSL 2 可能需要几分钟才能完成，具体取决于目标分发版的大小。 如果从 Windows 10 周年更新或创意者更新运行 WSL 1 的旧（历史）安装，可能会遇到更新错误。 按照这些说明<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvaW5zdGFsbC1sZWdhY3kjdW5pbnN0YWxsaW5ncmVtb3ZpbmctdGhlLWxlZ2FjeS1kaXN0cm8=" title="https://docs.microsoft.com/zh-cn/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro">卸载并删除任何旧分发<i class="fa fa-external-link"></i></span>。</p>
+<p>如果 <code>wsl --set-default-version</code> 结果为无效命令，请输入 <code>wsl --help</code>。 如果 <code>--set-default-version</code> 未列出，则表示你的 OS 不支持它，你需要更新到版本 1903（内部版本 18362）或更高版本。</p>
+<h3 id="1-3-3-将分发版版本设置为-WSL-1-或-WSL-2"><a href="#1-3-3-将分发版版本设置为-WSL-1-或-WSL-2" class="headerlink" title="1.3.3 将分发版版本设置为 WSL 1 或 WSL 2"></a>1.3.3 将分发版版本设置为 WSL 1 或 WSL 2</h3><p>可打开 PowerShell 命令行并输入以下命令（仅在 <span class="exturl" data-url="bXMtc2V0dGluZ3M6d2luZG93c3VwZGF0ZQ==" title="ms-settings:windowsupdate">Windows 内部版本 18362 或更高版本<i class="fa fa-external-link"></i></span>中可用），检查分配给每个已安装的 Linux 分发版的 WSL 版本：<code>wsl -l -v</code></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> -<span class="literal">-verbose</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png" alt="image-20200912151921601"></p>
+<p>若要将分发版设置为受某一 WSL 版本支持，请运行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> &lt;distribution name&gt; &lt;versionNumber&gt;</span><br></pre></td></tr></table></figure>
+
+<p>请确保将 <code>&lt;distribution name&gt;</code> 替换为你的分发版的实际名称，并将 <code>&lt;versionNumber&gt;</code> 替换为数字“1”或“2”。 可以随时更改回 WSL 1，方法是运行与上面相同的命令，但将“2”替换为“1”。</p>
+<p><strong>我这里就是运行:</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> Ubuntu<span class="literal">-18</span>.<span class="number">04</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>这会将安装的任何新分发版的版本设置为 WSL 2。</p>
+<h2 id="1-4-配置Ubuntu默认镜像源"><a href="#1-4-配置Ubuntu默认镜像源" class="headerlink" title="1.4 配置Ubuntu默认镜像源"></a>1.4 配置Ubuntu默认镜像源</h2><h3 id="1-4-1-备份并更新"><a href="#1-4-1-备份并更新" class="headerlink" title="1.4.1 备份并更新"></a>1.4.1 备份并更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt  <span class="comment">#进入配置文件所在目录</span></span><br><span class="line">cp sources.list sources.list.bak  <span class="comment">#备份配置文件</span></span><br><span class="line">vim sources.list  <span class="comment">#编辑配置文件</span></span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYWxpeXVuLmNvbS9taXJyb3IvdWJ1bnR1P3NwbT1hMmM2aC4xMzY1MTEwMi4wLjAuM2UyMjFiMTFReGFMYkY=" title="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11QxaLbF">参考阿里云Ubuntu镜像源配置方法<i class="fa fa-external-link"></i></span></p>
+<p>将对应的代码粘贴进去。</p>
+<p><strong>ubuntu 18.04(bionic) 配置如下</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>这里如果在vim直接粘贴会出错。要不检查错误，还可以打开ubuntu的实际硬盘位置</p>
+<p><code>C:\Users\%USERNAME%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code></p>
+<p>这个就是 <strong>Ubuntu</strong> WSL版的根目录,接着到 <strong>etc\apt</strong> 下找到 <strong>sources.list</strong> 用之前贴的配置文件覆盖即可.接着更新数据源</p>
+<h3 id="1-4-2-更新了镜像源之后，更新apt和其他软件："><a href="#1-4-2-更新了镜像源之后，更新apt和其他软件：" class="headerlink" title="1.4.2 更新了镜像源之后，更新apt和其他软件："></a>1.4.2 更新了镜像源之后，更新apt和其他软件：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update  <span class="comment">#更新源  </span></span><br><span class="line">sudo apt-get upgrade  <span class="comment">#更新软件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5-更改Ubuntu实际位置到d盘"><a href="#1-5-更改Ubuntu实际位置到d盘" class="headerlink" title="1.5 更改Ubuntu实际位置到d盘"></a>1.5 更改Ubuntu实际位置到d盘</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZV9qYWNrZ2cvYXJ0aWNsZS9kZXRhaWxzLzEwNjczODg3OA==" title="https://blog.csdn.net/lee_jackgg/article/details/106738878">此步骤参考CSDN我的大神666Windows10子系统(WSL)修改安装目录<i class="fa fa-external-link"></i></span></p>
+<p>只要把ubuntu版本改成对应的即可。</p>
+<h3 id="1-5-1-首先查看所有分发版本"><a href="#1-5-1-首先查看所有分发版本" class="headerlink" title="1.5.1 首先查看所有分发版本"></a>1.5.1 首先查看所有分发版本</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">-l</span> -<span class="literal">-all</span>  <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>  NAME STATE VERSION</p>
+<p> * Ubuntu-20.04 Running 2</p>
+</blockquote>
+<h3 id="1-5-2-导出分发版为tar文件到d盘"><a href="#1-5-2-导出分发版为tar文件到d盘" class="headerlink" title="1.5.2 导出分发版为tar文件到d盘"></a>1.5.2 导出分发版为tar文件到d盘</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-export</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
+
+<h5 id="注销当前分发版"><a href="#注销当前分发版" class="headerlink" title="注销当前分发版"></a>注销当前分发版</h5><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-unregister</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-3-重新导入并安装分发版在d-ubuntu"><a href="#1-5-3-重新导入并安装分发版在d-ubuntu" class="headerlink" title="1.5.3 重新导入并安装分发版在d:\ubuntu"></a>1.5.3 重新导入并安装分发版在d:\ubuntu</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-import</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> d:\ubuntu d:\ubuntu20.<span class="number">04</span>.tar -<span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-4-设置默认登陆用户为安装时用户名"><a href="#1-5-4-设置默认登陆用户为安装时用户名" class="headerlink" title="1.5.4 设置默认登陆用户为安装时用户名"></a>1.5.4 设置默认登陆用户为安装时用户名</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu2004 config -<span class="literal">-default</span><span class="literal">-user</span> Username</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-5-删除tar文件-可选"><a href="#1-5-5-删除tar文件-可选" class="headerlink" title="1.5.5 删除tar文件(可选)"></a>1.5.5 删除tar文件(可选)</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">del d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Windows-Terminal中使用WSL"><a href="#2-Windows-Terminal中使用WSL" class="headerlink" title="2. Windows Terminal中使用WSL"></a>2. Windows Terminal中使用WSL</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>直接在Microsoft Store中搜索并安装即可。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png" alt="image-20200912153621967"></p>
+<p>安装后应该可以识别到wsl，如果没有识别，可以在设置中进行如下配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">"list":</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"guid"</span>: <span class="string">"&#123;c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40&#125;"</span>,</span><br><span class="line">                <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">"name"</span>: <span class="string">"Ubuntu-18.04"</span>,</span><br><span class="line">                <span class="attr">"source"</span>: <span class="string">"Windows.Terminal.Wsl"</span>,</span><br><span class="line">                <span class="attr">"startingDirectory"</span>: <span class="string">"//wsl$/Ubuntu-18.04/root"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            ...其他配置</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以检测到wsl系统了，点击即可打开。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png" alt="image-20200912153808770"></p>
+<h3 id="2-2-配置zsh"><a href="#2-2-配置zsh" class="headerlink" title="2.2 配置zsh"></a>2.2 配置zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~$ sudo apt-get install zsh <span class="comment">#首先下载</span></span><br><span class="line">/mnt/c/Users/User$ <span class="built_in">which</span> zsh <span class="comment">#查看下载是否成功</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png" alt="image-20200912154357630"></p>
+<p>如果可以出现如下目录，即为安装成功。</p>
+<h3 id="2-3-配置oh-my-zsh"><a href="#2-3-配置oh-my-zsh" class="headerlink" title="2.3 配置oh my zsh"></a>2.3 配置oh my zsh</h3><p>根据<span class="exturl" data-url="aHR0cHM6Ly9vaG15ei5zaC8=" title="https://ohmyz.sh/">https://ohmyz.sh/<i class="fa fa-external-link"></i></span>官网，可以输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
+
+<p>但是我在安装时出现了错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused</span><br></pre></td></tr></table></figure>
+
+<p>经查证，需要配置ssh。这里我直接把windows下的<strong>.ssh</strong>文件，复制到了wsl文件下根目录<strong>\\wsl$\Ubuntu-18.04</strong>的<strong>root</strong>文件里。</p>
+<p>再次下载，成功。如果以前没有配置过github的ssh，我不知道是否还会报这个错误，如果抱着个错误了，请参考<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3Nzg5MDUvYXJ0aWNsZS9kZXRhaWxzLzgzNTAxMjA0" title="https://blog.csdn.net/u013778905/article/details/83501204">如何生成ssh公私钥并将公钥放到github上<i class="fa fa-external-link"></i></span>。</p>
+<h3 id="2-4-美化工作"><a href="#2-4-美化工作" class="headerlink" title="2.4 美化工作"></a>2.4 美化工作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#进入root根目录</span></span><br><span class="line">vim .zshrc <span class="comment">#编辑.zshrc</span></span><br></pre></td></tr></table></figure>
+
+<p>将主题设置为：</p>
+<p>ZSH_THEME=”agnoster”</p>
+<p>将windows terminal的默认字体设置为<code>Cascadia Code PL</code>，就是开启powerline功能的意思，agnoster的箭头需要开启此功能。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png" alt="image-20200912155336231"></p>
+<p>并在下面schemes中添加如下配置：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">"schemes": [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Dark"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#002831"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#d11c24"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#738a05"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#a57706"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2176c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#c61c6f"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#259286"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#eae3cb"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#bd3613"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#536870"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#708284"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#5956ba"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#819090"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#fcf4dc"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#001e27"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#708284"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Darcula"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#3d3f41"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#d2d8d9"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br></pre></td></tr></table></figure>
+
+<p>这些配置是在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21iYWRvbGF0by9pVGVybTItQ29sb3ItU2NoZW1lcy90cmVlL21hc3Rlci93aW5kb3dzdGVybWluYWw=" title="https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal">iTerm2-Color-Schemes<i class="fa fa-external-link"></i></span>中复制的，大家可以根据自己的喜好定制。并在对应的终端开启主题，这里我直接默认使用该主题了。</p>
+<h3 id="2-5-安装zsh插件"><a href="#2-5-安装zsh插件" class="headerlink" title="2.5 安装zsh插件"></a>2.5 安装zsh插件</h3><p>参考<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDg2MzY2Mjk=" title="https://zhuanlan.zhihu.com/p/108636629">一些常用的zsh插件<i class="fa fa-external-link"></i></span>这篇文章，写的非常详细了。</p>
+
+    </div>
+
+    
+    
+    
+      
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Zlatanlong
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" title="windows下找到linux的感觉">https://www.lclong.top/2020/09/10/windows系统工具/windows下找到linux的感觉/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="cmder的使用">
+      <i class="fa fa-chevron-left"></i> cmder的使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/9999/02/13/hometop/" rel="next" title="How you doing?">
+      How you doing? <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装WSl"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装WSl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-打开系统功能"><span class="nav-number">1.2.</span> <span class="nav-text">1.1 打开系统功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-下载Ubuntu"><span class="nav-number">1.3.</span> <span class="nav-text">1.2 下载Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-下载"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.2.1 下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-设置新分发版"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.2.2 设置新分发版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-更新WSL到WSL2"><span class="nav-number">1.4.</span> <span class="nav-text">1.3 更新WSL到WSL2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-启用“虚拟机平台”可选组件"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.3.1 启用“虚拟机平台”可选组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-将-WSL-2-设置为默认版本"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.3.2 将 WSL 2 设置为默认版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-3-将分发版版本设置为-WSL-1-或-WSL-2"><span class="nav-number">1.4.3.</span> <span class="nav-text">1.3.3 将分发版版本设置为 WSL 1 或 WSL 2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-配置Ubuntu默认镜像源"><span class="nav-number">1.5.</span> <span class="nav-text">1.4 配置Ubuntu默认镜像源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-备份并更新"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.4.1 备份并更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-更新了镜像源之后，更新apt和其他软件："><span class="nav-number">1.5.2.</span> <span class="nav-text">1.4.2 更新了镜像源之后，更新apt和其他软件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-更改Ubuntu实际位置到d盘"><span class="nav-number">1.6.</span> <span class="nav-text">1.5 更改Ubuntu实际位置到d盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-首先查看所有分发版本"><span class="nav-number">1.6.1.</span> <span class="nav-text">1.5.1 首先查看所有分发版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-导出分发版为tar文件到d盘"><span class="nav-number">1.6.2.</span> <span class="nav-text">1.5.2 导出分发版为tar文件到d盘</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注销当前分发版"><span class="nav-number">1.6.2.0.1.</span> <span class="nav-text">注销当前分发版</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-3-重新导入并安装分发版在d-ubuntu"><span class="nav-number">1.6.3.</span> <span class="nav-text">1.5.3 重新导入并安装分发版在d:\ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-4-设置默认登陆用户为安装时用户名"><span class="nav-number">1.6.4.</span> <span class="nav-text">1.5.4 设置默认登陆用户为安装时用户名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-5-删除tar文件-可选"><span class="nav-number">1.6.5.</span> <span class="nav-text">1.5.5 删除tar文件(可选)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Windows-Terminal中使用WSL"><span class="nav-number">1.7.</span> <span class="nav-text">2. Windows Terminal中使用WSL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-安装"><span class="nav-number">1.7.1.</span> <span class="nav-text">2.1 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-配置zsh"><span class="nav-number">1.7.2.</span> <span class="nav-text">2.2 配置zsh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-配置oh-my-zsh"><span class="nav-number">1.7.3.</span> <span class="nav-text">2.3 配置oh my zsh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-美化工作"><span class="nav-number">1.7.4.</span> <span class="nav-text">2.4 美化工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-安装zsh插件"><span class="nav-number">1.7.5.</span> <span class="nav-text">2.5 安装zsh插件</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zlatanlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Zlatanlong</p>
+  <div class="site-description" itemprop="description">生活就像巧克力🍫</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3psYXRhbmxvbmc=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zlatanlong"><i class="fa fa-fw fa-github"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxvbmctdHhnY0Bmb3htYWlsLmNvbQ==" title="E-Mail → mailto:long-txgc@foxmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      关注列表
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9sZWZsYWNvbi5naXRodWIuaW8v" title="https:&#x2F;&#x2F;leflacon.github.io&#x2F;">leflacon</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9ib2Jib3NzLmdpdGh1Yi5pby8=" title="https:&#x2F;&#x2F;bobboss.github.io&#x2F;">BobBoss</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL29wdGltaXN0aWNhdC54eXovdXNlcj91c2VySWQ9bHpkY2w=" title="http:&#x2F;&#x2F;optimisticat.xyz&#x2F;user?userId&#x3D;lzdcl">lzdcl</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zlatanlong</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">137k</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'H5inyassVpcpItLTuMJH9aBg-gzGzoHsz',
+      appKey     : 'mBzB6QB3deD6zw8YEIKVQdzz',
+      placeholder: "快来说两句吧。。。",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
