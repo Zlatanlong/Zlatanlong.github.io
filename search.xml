@@ -270,35 +270,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2月8日与18级同学分享直播</title>
-    <url>/2020/02/08/208share/</url>
-    <content><![CDATA[<h1 id="简单谈编程动手能力（软件为主）"><a href="#简单谈编程动手能力（软件为主）" class="headerlink" title="简单谈编程动手能力（软件为主）"></a>简单谈编程动手能力（软件为主）</h1><h2 id="前言：谈谈锻炼动手能力的用处"><a href="#前言：谈谈锻炼动手能力的用处" class="headerlink" title="前言：谈谈锻炼动手能力的用处"></a>前言：谈谈锻炼动手能力的用处</h2><p>保研，考研，出国，工作</p>
-<a id="more"></a>
-
-<h2 id="1-关于课内"><a href="#1-关于课内" class="headerlink" title="1. 关于课内"></a>1. 关于课内</h2><p>上机考试尽量满分，课内掌握好才能课外做东西</p>
-<p>有大作业的科目, 如c++,  数据库，java，计算机网络，要加以重视，对于作业完成的速度和质量。</p>
-<p>需要强调的是，由于课内的大作业比较简单，而且问题比较具体化，因此遇到问题尽最大努力个人解决，卡得太久了再考虑百度。</p>
-<p>如果对于作业整体没有概念，找视频学习。</p>
-<h2 id="2-关于小学期"><a href="#2-关于小学期" class="headerlink" title="2. 关于小学期"></a>2. 关于小学期</h2><p>尽量使用老师提供的技术，看看能做出来什么东西，或以此为基础添加其他技术，不要跨越它。</p>
-<p>比如大二小学期，jsp。</p>
-<p>课内，小学期扎实的是基础，还有短期内的学习能力，不要好高骛远，因为以后很少有锻炼基础的机会，当然基础好的同学除外。</p>
-<h2 id="3-大创，课外比赛"><a href="#3-大创，课外比赛" class="headerlink" title="3.大创，课外比赛"></a>3.大创，课外比赛</h2><p>题目+技术</p>
-<h3 id="a-先有题目考虑技术"><a href="#a-先有题目考虑技术" class="headerlink" title="a. 先有题目考虑技术"></a>a. 先有题目考虑技术</h3><p>视频入门+多看文档</p>
-<h3 id="b-先有技术想题目"><a href="#b-先有技术想题目" class="headerlink" title="b. 先有技术想题目"></a>b. 先有技术想题目</h3><h2 id="4-关于软硬件学习比重问题"><a href="#4-关于软硬件学习比重问题" class="headerlink" title="4. 关于软硬件学习比重问题"></a>4. 关于软硬件学习比重问题</h2><p>根据个人爱好，都有好的比赛，课程都别落下，毕竟软+硬是我们通信工程的特色，要好好利用起来。</p>
-<h2 id="5-学习方法"><a href="#5-学习方法" class="headerlink" title="5.学习方法"></a>5.学习方法</h2><p>擅长搜索，google当然最好，百度也能解决99%的问题。github的问题讨论区，stackoverflow</p>
-<p>课内项目用来锻炼独立解决问题能力，课外项目锻炼搜索能力，多搜索自然知道哪些网站解决哪些技术好。</p>
-<p>写文档，技术博客</p>
-<p>最佳视频学习网站：bilibili（转载了各大收费的学习网站等等）</p>
-<p>手里没有项目怎么办：选学习曲线平缓的语言技术，github上找项目，给喜欢玩的游戏做mod等等。</p>
-<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2>]]></content>
-      <categories>
-        <category>本科学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git与Git相关命令</title>
     <url>/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h1><blockquote>
@@ -338,6 +309,35 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2月8日与18级同学分享直播</title>
+    <url>/2020/02/08/208share/</url>
+    <content><![CDATA[<h1 id="简单谈编程动手能力（软件为主）"><a href="#简单谈编程动手能力（软件为主）" class="headerlink" title="简单谈编程动手能力（软件为主）"></a>简单谈编程动手能力（软件为主）</h1><h2 id="前言：谈谈锻炼动手能力的用处"><a href="#前言：谈谈锻炼动手能力的用处" class="headerlink" title="前言：谈谈锻炼动手能力的用处"></a>前言：谈谈锻炼动手能力的用处</h2><p>保研，考研，出国，工作</p>
+<a id="more"></a>
+
+<h2 id="1-关于课内"><a href="#1-关于课内" class="headerlink" title="1. 关于课内"></a>1. 关于课内</h2><p>上机考试尽量满分，课内掌握好才能课外做东西</p>
+<p>有大作业的科目, 如c++,  数据库，java，计算机网络，要加以重视，对于作业完成的速度和质量。</p>
+<p>需要强调的是，由于课内的大作业比较简单，而且问题比较具体化，因此遇到问题尽最大努力个人解决，卡得太久了再考虑百度。</p>
+<p>如果对于作业整体没有概念，找视频学习。</p>
+<h2 id="2-关于小学期"><a href="#2-关于小学期" class="headerlink" title="2. 关于小学期"></a>2. 关于小学期</h2><p>尽量使用老师提供的技术，看看能做出来什么东西，或以此为基础添加其他技术，不要跨越它。</p>
+<p>比如大二小学期，jsp。</p>
+<p>课内，小学期扎实的是基础，还有短期内的学习能力，不要好高骛远，因为以后很少有锻炼基础的机会，当然基础好的同学除外。</p>
+<h2 id="3-大创，课外比赛"><a href="#3-大创，课外比赛" class="headerlink" title="3.大创，课外比赛"></a>3.大创，课外比赛</h2><p>题目+技术</p>
+<h3 id="a-先有题目考虑技术"><a href="#a-先有题目考虑技术" class="headerlink" title="a. 先有题目考虑技术"></a>a. 先有题目考虑技术</h3><p>视频入门+多看文档</p>
+<h3 id="b-先有技术想题目"><a href="#b-先有技术想题目" class="headerlink" title="b. 先有技术想题目"></a>b. 先有技术想题目</h3><h2 id="4-关于软硬件学习比重问题"><a href="#4-关于软硬件学习比重问题" class="headerlink" title="4. 关于软硬件学习比重问题"></a>4. 关于软硬件学习比重问题</h2><p>根据个人爱好，都有好的比赛，课程都别落下，毕竟软+硬是我们通信工程的特色，要好好利用起来。</p>
+<h2 id="5-学习方法"><a href="#5-学习方法" class="headerlink" title="5.学习方法"></a>5.学习方法</h2><p>擅长搜索，google当然最好，百度也能解决99%的问题。github的问题讨论区，stackoverflow</p>
+<p>课内项目用来锻炼独立解决问题能力，课外项目锻炼搜索能力，多搜索自然知道哪些网站解决哪些技术好。</p>
+<p>写文档，技术博客</p>
+<p>最佳视频学习网站：bilibili（转载了各大收费的学习网站等等）</p>
+<p>手里没有项目怎么办：选学习曲线平缓的语言技术，github上找项目，给喜欢玩的游戏做mod等等。</p>
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2>]]></content>
+      <categories>
+        <category>本科学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -448,13 +448,6 @@
 <p>运行效果如下:</p>
 <p><img src="/2020/02/24/hanoi%E5%A1%94%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/48697D36-D378-4CB9-ABA0-49D53A00270F.png" alt="结果"></p>
 <p>和文件结构一样，运行成功。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>How you doing?</title>
-    <url>/9999/02/13/hometop/</url>
-    <content><![CDATA[<p>欢迎各位网友来到的我的博客，</p>
-<p>这个博客用来记录一些开发中遇到的问题，和相关的分享~🥳</p>
 ]]></content>
   </entry>
   <entry>
@@ -635,30 +628,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Node.js 并行处理Promise</title>
-    <url>/2020/03/02/nodejs%E5%B9%B6%E8%A1%8C%E5%A4%84%E7%90%86promise/</url>
-    <content><![CDATA[<h3 id="情景解释"><a href="#情景解释" class="headerlink" title="情景解释"></a>情景解释</h3><p>之前发现微信小程序云开发功能提供了免费的云函数，但是对于node.js没有接触，只使用了<code>wx.getcontent()</code>获取用户标识，后端还是使用springboot，最近开始学习nodejs进行后端开发。</p>
-<p>当我们发送一组异步请求/从数据库取出一组满足要求的数据，要怎么处理那，例如: 有一个数组<code>a</code>，我们在数据库表<code>user</code>中寻找字段<code>t1</code>等于的每一行数据。</p>
-<p>我用微信小程序的本地调试工具对几种方法进行了测试，并记录了响应时间。</p>
-<a id="more"></a>
-
-<h3 id="方法测试"><a href="#方法测试" class="headerlink" title="方法测试"></a>方法测试</h3><p>其中test()函数是从数据库中取出一个数据，</p>
-<p><code>test2()</code>是在每个<code>promise对象</code>的`resolve中进行数据处理，时间等于取三个数据，</p>
-<p><code>test3()</code>和<code>test4()</code>都是先保存一个<code>promise数组</code>，然后对这个<code>promise数组</code>进行操作，这两种方法的时间都和取出一个数据是相同的。</p>
-<p>综合这几种方式，<code>test3()</code>的实现是最令人满意的</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 云函数入口文件</span></span><br><span class="line"><span class="keyword">const</span> cloud = <span class="built_in">require</span>(<span class="string">'wx-server-sdk'</span>)</span><br><span class="line"></span><br><span class="line">cloud.init(&#123;</span><br><span class="line">  env: <span class="string">'wxbase1-bdeeac'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> db = cloud.database()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> t1Array = [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>]</span><br><span class="line"><span class="keyword">const</span> t2Array = []</span><br><span class="line"></span><br><span class="line"><span class="comment">//471ms</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> b = []</span><br><span class="line">  <span class="keyword">let</span> a = <span class="keyword">await</span> db.collection(<span class="string">'user'</span>)</span><br><span class="line">    .where(&#123;</span><br><span class="line">      t1: <span class="string">'1'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .get().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line">      b.push(res)</span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="keyword">return</span> b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1441ms</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a1 = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> t1 <span class="keyword">of</span> t1Array) &#123;</span><br><span class="line">    <span class="keyword">await</span> db.collection(<span class="string">'user'</span>)</span><br><span class="line">      .where(&#123;</span><br><span class="line">        t1: t1</span><br><span class="line">      &#125;).get().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        a1.push(res.data[<span class="number">0</span>])</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 474ms</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test3</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> tasks = t1Array.map(<span class="function"><span class="params">t1</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> temp = db.collection(<span class="string">'user'</span>)</span><br><span class="line">      .where(&#123;</span><br><span class="line">        t1: t1</span><br><span class="line">      &#125;).get()</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params"><span class="keyword">await</span> <span class="built_in">Promise</span>.all(tasks</span>)).<span class="params">reduce</span>(<span class="params">(acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      data: acc.data.concat(cur.data),</span><br><span class="line">      errMsg: acc.errMsg,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//496毫秒</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test4</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a1 = []</span><br><span class="line">  <span class="keyword">const</span> tasks = t1Array.map(<span class="function"><span class="params">t1</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> temp = db.collection(<span class="string">'user'</span>)</span><br><span class="line">      .where(&#123;</span><br><span class="line">        t1: t1</span><br><span class="line">      &#125;).get()</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> task <span class="keyword">of</span> tasks)&#123;</span><br><span class="line">    <span class="keyword">const</span> temp = <span class="keyword">await</span> task</span><br><span class="line">    a1.push(temp.data[<span class="number">0</span>])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 云函数入口函数</span></span><br><span class="line">exports.main = <span class="keyword">async</span>(event, context) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> test3()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中数组的<code>reduce(function sum())</code>方法，传递一个累加器函数，其中第一个参数相当于<code>sum</code>，第二个参数相当于<code>每一个数据</code>。</p>
-<p>如<code>test3()</code>处理的操作，可以将每一次返回的数组转化为一个数组</p>
-]]></content>
-      <categories>
-        <category>Node.js</category>
-      </categories>
-      <tags>
-        <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客更新日志，功能简述</title>
     <url>/2020/02/12/todo/</url>
     <content><![CDATA[<p>blog搭建任务第一阶段告一段落，准备好好整理一下以前收藏的解决问题的博文和有意义值得分享的事~💃</p>
@@ -712,6 +681,30 @@
 <p><img src="/2020/02/12/todo/2B53B102.jpg" alt="效果"></p>
 <p>前两天还挺着急，按了网上的seo配置之后还搜不到，实际上只要等两天就好了，给百度哥一个时间。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Node.js 并行处理Promise</title>
+    <url>/2020/03/02/nodejs%E5%B9%B6%E8%A1%8C%E5%A4%84%E7%90%86promise/</url>
+    <content><![CDATA[<h3 id="情景解释"><a href="#情景解释" class="headerlink" title="情景解释"></a>情景解释</h3><p>之前发现微信小程序云开发功能提供了免费的云函数，但是对于node.js没有接触，只使用了<code>wx.getcontent()</code>获取用户标识，后端还是使用springboot，最近开始学习nodejs进行后端开发。</p>
+<p>当我们发送一组异步请求/从数据库取出一组满足要求的数据，要怎么处理那，例如: 有一个数组<code>a</code>，我们在数据库表<code>user</code>中寻找字段<code>t1</code>等于的每一行数据。</p>
+<p>我用微信小程序的本地调试工具对几种方法进行了测试，并记录了响应时间。</p>
+<a id="more"></a>
+
+<h3 id="方法测试"><a href="#方法测试" class="headerlink" title="方法测试"></a>方法测试</h3><p>其中test()函数是从数据库中取出一个数据，</p>
+<p><code>test2()</code>是在每个<code>promise对象</code>的`resolve中进行数据处理，时间等于取三个数据，</p>
+<p><code>test3()</code>和<code>test4()</code>都是先保存一个<code>promise数组</code>，然后对这个<code>promise数组</code>进行操作，这两种方法的时间都和取出一个数据是相同的。</p>
+<p>综合这几种方式，<code>test3()</code>的实现是最令人满意的</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 云函数入口文件</span></span><br><span class="line"><span class="keyword">const</span> cloud = <span class="built_in">require</span>(<span class="string">'wx-server-sdk'</span>)</span><br><span class="line"></span><br><span class="line">cloud.init(&#123;</span><br><span class="line">  env: <span class="string">'wxbase1-bdeeac'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> db = cloud.database()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> t1Array = [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>]</span><br><span class="line"><span class="keyword">const</span> t2Array = []</span><br><span class="line"></span><br><span class="line"><span class="comment">//471ms</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> b = []</span><br><span class="line">  <span class="keyword">let</span> a = <span class="keyword">await</span> db.collection(<span class="string">'user'</span>)</span><br><span class="line">    .where(&#123;</span><br><span class="line">      t1: <span class="string">'1'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .get().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line">      b.push(res)</span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="keyword">return</span> b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1441ms</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a1 = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> t1 <span class="keyword">of</span> t1Array) &#123;</span><br><span class="line">    <span class="keyword">await</span> db.collection(<span class="string">'user'</span>)</span><br><span class="line">      .where(&#123;</span><br><span class="line">        t1: t1</span><br><span class="line">      &#125;).get().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        a1.push(res.data[<span class="number">0</span>])</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 474ms</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test3</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> tasks = t1Array.map(<span class="function"><span class="params">t1</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> temp = db.collection(<span class="string">'user'</span>)</span><br><span class="line">      .where(&#123;</span><br><span class="line">        t1: t1</span><br><span class="line">      &#125;).get()</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params"><span class="keyword">await</span> <span class="built_in">Promise</span>.all(tasks</span>)).<span class="params">reduce</span>(<span class="params">(acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      data: acc.data.concat(cur.data),</span><br><span class="line">      errMsg: acc.errMsg,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//496毫秒</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test4</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a1 = []</span><br><span class="line">  <span class="keyword">const</span> tasks = t1Array.map(<span class="function"><span class="params">t1</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> temp = db.collection(<span class="string">'user'</span>)</span><br><span class="line">      .where(&#123;</span><br><span class="line">        t1: t1</span><br><span class="line">      &#125;).get()</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> task <span class="keyword">of</span> tasks)&#123;</span><br><span class="line">    <span class="keyword">const</span> temp = <span class="keyword">await</span> task</span><br><span class="line">    a1.push(temp.data[<span class="number">0</span>])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 云函数入口函数</span></span><br><span class="line">exports.main = <span class="keyword">async</span>(event, context) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> test3()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中数组的<code>reduce(function sum())</code>方法，传递一个累加器函数，其中第一个参数相当于<code>sum</code>，第二个参数相当于<code>每一个数据</code>。</p>
+<p>如<code>test3()</code>处理的操作，可以将每一次返回的数组转化为一个数组</p>
+]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+      </tags>
   </entry>
   <entry>
     <title>基于BP神经网络的NBA球员薪资评估</title>
@@ -928,24 +921,10 @@
       </tags>
   </entry>
   <entry>
-    <title>go4it/面试各种知识点</title>
-    <url>/2020/10/08/go4it/%E9%9D%A2%E8%AF%95%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>10.12 字节data后端实习一面</p>
-<ol>
-<li>自我介绍</li>
-<li>项目中感觉到的难点</li>
-<li>linux系统常用的命令有哪些</li>
-<li>top 和 grep用过嘛</li>
-<li>进程之间通信，还有一个进程相关，我直接说操作系统范畴没学过，都不会</li>
-<li>TCP，UDP区别</li>
-<li>TCP三次握手</li>
-<li>HTTP状态码常用的，401是什么</li>
-<li>事务的特性有哪些</li>
-<li>MySQL索引的实现</li>
-<li>聚集索引和非聚集索引</li>
-<li>索引的循环前缀</li>
-<li>做题</li>
-</ol>
+    <title>How you doing?</title>
+    <url>/9999/02/13/hometop/</url>
+    <content><![CDATA[<p>欢迎各位网友来到的我的博客，</p>
+<p>这个博客用来记录一些开发中遇到的问题，和相关的分享~🥳</p>
 ]]></content>
   </entry>
   <entry>
@@ -986,244 +965,6 @@
       <tags>
         <tag>Java</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>(转)TCP三次握手四次挥手</title>
-    <url>/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>本文转载于<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F6Y3N1" title="https://blog.csdn.net/qzcsu">小书go<i class="fa fa-external-link"></i></span>的<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F6Y3N1L2FydGljbGUvZGV0YWlscy83Mjg2MTg5MQ==" title="https://blog.csdn.net/qzcsu/article/details/72861891">两张动图-彻底明白TCP的三次握手与四次挥手<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<h2 id="背景描述"><a href="#背景描述" class="headerlink" title="背景描述"></a>背景描述</h2><blockquote>
-<p>通过上一篇中网络模型中的<span class="exturl" data-url="aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXpjc3UvYXJ0aWNsZS9kZXRhaWxzLzcyODU5NDMx" title="http://blog.csdn.net/qzcsu/article/details/72859431">IP层的介绍<i class="fa fa-external-link"></i></span>，我们知道网络层，可以实现两个主机之间的通信。但是这并不具体，因为，真正进行通信的实体是在主机中的进程，是一个主机中的一个进程与另外一个主机中的一个进程在交换数据。IP协议虽然能把数据报文送到目的主机，但是并没有交付给主机的具体应用进程。而端到端的通信才应该是应用进程之间的通信。</p>
-<p>UDP，在传送数据前不需要先建立连接，远地的主机在收到UDP报文后也不需要给出任何确认。虽然UDP不提供可靠交付，但是正是因为这样，省去和很多的开销，使得它的速度比较快，比如一些对实时性要求较高的服务，就常常使用的是UDP。对应的应用层的协议主要有 DNS,TFTP,DHCP,SNMP,NFS 等。</p>
-<p>TCP，提供面向连接的服务，在传送数据之前必须先建立连接，数据传送完成后要释放连接。因此TCP是一种可靠的的运输服务，但是正因为这样，不可避免的增加了许多的开销，比如确认，流量控制等。对应的应用层的协议主要有 SMTP,TELNET,HTTP,FTP 等。</p>
-</blockquote>
-<hr>
-<h3 id="常用的熟知端口号"><a href="#常用的熟知端口号" class="headerlink" title="常用的熟知端口号"></a>常用的熟知端口号</h3><table>
-<thead>
-<tr>
-<th>应用程序</th>
-<th>FTP</th>
-<th>TFTP</th>
-<th>TELNET</th>
-<th>SMTP</th>
-<th>DNS</th>
-<th>HTTP</th>
-<th>SSH</th>
-<th>MYSQL</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>熟知端口</td>
-<td>21,20</td>
-<td>69</td>
-<td>23</td>
-<td>25</td>
-<td>53</td>
-<td>80</td>
-<td>22</td>
-<td>3306</td>
-</tr>
-<tr>
-<td>传输层协议</td>
-<td>TCP</td>
-<td>UDP</td>
-<td>TCP</td>
-<td>TCP</td>
-<td>UDP</td>
-<td>TCP</td>
-<td>TCP</td>
-<td>TCP</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="TCP的概述"><a href="#TCP的概述" class="headerlink" title="TCP的概述"></a>TCP的概述</h2><blockquote>
-<p>TCP把连接作为最基本的对象，每一条TCP连接都有两个端点，这种断点我们叫作套接字（socket），它的定义为端口号拼接到IP地址即构成了套接字，例如，若IP地址为192.3.4.16 而端口号为80，那么得到的套接字为192.3.4.16:80。</p>
-</blockquote>
-<h3 id="TCP报文首部"><a href="#TCP报文首部" class="headerlink" title="TCP报文首部"></a>TCP报文首部</h3><ol>
-<li>源端口和目的端口，各占2个字节，分别写入源端口和目的端口；</li>
-<li>序号，占4个字节，TCP连接中传送的字节流中的每个字节都按顺序编号。例如，一段报文的序号字段值是 301 ，而携带的数据共有100字段，显然下一个报文段（如果还有的话）的数据序号应该从401开始；</li>
-<li>确认号，占4个字节，是期望收到对方下一个报文的第一个数据字节的序号。例如，B收到了A发送过来的报文，其序列号字段是501，而数据长度是200字节，这表明B正确的收到了A发送的到序号700为止的数据。因此，B期望收到A的下一个数据序号是701，于是B在发送给A的确认报文段中把确认号置为701；</li>
-<li>数据偏移，占4位，它指出TCP报文的数据距离TCP报文段的起始处有多远；</li>
-<li>保留，占6位，保留今后使用，但目前应都位0；</li>
-<li>紧急URG，当URG=1，表明紧急指针字段有效。告诉系统此报文段中有紧急数据；</li>
-<li>确认ACK，仅当ACK=1时，确认号字段才有效。TCP规定，在连接建立后所有报文的传输都必须把ACK置1；</li>
-<li>推送PSH，当两个应用进程进行交互式通信时，有时在一端的应用进程希望在键入一个命令后立即就能收到对方的响应，这时候就将PSH=1；</li>
-<li>复位RST，当RST=1，表明TCP连接中出现严重差错，必须释放连接，然后再重新建立连接；</li>
-<li>同步SYN，在连接建立时用来同步序号。当SYN=1，ACK=0，表明是连接请求报文，若同意连接，则响应报文中应该使SYN=1，ACK=1；</li>
-<li>终止FIN，用来释放连接。当FIN=1，表明此报文的发送方的数据已经发送完毕，并且要求释放；</li>
-<li>窗口，占2字节，指的是通知接收方，发送本报文你需要有多大的空间来接受；</li>
-<li>检验和，占2字节，校验首部和数据这两部分；</li>
-<li>紧急指针，占2字节，指出本报文段中的紧急数据的字节数；</li>
-<li>选项，长度可变，定义一些其他的可选的参数。</li>
-</ol>
-<h3 id="TCP连接的建立（三次握手）"><a href="#TCP连接的建立（三次握手）" class="headerlink" title="TCP连接的建立（三次握手）"></a>TCP连接的建立（三次握手）</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA3MjA1NzA5MzY3?x-oss-process=image/format,png" alt="这里写图片描述"></p>
-<blockquote>
-<p><strong>最开始的时候客户端和服务器都是处于CLOSED状态。主动打开连接的为客户端，被动打开连接的是服务器。</strong></p>
-</blockquote>
-<ol>
-<li>TCP服务器进程先创建传输控制块TCB，时刻准备接受客户进程的连接请求，此时服务器就进入了LISTEN（监听）状态；</li>
-<li>TCP客户进程也是先创建传输控制块TCB，然后向服务器发出连接请求报文，这是报文首部中的同部位SYN=1，同时选择一个初始序列号 seq=x ，此时，TCP客户端进程进入了 SYN-SENT（同步已发送状态）状态。TCP规定，SYN报文段（SYN=1的报文段）不能携带数据，但需要消耗掉一个序号。</li>
-<li>TCP服务器收到请求报文后，如果同意连接，则发出确认报文。确认报文中应该 ACK=1，SYN=1，确认号是ack=x+1，同时也要为自己初始化一个序列号 seq=y，此时，TCP服务器进程进入了SYN-RCVD（同步收到）状态。这个报文也不能携带数据，但是同样要消耗一个序号。</li>
-<li>TCP客户进程收到确认后，还要向服务器给出确认。确认报文的ACK=1，ack=y+1，自己的序列号seq=x+1，此时，TCP连接建立，客户端进入ESTABLISHED（已建立连接）状态。TCP规定，ACK报文段可以携带数据，但是如果不携带数据则不消耗序号。</li>
-<li>当服务器收到客户端的确认后也进入ESTABLISHED状态，此后双方就可以开始通信了。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA1MTEwNDA1NjY2?x-oss-process=image/format,png" alt="三次握手"></li>
-</ol>
-<h4 id="为什么TCP客户端最后还要发送一次确认呢？"><a href="#为什么TCP客户端最后还要发送一次确认呢？" class="headerlink" title="为什么TCP客户端最后还要发送一次确认呢？"></a>为什么TCP客户端最后还要发送一次确认呢？</h4><blockquote>
-<p>一句话，主要防止已经失效的连接请求报文突然又传送到了服务器，从而产生错误。</p>
-<p>如果使用的是两次握手建立连接，假设有这样一种场景，客户端发送了第一个请求连接并且没有丢失，只是因为在网络结点中滞留的时间太长了，由于TCP的客户端迟迟没有收到确认报文，以为服务器没有收到，此时重新向服务器发送这条报文，此后客户端和服务器经过两次握手完成连接，传输数据，然后关闭连接。此时此前滞留的那一次请求连接，网络通畅了到达了服务器，这个报文本该是失效的，但是，两次握手的机制将会让客户端和服务器再次建立连接，这将导致不必要的错误和资源的浪费。</p>
-<p>如果采用的是三次握手，就算是那一次失效的报文传送过来了，服务端接受到了那条失效报文并且回复了确认报文，但是客户端不会再次发出确认。由于服务器收不到确认，就知道客户端并没有请求连接。</p>
-</blockquote>
-<h3 id="TCP连接的释放（四次挥手）"><a href="#TCP连接的释放（四次挥手）" class="headerlink" title="TCP连接的释放（四次挥手）"></a>TCP连接的释放（四次挥手）</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA3MjA1NzU2MjU1?x-oss-process=image/format,png" alt="这里写图片描述"></p>
-<blockquote>
-<p>数据传输完毕后，双方都可释放连接。最开始的时候，客户端和服务器都是处于ESTABLISHED状态，然后客户端主动关闭，服务器被动关闭。</p>
-</blockquote>
-<ol>
-<li>客户端进程发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN=1，其序列号为seq=u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入FIN-WAIT-1（终止等待1）状态。 TCP规定，FIN报文段即使不携带数据，也要消耗一个序号。</li>
-<li>服务器收到连接释放报文，发出确认报文，ACK=1，ack=u+1，并且带上自己的序列号seq=v，此时，服务端就进入了CLOSE-WAIT（关闭等待）状态。TCP服务器通知高层的应用进程，客户端向服务器的方向就释放了，这时候处于半关闭状态，即客户端已经没有数据要发送了，但是服务器若发送数据，客户端依然要接受。这个状态还要持续一段时间，也就是整个CLOSE-WAIT状态持续的时间。</li>
-<li>客户端收到服务器的确认请求后，此时，客户端就进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文（在这之前还需要接受服务器发送的最后的数据）。</li>
-<li>服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，FIN=1，ack=u+1，由于在半关闭状态，服务器很可能又发送了一些数据，假定此时的序列号为seq=w，此时，服务器就进入了LAST-ACK（最后确认）状态，等待客户端的确认。</li>
-<li>客户端收到服务器的连接释放报文后，必须发出确认，ACK=1，ack=w+1，而自己的序列号是seq=u+1，此时，客户端就进入了TIME-WAIT（时间等待）状态。注意此时TCP连接还没有释放，必须经过2∗ *∗MSL（最长报文段寿命）的时间后，当客户端撤销相应的TCB后，才进入CLOSED状态。</li>
-<li>服务器只要收到了客户端发出的确认，立即进入CLOSED状态。同样，撤销TCB后，就结束了这次的TCP连接。可以看到，服务器结束TCP连接的时间要比客户端早一些。</li>
-</ol>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA2MDg0ODUxMjcy?x-oss-process=image/format,png" alt="四次挥手"></p>
-<h4 id="为什么客户端最后还要等待2MSL？"><a href="#为什么客户端最后还要等待2MSL？" class="headerlink" title="为什么客户端最后还要等待2MSL？"></a>为什么客户端最后还要等待2MSL？</h4><blockquote>
-<p>MSL（Maximum Segment Lifetime），TCP允许不同的实现可以设置不同的MSL值。</p>
-<p>第一，保证客户端发送的最后一个ACK报文能够到达服务器，因为这个ACK报文可能丢失，站在服务器的角度看来，我已经发送了FIN+ACK报文请求断开了，客户端还没有给我回应，应该是我发送的请求断开报文它没有收到，于是服务器又会重新发送一次，而客户端就能在这个2MSL时间段内收到这个重传的报文，接着给出回应报文，并且会重启2MSL计时器。</p>
-<p>第二，防止类似与“三次握手”中提到了的“已经失效的连接请求报文段”出现在本连接中。客户端发送完最后一个确认报文后，在这个2MSL时间中，就可以使本连接持续的时间内所产生的所有报文段都从网络中消失。这样新的连接中不会出现旧连接的请求报文。</p>
-</blockquote>
-<blockquote>
-<p>为什么建立连接是三次握手，关闭连接确是四次挥手呢？</p>
-<p>建立连接的时候， 服务器在LISTEN状态下，收到建立连接请求的SYN报文后，把ACK和SYN放在一个报文里发送给客户端。<br>而关闭连接时，服务器收到对方的FIN报文时，仅仅表示对方不再发送数据了但是还能接收数据，而自己也未必全部数据都发送给对方了，所以己方可以立即关闭，也可以发送一些数据给对方后，再发送FIN报文给对方来表示同意现在关闭连接，因此，己方ACK和FIN一般都会分开发送，从而导致多了一次。</p>
-</blockquote>
-<h4 id="如果已经建立了连接，但是客户端突然出现故障了怎么办？"><a href="#如果已经建立了连接，但是客户端突然出现故障了怎么办？" class="headerlink" title="如果已经建立了连接，但是客户端突然出现故障了怎么办？"></a>如果已经建立了连接，但是客户端突然出现故障了怎么办？</h4><blockquote>
-<p>TCP还设有一个保活计时器，显然，客户端如果出现故障，服务器不能一直等下去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时器，时间通常是设置为2小时，若两小时还没有收到客户端的任何数据，服务器就会发送一个探测报文段，以后每隔75秒发送一次。若一连发送10个探测报文仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hexo如何实现不用新插件置顶文章</title>
-    <url>/2020/02/14/hexo/hexo%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%8D%E7%94%A8%E6%96%B0%E6%8F%92%E4%BB%B6%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<blockquote>
-<p>基于hexo 4 ，NexT 7</p>
-</blockquote>
-<p>最近想实现一个置顶功能，网查之后发现可以安装插件，我的方法直接修改时间为9999然后不显示时间来规避这个问题。</p>
-<a id="more"></a>
-
-<h1 id="修改post显示文件"><a href="#修改post显示文件" class="headerlink" title="修改post显示文件"></a>修改post显示文件</h1><p>修改<code>themes/next/layout/_macro/post.swig</code>文件，在<code>&lt;div class=&quot;post-meta&quot;&gt;</code>下面添加</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>来用于显示置顶二字。</p>
-<p>在下面<code>- if theme.post_meta.created_at</code>处添加判断条件后变为<code>- if theme.post_meta.created_at and not post.top</code>即可。</p>
-<p>最后效果如下:</p>
-<p><img src="/2020/02/14/hexo/hexo%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%8D%E7%94%A8%E6%96%B0%E6%8F%92%E4%BB%B6%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/top.png" alt="top"></p>
-<h1 id="修改archives显示文件"><a href="#修改archives显示文件" class="headerlink" title="修改archives显示文件"></a>修改archives显示文件</h1><p>修改<code>themes/next/layout/_macro/post-collapse.swig</code>文件</p>
-<p>目的让之前显示年份的地方改成“置顶”，并且小字部分显示年份</p>
-<p>代码如下:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% macro render(posts) %&#125;</span><br><span class="line">&#123;%- set current_year &#x3D; &#39;1970&#39; %&#125;</span><br><span class="line">&#123;%- set if_have_top &#x3D; false %&#125;</span><br><span class="line">&#123;%- for post in posts.toArray() %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;%- set year &#x3D; date(post.date, &#39;YYYY&#39;) %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;%- if year &gt; 9000 and not if_have_top %&#125;</span><br><span class="line">    &#123;%- set current_year &#x3D; &#39;置顶&#39; %&#125;</span><br><span class="line">    &#123;%- set if_have_top &#x3D; true %&#125;</span><br><span class="line">    &lt;div class&#x3D;&quot;collection-year&quot;&gt;</span><br><span class="line">      &lt;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125; class&#x3D;&quot;collection-header&quot;&gt;&#123;&#123; current_year &#125;&#125;&lt;&#x2F;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    &#123;%- if year !&#x3D;&#x3D; current_year and year &lt;&#x3D; 9000 %&#125;</span><br><span class="line">      &#123;%- set current_year &#x3D; year %&#125;</span><br><span class="line">      &lt;div class&#x3D;&quot;collection-year&quot;&gt;</span><br><span class="line">        &lt;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125; class&#x3D;&quot;collection-header&quot;&gt;&#123;&#123; current_year &#125;&#125;&lt;&#x2F;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">  &#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">  &lt;article itemscope itemtype&#x3D;&quot;http:&#x2F;&#x2F;schema.org&#x2F;Article&quot;&gt;</span><br><span class="line">    &lt;header class&#x3D;&quot;post-header&quot;&gt;</span><br><span class="line">    </span><br><span class="line">      &#123;%- if year &gt; 9000 %&#125;</span><br><span class="line">        &lt;div class&#x3D;&quot;post-meta&quot;&gt;</span><br><span class="line">          &lt;time itemprop&#x3D;&quot;dateCreated&quot;</span><br><span class="line">                datetime&#x3D;&quot;&#123;&#123; moment(post.updated).format() &#125;&#125;&quot;</span><br><span class="line">                content&#x3D;&quot;&#123;&#123; date(post.updated, config.date_format) &#125;&#125;&quot;&gt;</span><br><span class="line">            &#123;&#123; date(post.updated, &#39;YYYY-MM-DD&#39;) &#125;&#125;</span><br><span class="line">          &lt;&#x2F;time&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &#123;% else %&#125;</span><br><span class="line">        &lt;div class&#x3D;&quot;post-meta&quot;&gt;</span><br><span class="line">          &lt;time itemprop&#x3D;&quot;dateCreated&quot;</span><br><span class="line">                datetime&#x3D;&quot;&#123;&#123; moment(post.date).format() &#125;&#125;&quot;</span><br><span class="line">                content&#x3D;&quot;&#123;&#123; date(post.date, config.date_format) &#125;&#125;&quot;&gt;</span><br><span class="line">            &#123;&#123; date(post.date, &#39;MM-DD&#39;) &#125;&#125;</span><br><span class="line">          &lt;&#x2F;time&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">      &lt;&#123;%- if theme.seo %&#125;h3&#123;% else %&#125;h2&#123;%- endif %&#125; class&#x3D;&quot;post-title&quot;&gt;</span><br><span class="line">        &#123;%- if post.link %&#125;&#123;# Link posts #&#125;</span><br><span class="line">          &#123;%- set postTitleIcon &#x3D; &#39;&lt;i class&#x3D;&quot;fa fa-external-link&quot;&gt;&lt;&#x2F;i&gt;&#39; %&#125;</span><br><span class="line">          &#123;%- set postText &#x3D; post.title or post.link %&#125;</span><br><span class="line">          &#123;&#123; next_url(post.link, postText + postTitleIcon, &#123;class: &#39;post-title-link post-title-link-external&#39;, itemprop: &#39;url&#39;&#125;) &#125;&#125;</span><br><span class="line">        &#123;% else %&#125;</span><br><span class="line">          &lt;a class&#x3D;&quot;post-title-link&quot; href&#x3D;&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot; itemprop&#x3D;&quot;url&quot;&gt;</span><br><span class="line">            &lt;span itemprop&#x3D;&quot;name&quot;&gt;&#123;&#123; post.title or __(&#39;post.untitled&#39;) &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">          &lt;&#x2F;a&gt;</span><br><span class="line">        &#123;%- endif %&#125;</span><br><span class="line">      &lt;&#x2F;&#123;%- if theme.seo %&#125;h3&#123;% else %&#125;h2&#123;%- endif %&#125;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">  &lt;&#x2F;article&gt;</span><br><span class="line"></span><br><span class="line">&#123;%- endfor %&#125;</span><br><span class="line">&#123;% endmacro %&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="修改想要置顶的post"><a href="#修改想要置顶的post" class="headerlink" title="修改想要置顶的post"></a>修改想要置顶的post</h1><p>在想要置顶的top文件下加入<code>top: true</code>，并将<code>date</code>改成9000年以上即可，修改<code>updated</code>为你想要的修改的时间即可。</p>
-<blockquote>
-<p>参考：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuemh5b25nLmNuL3Bvc3RzL2ZjMjIv" title="https://www.zhyong.cn/posts/fc22/">hexo-next 添加文章置顶功能和评分功能等<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>修改样式</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用nvm管理node版本</title>
-    <url>/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/</url>
-    <content><![CDATA[<p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用mvn下载老版本的node，然后使用老版本的node运行。</p>
-<a id="more"></a>
-
-<ol>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NvcmV5YnV0bGVyL252bS13aW5kb3dzL3JlbGVhc2Vz" title="https://github.com/coreybutler/nvm-windows/releases">nvm-windows下载<i class="fa fa-external-link"></i></span> nvm实际上只能在linux/mac系统上运行，如果windows系统需要下载这个nvm-setup.zip，安装时会自动配好环境变量。</p>
-</li>
-<li><p>安装nvm 直接安装即可，第一个目录是以后个版本nodejs的安装目录，第二个目录实际上是第一个目录的快捷方式.</p>
-</li>
-</ol>
-<p>更改setting.txt文件，修改nodejs的镜像和npm的镜像,注意这里阿里淘宝镜像源已经都更新为<strong>https</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root: D:\env\nvm</span><br><span class="line">path: D:\env\nvm\nodejs</span><br><span class="line">node_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>通过nvm安装node<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm -v // 查看nvm版本</span><br><span class="line">nvm install 8.12.0 // 下载指定版本 </span><br><span class="line">nvm install latest安装最新版本</span><br><span class="line">nvm use 8.12.0 // 使用指定版本</span><br><span class="line">nvm ls // 查看已经安装的nodejs版本</span><br><span class="line">node -v // 查看nodejs版本</span><br></pre></td></tr></table></figure></li>
-<li>安装全局npm<br>　　安装node的时候，npm其实也已经一起安装了。因为nvm可以管理多个版本的node，如果每次添加一个node版本都要安装一堆的包很麻烦,如果有一个npm可以让各个版本的node共用，就不会这么麻烦了，这就是为什么我们要配置一个全局的npm的原因。简单的三步就可以配置一个全局的npm。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1.  npm config <span class="built_in">set</span> prefix <span class="string">"D:\env\nvm"</span>//配置用npm下载包时全局安装的包路径</span><br><span class="line">2.  npm install npm -g//安装全局npm,不同的node都使用这个npm，想更新全局的npm的话首先删除全局路径(就是上一行命令的地址,可以使用npm config ls查看)下的npm,再执行一次这个命令即可</span><br><span class="line">3.  在用户变量中添加 NPM_HOME=D:\env\nvm，path中添加%NPM-HOME%</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>node</category>
-      </categories>
-      <tags>
-        <tag>nvm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo踩坑记录(持续更新)</title>
-    <url>/2018/12/30/hexo/hexo%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h3 id="Unhandled-rejection-Template-render-error-unknown-path-parseIf-expected-elif-else-or-endif-got-end-of-file"><a href="#Unhandled-rejection-Template-render-error-unknown-path-parseIf-expected-elif-else-or-endif-got-end-of-file" class="headerlink" title="Unhandled rejection Template render error: (unknown path) parseIf: expected elif, else, or endif, got end of file"></a>Unhandled rejection Template render error: (unknown path) parseIf: expected elif, else, or endif, got end of file</h3><p>我出现这个问题的原因竟然是在markdown中出现如下代码，应该是吧大括号和百分号读取了。</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`&#123;%if ****%&#125;`</span></span><br></pre></td></tr></table></figure>
-
-<p>在百分号前加上转移符号<code>\</code>即可</p>
-<h3 id="网页加载慢可能问题"><a href="#网页加载慢可能问题" class="headerlink" title="网页加载慢可能问题"></a>网页加载慢可能问题</h3><p>用Chrome network检测工具发现font的cdn是国外，吧<code>_config.yml</code>文件<code>font</code>改成false即可，2020年初这个时间段国内还没有搜索到字体镜像。所以要想改字体还是放自己服务器上吧。</p>
-<h3 id="只是添加文章后，主页无法加载并且无报错"><a href="#只是添加文章后，主页无法加载并且无报错" class="headerlink" title="只是添加文章后，主页无法加载并且无报错"></a>只是添加文章后，主页无法加载并且无报错</h3><p>原因是在文章正文中有<code>&lt;***&gt;</code>，应该是next或者hexo会自动解析尖括号。</p>
-<h3 id="Hexo-部署到-Github-Pages-文件夹大小写问题"><a href="#Hexo-部署到-Github-Pages-文件夹大小写问题" class="headerlink" title="Hexo 部署到 Github Pages 文件夹大小写问题"></a>Hexo 部署到 Github Pages 文件夹大小写问题</h3><p><span class="exturl" data-url="aHR0cHM6Ly9zZWdtZW50ZmF1bHQuY29tL3EvMTAxMDAwMDAwNDMzOTg1MQ==" title="https://segmentfault.com/q/1010000004339851">https://segmentfault.com/q/1010000004339851<i class="fa fa-external-link"></i></span></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Anaconda修改清华镜像源(全)</title>
-    <url>/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/</url>
-    <content><![CDATA[<h1 id="全部镜像源"><a href="#全部镜像源" class="headerlink" title="全部镜像源"></a>全部镜像源</h1><blockquote>
-<p>参考<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2hlbHAvYW5hY29uZGEv" title="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">Anaconda 镜像使用帮助<i class="fa fa-external-link"></i></span>，配置还是要看官网呀。</p>
-</blockquote>
-<p>大家在安装anaconda之后都会配置镜像源，但是网上好多教程都只是配置</p>
-<p><strong>但这是不够的</strong>。</p>
-<p>以下为半错配置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br></pre></td></tr></table></figure>
-
-<p>刚才在安装pytorch时候发现速度很慢。</p>
-<a id="more"></a>
-
-<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/TG0Z0%7B3NQI7%60T$IXJ@RIQUT.png" alt="img"></p>
-<p>回看之前的提示，pytorch的本体的源并不是清华的。</p>
-<p>下载速度感人。</p>
-<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/suduganren.png" alt="img"></p>
-<p>直接去清华镜像源网站上看看吧。</p>
-<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/image-20201021152433721.png" alt="image-20201021152433721"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda</span><br><span class="line">default_channels:</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;pro</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  msys2: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  bioconda: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  menpo: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  pytorch: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  simpleitk: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br></pre></td></tr></table></figure>
-
-<p>问题是这个channels的配置文件保存在哪那？各系统都可以通过修改用户目录下的 <code>.condarc</code> 文件。Windows 用户无法直接创建名为 <code>.condarc</code> 的文件，可先执行 <code>conda config --set show_channel_urls yes</code> 生成该文件之后再修改。</p>
-<ul>
-<li><p>Windows：<code>‪C:\Users\{你的用户名}\.condarc</code></p>
-</li>
-<li><p>Linux/Mac：<code>~/.condarc</code></p>
-</li>
-</ul>
-<p>说白了还是用户文件下，编辑这个文件将内容粘贴即可。</p>
-<p>接着根据清华镜像源的说明。</p>
-<ul>
-<li><p>运行 <code>conda clean -i</code> 清除索引缓存，保证用的是镜像站提供的索引。</p>
-</li>
-<li><p>运行 <code>conda create -n myenv numpy</code> 测试一下吧。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
   </entry>
   <entry>
     <title>Java实现俄罗斯联机俄罗斯方块</title>
@@ -1269,123 +1010,114 @@
       </tags>
   </entry>
   <entry>
-    <title>windows下找到linux的感觉</title>
-    <url>/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。</p>
-<ul>
-<li>WSL 适用于linux的windows子系统</li>
-<li>升级到wsl2</li>
-<li>windows terminal</li>
-<li>zsh</li>
-</ul>
+    <title>Hexo踩坑记录(持续更新)</title>
+    <url>/2018/12/30/hexo/hexo%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="Unhandled-rejection-Template-render-error-unknown-path-parseIf-expected-elif-else-or-endif-got-end-of-file"><a href="#Unhandled-rejection-Template-render-error-unknown-path-parseIf-expected-elif-else-or-endif-got-end-of-file" class="headerlink" title="Unhandled rejection Template render error: (unknown path) parseIf: expected elif, else, or endif, got end of file"></a>Unhandled rejection Template render error: (unknown path) parseIf: expected elif, else, or endif, got end of file</h3><p>我出现这个问题的原因竟然是在markdown中出现如下代码，应该是吧大括号和百分号读取了。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`&#123;%if ****%&#125;`</span></span><br></pre></td></tr></table></figure>
+
+<p>在百分号前加上转移符号<code>\</code>即可</p>
+<h3 id="网页加载慢可能问题"><a href="#网页加载慢可能问题" class="headerlink" title="网页加载慢可能问题"></a>网页加载慢可能问题</h3><p>用Chrome network检测工具发现font的cdn是国外，吧<code>_config.yml</code>文件<code>font</code>改成false即可，2020年初这个时间段国内还没有搜索到字体镜像。所以要想改字体还是放自己服务器上吧。</p>
+<h3 id="只是添加文章后，主页无法加载并且无报错"><a href="#只是添加文章后，主页无法加载并且无报错" class="headerlink" title="只是添加文章后，主页无法加载并且无报错"></a>只是添加文章后，主页无法加载并且无报错</h3><p>原因是在文章正文中有<code>&lt;***&gt;</code>，应该是next或者hexo会自动解析尖括号。</p>
+<h3 id="Hexo-部署到-Github-Pages-文件夹大小写问题"><a href="#Hexo-部署到-Github-Pages-文件夹大小写问题" class="headerlink" title="Hexo 部署到 Github Pages 文件夹大小写问题"></a>Hexo 部署到 Github Pages 文件夹大小写问题</h3><p><span class="exturl" data-url="aHR0cHM6Ly9zZWdtZW50ZmF1bHQuY29tL3EvMTAxMDAwMDAwNDMzOTg1MQ==" title="https://segmentfault.com/q/1010000004339851">https://segmentfault.com/q/1010000004339851<i class="fa fa-external-link"></i></span></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用nvm管理node版本</title>
+    <url>/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用mvn下载老版本的node，然后使用老版本的node运行。</p>
 <a id="more"></a>
 
-<h2 id="1-安装WSl"><a href="#1-安装WSl" class="headerlink" title="1. 安装WSl"></a>1. 安装WSl</h2><p>WSL是在windows下进行开发，并使用linux中的bash等功能的最好的解决方案之一。</p>
-<h2 id="1-1-打开系统功能"><a href="#1-1-打开系统功能" class="headerlink" title="1.1 打开系统功能"></a>1.1 打开系统功能</h2><p><strong>控制面板\所有控制面板项\程序和功能</strong> 中选择 <strong>启用或者关闭Windows功能</strong></p>
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png" alt="image-20200912150736512"></p>
-<p>然后勾选 <strong>适用于Linux的Windows子系统</strong> </p>
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png" alt="image-20200912150852217"></p>
-<p>经过系统一段时间的自动下载后，重启计算机。</p>
-<!-- more -->
-
-<h2 id="1-2-下载Ubuntu"><a href="#1-2-下载Ubuntu" class="headerlink" title="1.2 下载Ubuntu"></a>1.2 下载Ubuntu</h2><h3 id="1-2-1-下载"><a href="#1-2-1-下载" class="headerlink" title="1.2.1 下载"></a>1.2.1 下载</h3><p>直接在<strong>Microsoft store</strong>中搜索<strong>Ubuntu</strong>，并启动即可。我使用的是18.04版本。</p>
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png" alt="image-20200912151114333"></p>
-<h3 id="1-2-2-设置新分发版"><a href="#1-2-2-设置新分发版" class="headerlink" title="1.2.2 设置新分发版"></a>1.2.2 设置新分发版</h3><p>首次启动新安装的 Linux 分发版时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，以便文件解压缩并存储到电脑上。 未来的所有启动时间应不到一秒。然后，需要为新的 Linux 分发版创建用户帐户和密码。</p>
-<p><img src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png" alt="Windows 控制台中的 Ubuntu 解包"></p>
-<h2 id="1-3-更新WSL到WSL2"><a href="#1-3-更新WSL到WSL2" class="headerlink" title="1.3 更新WSL到WSL2"></a>1.3 更新WSL到WSL2</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvd3NsMi1pbmRleA==" title="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-index">参考微软官方文档<i class="fa fa-external-link"></i></span></p>
-<h3 id="1-3-1-启用“虚拟机平台”可选组件"><a href="#1-3-1-启用“虚拟机平台”可选组件" class="headerlink" title="1.3.1 启用“虚拟机平台”可选组件"></a>1.3.1 启用“虚拟机平台”可选组件</h3><p>安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。</p>
-<p>以管理员身份打开 PowerShell 并运行：</p>
-<p>PowerShell复制</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
-
-<p><strong>重新启动</strong>计算机，以完成 WSL 安装并更新到 WSL 2。</p>
-<h3 id="1-3-2-将-WSL-2-设置为默认版本"><a href="#1-3-2-将-WSL-2-设置为默认版本" class="headerlink" title="1.3.2 将 WSL 2 设置为默认版本"></a>1.3.2 将 WSL 2 设置为默认版本</h3><p>以管理员的身份打开 PowerShell，然后在安装新的 Linux 发行版时运行以下命令，将 WSL 2 设置为默认版本：</p>
-<p>PowerShell复制</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p>运行该命令后，你可能会看到此消息：<code>WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel</code>。 跟随链接（<span class="exturl" data-url="aHR0cHM6Ly9ha2EubXMvd3NsMmtlcm5lbO+8ie+8jOWcqOaWh+aho+S4reWuieijheadpeiHquivpemhtemdoueahA==" title="https://aka.ms/wsl2kernel），在文档中安装来自该页面的">https://aka.ms/wsl2kernel），在文档中安装来自该页面的<i class="fa fa-external-link"></i></span> MSI，以便在计算机上安装 Linux 内核供 WSL 2 使用。 安装内核后，请再次运行该命令，该命令应会成功完成而不显示消息。</p>
-<p> 备注</p>
-<p>从 WSL 1 更新到 WSL 2 可能需要几分钟才能完成，具体取决于目标分发版的大小。 如果从 Windows 10 周年更新或创意者更新运行 WSL 1 的旧（历史）安装，可能会遇到更新错误。 按照这些说明<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvaW5zdGFsbC1sZWdhY3kjdW5pbnN0YWxsaW5ncmVtb3ZpbmctdGhlLWxlZ2FjeS1kaXN0cm8=" title="https://docs.microsoft.com/zh-cn/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro">卸载并删除任何旧分发<i class="fa fa-external-link"></i></span>。</p>
-<p>如果 <code>wsl --set-default-version</code> 结果为无效命令，请输入 <code>wsl --help</code>。 如果 <code>--set-default-version</code> 未列出，则表示你的 OS 不支持它，你需要更新到版本 1903（内部版本 18362）或更高版本。</p>
-<h3 id="1-3-3-将分发版版本设置为-WSL-1-或-WSL-2"><a href="#1-3-3-将分发版版本设置为-WSL-1-或-WSL-2" class="headerlink" title="1.3.3 将分发版版本设置为 WSL 1 或 WSL 2"></a>1.3.3 将分发版版本设置为 WSL 1 或 WSL 2</h3><p>可打开 PowerShell 命令行并输入以下命令（仅在 <span class="exturl" data-url="bXMtc2V0dGluZ3M6d2luZG93c3VwZGF0ZQ==" title="ms-settings:windowsupdate">Windows 内部版本 18362 或更高版本<i class="fa fa-external-link"></i></span>中可用），检查分配给每个已安装的 Linux 分发版的 WSL 版本：<code>wsl -l -v</code></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> -<span class="literal">-verbose</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png" alt="image-20200912151921601"></p>
-<p>若要将分发版设置为受某一 WSL 版本支持，请运行：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> &lt;distribution name&gt; &lt;versionNumber&gt;</span><br></pre></td></tr></table></figure>
-
-<p>请确保将 <code>&lt;distribution name&gt;</code> 替换为你的分发版的实际名称，并将 <code>&lt;versionNumber&gt;</code> 替换为数字“1”或“2”。 可以随时更改回 WSL 1，方法是运行与上面相同的命令，但将“2”替换为“1”。</p>
-<p><strong>我这里就是运行:</strong></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> Ubuntu<span class="literal">-18</span>.<span class="number">04</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p>此外，如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p>这会将安装的任何新分发版的版本设置为 WSL 2。</p>
-<h2 id="1-4-配置Ubuntu默认镜像源"><a href="#1-4-配置Ubuntu默认镜像源" class="headerlink" title="1.4 配置Ubuntu默认镜像源"></a>1.4 配置Ubuntu默认镜像源</h2><h3 id="1-4-1-备份并更新"><a href="#1-4-1-备份并更新" class="headerlink" title="1.4.1 备份并更新"></a>1.4.1 备份并更新</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt  <span class="comment">#进入配置文件所在目录</span></span><br><span class="line">cp sources.list sources.list.bak  <span class="comment">#备份配置文件</span></span><br><span class="line">vim sources.list  <span class="comment">#编辑配置文件</span></span><br></pre></td></tr></table></figure>
-
-<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYWxpeXVuLmNvbS9taXJyb3IvdWJ1bnR1P3NwbT1hMmM2aC4xMzY1MTEwMi4wLjAuM2UyMjFiMTFReGFMYkY=" title="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11QxaLbF">参考阿里云Ubuntu镜像源配置方法<i class="fa fa-external-link"></i></span></p>
-<p>将对应的代码粘贴进去。</p>
-<p><strong>ubuntu 18.04(bionic) 配置如下</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-
-<p>这里如果在vim直接粘贴会出错。要不检查错误，还可以打开ubuntu的实际硬盘位置</p>
-<p><code>C:\Users\%USERNAME%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code></p>
-<p>这个就是 <strong>Ubuntu</strong> WSL版的根目录,接着到 <strong>etc\apt</strong> 下找到 <strong>sources.list</strong> 用之前贴的配置文件覆盖即可.接着更新数据源</p>
-<h3 id="1-4-2-更新了镜像源之后，更新apt和其他软件："><a href="#1-4-2-更新了镜像源之后，更新apt和其他软件：" class="headerlink" title="1.4.2 更新了镜像源之后，更新apt和其他软件："></a>1.4.2 更新了镜像源之后，更新apt和其他软件：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update  <span class="comment">#更新源  </span></span><br><span class="line">sudo apt-get upgrade  <span class="comment">#更新软件</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="1-5-更改Ubuntu实际位置到d盘"><a href="#1-5-更改Ubuntu实际位置到d盘" class="headerlink" title="1.5 更改Ubuntu实际位置到d盘"></a>1.5 更改Ubuntu实际位置到d盘</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZV9qYWNrZ2cvYXJ0aWNsZS9kZXRhaWxzLzEwNjczODg3OA==" title="https://blog.csdn.net/lee_jackgg/article/details/106738878">此步骤参考CSDN我的大神666Windows10子系统(WSL)修改安装目录<i class="fa fa-external-link"></i></span></p>
-<p>只要把ubuntu版本改成对应的即可。</p>
-<h3 id="1-5-1-首先查看所有分发版本"><a href="#1-5-1-首先查看所有分发版本" class="headerlink" title="1.5.1 首先查看所有分发版本"></a>1.5.1 首先查看所有分发版本</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl <span class="literal">-l</span> -<span class="literal">-all</span>  <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>  NAME STATE VERSION</p>
-<p> * Ubuntu-20.04 Running 2</p>
+<ol>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NvcmV5YnV0bGVyL252bS13aW5kb3dzL3JlbGVhc2Vz" title="https://github.com/coreybutler/nvm-windows/releases">nvm-windows下载<i class="fa fa-external-link"></i></span> nvm实际上只能在linux/mac系统上运行，如果windows系统需要下载这个nvm-setup.zip，安装时会自动配好环境变量。</p>
+</li>
+<li><p>安装nvm 直接安装即可，第一个目录是以后个版本nodejs的安装目录，第二个目录实际上是第一个目录的快捷方式.</p>
+</li>
+</ol>
+<p>更改setting.txt文件，修改nodejs的镜像和npm的镜像,注意这里阿里淘宝镜像源已经都更新为<strong>https</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root: D:\env\nvm</span><br><span class="line">path: D:\env\nvm\nodejs</span><br><span class="line">node_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>通过nvm安装node<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm -v // 查看nvm版本</span><br><span class="line">nvm install 8.12.0 // 下载指定版本 </span><br><span class="line">nvm install latest安装最新版本</span><br><span class="line">nvm use 8.12.0 // 使用指定版本</span><br><span class="line">nvm ls // 查看已经安装的nodejs版本</span><br><span class="line">node -v // 查看nodejs版本</span><br></pre></td></tr></table></figure></li>
+<li>安装全局npm<br>　　安装node的时候，npm其实也已经一起安装了。因为nvm可以管理多个版本的node，如果每次添加一个node版本都要安装一堆的包很麻烦,如果有一个npm可以让各个版本的node共用，就不会这么麻烦了，这就是为什么我们要配置一个全局的npm的原因。简单的三步就可以配置一个全局的npm。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1.  npm config <span class="built_in">set</span> prefix <span class="string">"D:\env\nvm"</span>//配置用npm下载包时全局安装的包路径</span><br><span class="line">2.  npm install npm -g//安装全局npm,不同的node都使用这个npm，想更新全局的npm的话首先删除全局路径(就是上一行命令的地址,可以使用npm config ls查看)下的npm,再执行一次这个命令即可</span><br><span class="line">3.  在用户变量中添加 NPM_HOME=D:\env\nvm，path中添加%NPM-HOME%</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>nvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Anaconda修改清华镜像源(全)</title>
+    <url>/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/</url>
+    <content><![CDATA[<h1 id="全部镜像源"><a href="#全部镜像源" class="headerlink" title="全部镜像源"></a>全部镜像源</h1><blockquote>
+<p>参考<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2hlbHAvYW5hY29uZGEv" title="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">Anaconda 镜像使用帮助<i class="fa fa-external-link"></i></span>，配置还是要看官网呀。</p>
 </blockquote>
-<h3 id="1-5-2-导出分发版为tar文件到d盘"><a href="#1-5-2-导出分发版为tar文件到d盘" class="headerlink" title="1.5.2 导出分发版为tar文件到d盘"></a>1.5.2 导出分发版为tar文件到d盘</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-export</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
+<p>大家在安装anaconda之后都会配置镜像源，但是网上好多教程都只是配置</p>
+<p><strong>但这是不够的</strong>。</p>
+<p>以下为半错配置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br></pre></td></tr></table></figure>
 
-<h5 id="注销当前分发版"><a href="#注销当前分发版" class="headerlink" title="注销当前分发版"></a>注销当前分发版</h5><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-unregister</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span></span><br></pre></td></tr></table></figure>
+<p>刚才在安装pytorch时候发现速度很慢。</p>
+<a id="more"></a>
 
-<h3 id="1-5-3-重新导入并安装分发版在d-ubuntu"><a href="#1-5-3-重新导入并安装分发版在d-ubuntu" class="headerlink" title="1.5.3 重新导入并安装分发版在d:\ubuntu"></a>1.5.3 重新导入并安装分发版在d:\ubuntu</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-import</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> d:\ubuntu d:\ubuntu20.<span class="number">04</span>.tar -<span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/TG0Z0%7B3NQI7%60T$IXJ@RIQUT.png" alt="img"></p>
+<p>回看之前的提示，pytorch的本体的源并不是清华的。</p>
+<p>下载速度感人。</p>
+<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/suduganren.png" alt="img"></p>
+<p>直接去清华镜像源网站上看看吧。</p>
+<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/image-20201021152433721.png" alt="image-20201021152433721"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda</span><br><span class="line">default_channels:</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;pro</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  msys2: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  bioconda: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  menpo: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  pytorch: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  simpleitk: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-5-4-设置默认登陆用户为安装时用户名"><a href="#1-5-4-设置默认登陆用户为安装时用户名" class="headerlink" title="1.5.4 设置默认登陆用户为安装时用户名"></a>1.5.4 设置默认登陆用户为安装时用户名</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ubuntu2004 config -<span class="literal">-default</span><span class="literal">-user</span> Username</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-5-5-删除tar文件-可选"><a href="#1-5-5-删除tar文件-可选" class="headerlink" title="1.5.5 删除tar文件(可选)"></a>1.5.5 删除tar文件(可选)</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">del d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-Windows-Terminal中使用WSL"><a href="#2-Windows-Terminal中使用WSL" class="headerlink" title="2. Windows Terminal中使用WSL"></a>2. Windows Terminal中使用WSL</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>直接在Microsoft Store中搜索并安装即可。</p>
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png" alt="image-20200912153621967"></p>
-<p>安装后应该可以识别到wsl，如果没有识别，可以在设置中进行如下配置：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">"list":</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"guid"</span>: <span class="string">"&#123;c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40&#125;"</span>,</span><br><span class="line">                <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">"name"</span>: <span class="string">"Ubuntu-18.04"</span>,</span><br><span class="line">                <span class="attr">"source"</span>: <span class="string">"Windows.Terminal.Wsl"</span>,</span><br><span class="line">                <span class="attr">"startingDirectory"</span>: <span class="string">"//wsl$/Ubuntu-18.04/root"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            ...其他配置</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
-
-<p>这样就可以检测到wsl系统了，点击即可打开。</p>
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png" alt="image-20200912153808770"></p>
-<h3 id="2-2-配置zsh"><a href="#2-2-配置zsh" class="headerlink" title="2.2 配置zsh"></a>2.2 配置zsh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~$ sudo apt-get install zsh <span class="comment">#首先下载</span></span><br><span class="line">/mnt/c/Users/User$ <span class="built_in">which</span> zsh <span class="comment">#查看下载是否成功</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png" alt="image-20200912154357630"></p>
-<p>如果可以出现如下目录，即为安装成功。</p>
-<h3 id="2-3-配置oh-my-zsh"><a href="#2-3-配置oh-my-zsh" class="headerlink" title="2.3 配置oh my zsh"></a>2.3 配置oh my zsh</h3><p>根据<span class="exturl" data-url="aHR0cHM6Ly9vaG15ei5zaC8=" title="https://ohmyz.sh/">https://ohmyz.sh/<i class="fa fa-external-link"></i></span>官网，可以输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
-
-<p>但是我在安装时出现了错误：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused</span><br></pre></td></tr></table></figure>
-
-<p>经查证，需要配置ssh。这里我直接把windows下的<strong>.ssh</strong>文件，复制到了wsl文件下根目录<strong>\\wsl$\Ubuntu-18.04</strong>的<strong>root</strong>文件里。</p>
-<p>再次下载，成功。如果以前没有配置过github的ssh，我不知道是否还会报这个错误，如果抱着个错误了，请参考<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3Nzg5MDUvYXJ0aWNsZS9kZXRhaWxzLzgzNTAxMjA0" title="https://blog.csdn.net/u013778905/article/details/83501204">如何生成ssh公私钥并将公钥放到github上<i class="fa fa-external-link"></i></span>。</p>
-<h3 id="2-4-美化工作"><a href="#2-4-美化工作" class="headerlink" title="2.4 美化工作"></a>2.4 美化工作</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#进入root根目录</span></span><br><span class="line">vim .zshrc <span class="comment">#编辑.zshrc</span></span><br></pre></td></tr></table></figure>
-
-<p>将主题设置为：</p>
-<p>ZSH_THEME=”agnoster”</p>
-<p>将windows terminal的默认字体设置为<code>Cascadia Code PL</code>，就是开启powerline功能的意思，agnoster的箭头需要开启此功能。</p>
-<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png" alt="image-20200912155336231"></p>
-<p>并在下面schemes中添加如下配置：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"schemes": [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Dark"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#002831"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#d11c24"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#738a05"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#a57706"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2176c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#c61c6f"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#259286"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#eae3cb"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#bd3613"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#536870"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#708284"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#5956ba"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#819090"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#fcf4dc"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#001e27"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#708284"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Darcula"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#3d3f41"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#d2d8d9"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br></pre></td></tr></table></figure>
-
-<p>这些配置是在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21iYWRvbGF0by9pVGVybTItQ29sb3ItU2NoZW1lcy90cmVlL21hc3Rlci93aW5kb3dzdGVybWluYWw=" title="https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal">iTerm2-Color-Schemes<i class="fa fa-external-link"></i></span>中复制的，大家可以根据自己的喜好定制。并在对应的终端开启主题，这里我直接默认使用该主题了。</p>
-<h3 id="2-5-安装zsh插件"><a href="#2-5-安装zsh插件" class="headerlink" title="2.5 安装zsh插件"></a>2.5 安装zsh插件</h3><p>参考<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDg2MzY2Mjk=" title="https://zhuanlan.zhihu.com/p/108636629">一些常用的zsh插件<i class="fa fa-external-link"></i></span>这篇文章，写的非常详细了。</p>
+<p>问题是这个channels的配置文件保存在哪那？各系统都可以通过修改用户目录下的 <code>.condarc</code> 文件。Windows 用户无法直接创建名为 <code>.condarc</code> 的文件，可先执行 <code>conda config --set show_channel_urls yes</code> 生成该文件之后再修改。</p>
+<ul>
+<li><p>Windows：<code>‪C:\Users\{你的用户名}\.condarc</code></p>
+</li>
+<li><p>Linux/Mac：<code>~/.condarc</code></p>
+</li>
+</ul>
+<p>说白了还是用户文件下，编辑这个文件将内容粘贴即可。</p>
+<p>接着根据清华镜像源的说明。</p>
+<ul>
+<li><p>运行 <code>conda clean -i</code> 清除索引缓存，保证用的是镜像站提供的索引。</p>
+</li>
+<li><p>运行 <code>conda create -n myenv numpy</code> 测试一下吧。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>cmder的使用</title>
+    <url>/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
+<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
+<ol>
+<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
+<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
+<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
+<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
+ 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
+<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
+</ol>
 ]]></content>
       <categories>
         <category>windows</category>
       </categories>
+      <tags>
+        <tag>cmder</tag>
+      </tags>
   </entry>
   <entry>
     <title>Mybatis 从零到∞</title>
@@ -2070,27 +1802,219 @@
       </tags>
   </entry>
   <entry>
-    <title>cmder的使用</title>
-    <url>/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
-<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
-<ol>
-<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
-<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
-<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
-<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
- 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
-<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
-</ol>
+    <title>Hexo如何实现不用新插件置顶文章</title>
+    <url>/2020/02/14/hexo/hexo%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%8D%E7%94%A8%E6%96%B0%E6%8F%92%E4%BB%B6%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<blockquote>
+<p>基于hexo 4 ，NexT 7</p>
+</blockquote>
+<p>最近想实现一个置顶功能，网查之后发现可以安装插件，我的方法直接修改时间为9999然后不显示时间来规避这个问题。</p>
+<a id="more"></a>
+
+<h1 id="修改post显示文件"><a href="#修改post显示文件" class="headerlink" title="修改post显示文件"></a>修改post显示文件</h1><p>修改<code>themes/next/layout/_macro/post.swig</code>文件，在<code>&lt;div class=&quot;post-meta&quot;&gt;</code>下面添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>来用于显示置顶二字。</p>
+<p>在下面<code>- if theme.post_meta.created_at</code>处添加判断条件后变为<code>- if theme.post_meta.created_at and not post.top</code>即可。</p>
+<p>最后效果如下:</p>
+<p><img src="/2020/02/14/hexo/hexo%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%8D%E7%94%A8%E6%96%B0%E6%8F%92%E4%BB%B6%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/top.png" alt="top"></p>
+<h1 id="修改archives显示文件"><a href="#修改archives显示文件" class="headerlink" title="修改archives显示文件"></a>修改archives显示文件</h1><p>修改<code>themes/next/layout/_macro/post-collapse.swig</code>文件</p>
+<p>目的让之前显示年份的地方改成“置顶”，并且小字部分显示年份</p>
+<p>代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% macro render(posts) %&#125;</span><br><span class="line">&#123;%- set current_year &#x3D; &#39;1970&#39; %&#125;</span><br><span class="line">&#123;%- set if_have_top &#x3D; false %&#125;</span><br><span class="line">&#123;%- for post in posts.toArray() %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;%- set year &#x3D; date(post.date, &#39;YYYY&#39;) %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;%- if year &gt; 9000 and not if_have_top %&#125;</span><br><span class="line">    &#123;%- set current_year &#x3D; &#39;置顶&#39; %&#125;</span><br><span class="line">    &#123;%- set if_have_top &#x3D; true %&#125;</span><br><span class="line">    &lt;div class&#x3D;&quot;collection-year&quot;&gt;</span><br><span class="line">      &lt;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125; class&#x3D;&quot;collection-header&quot;&gt;&#123;&#123; current_year &#125;&#125;&lt;&#x2F;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    &#123;%- if year !&#x3D;&#x3D; current_year and year &lt;&#x3D; 9000 %&#125;</span><br><span class="line">      &#123;%- set current_year &#x3D; year %&#125;</span><br><span class="line">      &lt;div class&#x3D;&quot;collection-year&quot;&gt;</span><br><span class="line">        &lt;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125; class&#x3D;&quot;collection-header&quot;&gt;&#123;&#123; current_year &#125;&#125;&lt;&#x2F;&#123;%- if theme.seo %&#125;h2&#123;% else %&#125;h1&#123;%- endif %&#125;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">  &#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">  &lt;article itemscope itemtype&#x3D;&quot;http:&#x2F;&#x2F;schema.org&#x2F;Article&quot;&gt;</span><br><span class="line">    &lt;header class&#x3D;&quot;post-header&quot;&gt;</span><br><span class="line">    </span><br><span class="line">      &#123;%- if year &gt; 9000 %&#125;</span><br><span class="line">        &lt;div class&#x3D;&quot;post-meta&quot;&gt;</span><br><span class="line">          &lt;time itemprop&#x3D;&quot;dateCreated&quot;</span><br><span class="line">                datetime&#x3D;&quot;&#123;&#123; moment(post.updated).format() &#125;&#125;&quot;</span><br><span class="line">                content&#x3D;&quot;&#123;&#123; date(post.updated, config.date_format) &#125;&#125;&quot;&gt;</span><br><span class="line">            &#123;&#123; date(post.updated, &#39;YYYY-MM-DD&#39;) &#125;&#125;</span><br><span class="line">          &lt;&#x2F;time&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &#123;% else %&#125;</span><br><span class="line">        &lt;div class&#x3D;&quot;post-meta&quot;&gt;</span><br><span class="line">          &lt;time itemprop&#x3D;&quot;dateCreated&quot;</span><br><span class="line">                datetime&#x3D;&quot;&#123;&#123; moment(post.date).format() &#125;&#125;&quot;</span><br><span class="line">                content&#x3D;&quot;&#123;&#123; date(post.date, config.date_format) &#125;&#125;&quot;&gt;</span><br><span class="line">            &#123;&#123; date(post.date, &#39;MM-DD&#39;) &#125;&#125;</span><br><span class="line">          &lt;&#x2F;time&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">      &lt;&#123;%- if theme.seo %&#125;h3&#123;% else %&#125;h2&#123;%- endif %&#125; class&#x3D;&quot;post-title&quot;&gt;</span><br><span class="line">        &#123;%- if post.link %&#125;&#123;# Link posts #&#125;</span><br><span class="line">          &#123;%- set postTitleIcon &#x3D; &#39;&lt;i class&#x3D;&quot;fa fa-external-link&quot;&gt;&lt;&#x2F;i&gt;&#39; %&#125;</span><br><span class="line">          &#123;%- set postText &#x3D; post.title or post.link %&#125;</span><br><span class="line">          &#123;&#123; next_url(post.link, postText + postTitleIcon, &#123;class: &#39;post-title-link post-title-link-external&#39;, itemprop: &#39;url&#39;&#125;) &#125;&#125;</span><br><span class="line">        &#123;% else %&#125;</span><br><span class="line">          &lt;a class&#x3D;&quot;post-title-link&quot; href&#x3D;&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot; itemprop&#x3D;&quot;url&quot;&gt;</span><br><span class="line">            &lt;span itemprop&#x3D;&quot;name&quot;&gt;&#123;&#123; post.title or __(&#39;post.untitled&#39;) &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">          &lt;&#x2F;a&gt;</span><br><span class="line">        &#123;%- endif %&#125;</span><br><span class="line">      &lt;&#x2F;&#123;%- if theme.seo %&#125;h3&#123;% else %&#125;h2&#123;%- endif %&#125;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">  &lt;&#x2F;article&gt;</span><br><span class="line"></span><br><span class="line">&#123;%- endfor %&#125;</span><br><span class="line">&#123;% endmacro %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="修改想要置顶的post"><a href="#修改想要置顶的post" class="headerlink" title="修改想要置顶的post"></a>修改想要置顶的post</h1><p>在想要置顶的top文件下加入<code>top: true</code>，并将<code>date</code>改成9000年以上即可，修改<code>updated</code>为你想要的修改的时间即可。</p>
+<blockquote>
+<p>参考：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuemh5b25nLmNuL3Bvc3RzL2ZjMjIv" title="https://www.zhyong.cn/posts/fc22/">hexo-next 添加文章置顶功能和评分功能等<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>修改样式</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows下找到linux的感觉</title>
+    <url>/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。</p>
+<ul>
+<li>WSL 适用于linux的windows子系统</li>
+<li>升级到wsl2</li>
+<li>windows terminal</li>
+<li>zsh</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="1-安装WSl"><a href="#1-安装WSl" class="headerlink" title="1. 安装WSl"></a>1. 安装WSl</h2><p>WSL是在windows下进行开发，并使用linux中的bash等功能的最好的解决方案之一。</p>
+<h2 id="1-1-打开系统功能"><a href="#1-1-打开系统功能" class="headerlink" title="1.1 打开系统功能"></a>1.1 打开系统功能</h2><p><strong>控制面板\所有控制面板项\程序和功能</strong> 中选择 <strong>启用或者关闭Windows功能</strong></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png" alt="image-20200912150736512"></p>
+<p>然后勾选 <strong>适用于Linux的Windows子系统</strong> </p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png" alt="image-20200912150852217"></p>
+<p>经过系统一段时间的自动下载后，重启计算机。</p>
+<!-- more -->
+
+<h2 id="1-2-下载Ubuntu"><a href="#1-2-下载Ubuntu" class="headerlink" title="1.2 下载Ubuntu"></a>1.2 下载Ubuntu</h2><h3 id="1-2-1-下载"><a href="#1-2-1-下载" class="headerlink" title="1.2.1 下载"></a>1.2.1 下载</h3><p>直接在<strong>Microsoft store</strong>中搜索<strong>Ubuntu</strong>，并启动即可。我使用的是18.04版本。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png" alt="image-20200912151114333"></p>
+<h3 id="1-2-2-设置新分发版"><a href="#1-2-2-设置新分发版" class="headerlink" title="1.2.2 设置新分发版"></a>1.2.2 设置新分发版</h3><p>首次启动新安装的 Linux 分发版时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，以便文件解压缩并存储到电脑上。 未来的所有启动时间应不到一秒。然后，需要为新的 Linux 分发版创建用户帐户和密码。</p>
+<p><img src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png" alt="Windows 控制台中的 Ubuntu 解包"></p>
+<h2 id="1-3-更新WSL到WSL2"><a href="#1-3-更新WSL到WSL2" class="headerlink" title="1.3 更新WSL到WSL2"></a>1.3 更新WSL到WSL2</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvd3NsMi1pbmRleA==" title="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-index">参考微软官方文档<i class="fa fa-external-link"></i></span></p>
+<h3 id="1-3-1-启用“虚拟机平台”可选组件"><a href="#1-3-1-启用“虚拟机平台”可选组件" class="headerlink" title="1.3.1 启用“虚拟机平台”可选组件"></a>1.3.1 启用“虚拟机平台”可选组件</h3><p>安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。</p>
+<p>以管理员身份打开 PowerShell 并运行：</p>
+<p>PowerShell复制</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
+
+<p><strong>重新启动</strong>计算机，以完成 WSL 安装并更新到 WSL 2。</p>
+<h3 id="1-3-2-将-WSL-2-设置为默认版本"><a href="#1-3-2-将-WSL-2-设置为默认版本" class="headerlink" title="1.3.2 将 WSL 2 设置为默认版本"></a>1.3.2 将 WSL 2 设置为默认版本</h3><p>以管理员的身份打开 PowerShell，然后在安装新的 Linux 发行版时运行以下命令，将 WSL 2 设置为默认版本：</p>
+<p>PowerShell复制</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>运行该命令后，你可能会看到此消息：<code>WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel</code>。 跟随链接（<span class="exturl" data-url="aHR0cHM6Ly9ha2EubXMvd3NsMmtlcm5lbO+8ie+8jOWcqOaWh+aho+S4reWuieijheadpeiHquivpemhtemdoueahA==" title="https://aka.ms/wsl2kernel），在文档中安装来自该页面的">https://aka.ms/wsl2kernel），在文档中安装来自该页面的<i class="fa fa-external-link"></i></span> MSI，以便在计算机上安装 Linux 内核供 WSL 2 使用。 安装内核后，请再次运行该命令，该命令应会成功完成而不显示消息。</p>
+<p> 备注</p>
+<p>从 WSL 1 更新到 WSL 2 可能需要几分钟才能完成，具体取决于目标分发版的大小。 如果从 Windows 10 周年更新或创意者更新运行 WSL 1 的旧（历史）安装，可能会遇到更新错误。 按照这些说明<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvaW5zdGFsbC1sZWdhY3kjdW5pbnN0YWxsaW5ncmVtb3ZpbmctdGhlLWxlZ2FjeS1kaXN0cm8=" title="https://docs.microsoft.com/zh-cn/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro">卸载并删除任何旧分发<i class="fa fa-external-link"></i></span>。</p>
+<p>如果 <code>wsl --set-default-version</code> 结果为无效命令，请输入 <code>wsl --help</code>。 如果 <code>--set-default-version</code> 未列出，则表示你的 OS 不支持它，你需要更新到版本 1903（内部版本 18362）或更高版本。</p>
+<h3 id="1-3-3-将分发版版本设置为-WSL-1-或-WSL-2"><a href="#1-3-3-将分发版版本设置为-WSL-1-或-WSL-2" class="headerlink" title="1.3.3 将分发版版本设置为 WSL 1 或 WSL 2"></a>1.3.3 将分发版版本设置为 WSL 1 或 WSL 2</h3><p>可打开 PowerShell 命令行并输入以下命令（仅在 <span class="exturl" data-url="bXMtc2V0dGluZ3M6d2luZG93c3VwZGF0ZQ==" title="ms-settings:windowsupdate">Windows 内部版本 18362 或更高版本<i class="fa fa-external-link"></i></span>中可用），检查分配给每个已安装的 Linux 分发版的 WSL 版本：<code>wsl -l -v</code></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> -<span class="literal">-verbose</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png" alt="image-20200912151921601"></p>
+<p>若要将分发版设置为受某一 WSL 版本支持，请运行：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> &lt;distribution name&gt; &lt;versionNumber&gt;</span><br></pre></td></tr></table></figure>
+
+<p>请确保将 <code>&lt;distribution name&gt;</code> 替换为你的分发版的实际名称，并将 <code>&lt;versionNumber&gt;</code> 替换为数字“1”或“2”。 可以随时更改回 WSL 1，方法是运行与上面相同的命令，但将“2”替换为“1”。</p>
+<p><strong>我这里就是运行:</strong></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> Ubuntu<span class="literal">-18</span>.<span class="number">04</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>这会将安装的任何新分发版的版本设置为 WSL 2。</p>
+<h2 id="1-4-配置Ubuntu默认镜像源"><a href="#1-4-配置Ubuntu默认镜像源" class="headerlink" title="1.4 配置Ubuntu默认镜像源"></a>1.4 配置Ubuntu默认镜像源</h2><h3 id="1-4-1-备份并更新"><a href="#1-4-1-备份并更新" class="headerlink" title="1.4.1 备份并更新"></a>1.4.1 备份并更新</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt  <span class="comment">#进入配置文件所在目录</span></span><br><span class="line">cp sources.list sources.list.bak  <span class="comment">#备份配置文件</span></span><br><span class="line">vim sources.list  <span class="comment">#编辑配置文件</span></span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYWxpeXVuLmNvbS9taXJyb3IvdWJ1bnR1P3NwbT1hMmM2aC4xMzY1MTEwMi4wLjAuM2UyMjFiMTFReGFMYkY=" title="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11QxaLbF">参考阿里云Ubuntu镜像源配置方法<i class="fa fa-external-link"></i></span></p>
+<p>将对应的代码粘贴进去。</p>
+<p><strong>ubuntu 18.04(bionic) 配置如下</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>这里如果在vim直接粘贴会出错。要不检查错误，还可以打开ubuntu的实际硬盘位置</p>
+<p><code>C:\Users\%USERNAME%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code></p>
+<p>这个就是 <strong>Ubuntu</strong> WSL版的根目录,接着到 <strong>etc\apt</strong> 下找到 <strong>sources.list</strong> 用之前贴的配置文件覆盖即可.接着更新数据源</p>
+<h3 id="1-4-2-更新了镜像源之后，更新apt和其他软件："><a href="#1-4-2-更新了镜像源之后，更新apt和其他软件：" class="headerlink" title="1.4.2 更新了镜像源之后，更新apt和其他软件："></a>1.4.2 更新了镜像源之后，更新apt和其他软件：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update  <span class="comment">#更新源  </span></span><br><span class="line">sudo apt-get upgrade  <span class="comment">#更新软件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5-更改Ubuntu实际位置到d盘"><a href="#1-5-更改Ubuntu实际位置到d盘" class="headerlink" title="1.5 更改Ubuntu实际位置到d盘"></a>1.5 更改Ubuntu实际位置到d盘</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZV9qYWNrZ2cvYXJ0aWNsZS9kZXRhaWxzLzEwNjczODg3OA==" title="https://blog.csdn.net/lee_jackgg/article/details/106738878">此步骤参考CSDN我的大神666Windows10子系统(WSL)修改安装目录<i class="fa fa-external-link"></i></span></p>
+<p>只要把ubuntu版本改成对应的即可。</p>
+<h3 id="1-5-1-首先查看所有分发版本"><a href="#1-5-1-首先查看所有分发版本" class="headerlink" title="1.5.1 首先查看所有分发版本"></a>1.5.1 首先查看所有分发版本</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl <span class="literal">-l</span> -<span class="literal">-all</span>  <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>  NAME STATE VERSION</p>
+<p> * Ubuntu-20.04 Running 2</p>
+</blockquote>
+<h3 id="1-5-2-导出分发版为tar文件到d盘"><a href="#1-5-2-导出分发版为tar文件到d盘" class="headerlink" title="1.5.2 导出分发版为tar文件到d盘"></a>1.5.2 导出分发版为tar文件到d盘</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-export</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
+
+<h5 id="注销当前分发版"><a href="#注销当前分发版" class="headerlink" title="注销当前分发版"></a>注销当前分发版</h5><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-unregister</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-3-重新导入并安装分发版在d-ubuntu"><a href="#1-5-3-重新导入并安装分发版在d-ubuntu" class="headerlink" title="1.5.3 重新导入并安装分发版在d:\ubuntu"></a>1.5.3 重新导入并安装分发版在d:\ubuntu</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-import</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> d:\ubuntu d:\ubuntu20.<span class="number">04</span>.tar -<span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-4-设置默认登陆用户为安装时用户名"><a href="#1-5-4-设置默认登陆用户为安装时用户名" class="headerlink" title="1.5.4 设置默认登陆用户为安装时用户名"></a>1.5.4 设置默认登陆用户为安装时用户名</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ubuntu2004 config -<span class="literal">-default</span><span class="literal">-user</span> Username</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-5-删除tar文件-可选"><a href="#1-5-5-删除tar文件-可选" class="headerlink" title="1.5.5 删除tar文件(可选)"></a>1.5.5 删除tar文件(可选)</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">del d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Windows-Terminal中使用WSL"><a href="#2-Windows-Terminal中使用WSL" class="headerlink" title="2. Windows Terminal中使用WSL"></a>2. Windows Terminal中使用WSL</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>直接在Microsoft Store中搜索并安装即可。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png" alt="image-20200912153621967"></p>
+<p>安装后应该可以识别到wsl，如果没有识别，可以在设置中进行如下配置：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">"list":</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"guid"</span>: <span class="string">"&#123;c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40&#125;"</span>,</span><br><span class="line">                <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">"name"</span>: <span class="string">"Ubuntu-18.04"</span>,</span><br><span class="line">                <span class="attr">"source"</span>: <span class="string">"Windows.Terminal.Wsl"</span>,</span><br><span class="line">                <span class="attr">"startingDirectory"</span>: <span class="string">"//wsl$/Ubuntu-18.04/root"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            ...其他配置</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以检测到wsl系统了，点击即可打开。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png" alt="image-20200912153808770"></p>
+<h3 id="2-2-配置zsh"><a href="#2-2-配置zsh" class="headerlink" title="2.2 配置zsh"></a>2.2 配置zsh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~$ sudo apt-get install zsh <span class="comment">#首先下载</span></span><br><span class="line">/mnt/c/Users/User$ <span class="built_in">which</span> zsh <span class="comment">#查看下载是否成功</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png" alt="image-20200912154357630"></p>
+<p>如果可以出现如下目录，即为安装成功。</p>
+<h3 id="2-3-配置oh-my-zsh"><a href="#2-3-配置oh-my-zsh" class="headerlink" title="2.3 配置oh my zsh"></a>2.3 配置oh my zsh</h3><p>根据<span class="exturl" data-url="aHR0cHM6Ly9vaG15ei5zaC8=" title="https://ohmyz.sh/">https://ohmyz.sh/<i class="fa fa-external-link"></i></span>官网，可以输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
+
+<p>但是我在安装时出现了错误：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused</span><br></pre></td></tr></table></figure>
+
+<p>经查证，需要配置ssh。这里我直接把windows下的<strong>.ssh</strong>文件，复制到了wsl文件下根目录<strong>\\wsl$\Ubuntu-18.04</strong>的<strong>root</strong>文件里。</p>
+<p>再次下载，成功。如果以前没有配置过github的ssh，我不知道是否还会报这个错误，如果抱着个错误了，请参考<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3Nzg5MDUvYXJ0aWNsZS9kZXRhaWxzLzgzNTAxMjA0" title="https://blog.csdn.net/u013778905/article/details/83501204">如何生成ssh公私钥并将公钥放到github上<i class="fa fa-external-link"></i></span>。</p>
+<h3 id="2-4-美化工作"><a href="#2-4-美化工作" class="headerlink" title="2.4 美化工作"></a>2.4 美化工作</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#进入root根目录</span></span><br><span class="line">vim .zshrc <span class="comment">#编辑.zshrc</span></span><br></pre></td></tr></table></figure>
+
+<p>将主题设置为：</p>
+<p>ZSH_THEME=”agnoster”</p>
+<p>将windows terminal的默认字体设置为<code>Cascadia Code PL</code>，就是开启powerline功能的意思，agnoster的箭头需要开启此功能。</p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png" alt="image-20200912155336231"></p>
+<p>并在下面schemes中添加如下配置：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"schemes": [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Dark"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#002831"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#d11c24"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#738a05"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#a57706"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2176c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#c61c6f"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#259286"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#eae3cb"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#bd3613"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#536870"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#708284"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#5956ba"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#819090"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#fcf4dc"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#001e27"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#708284"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Darcula"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#3d3f41"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#d2d8d9"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br></pre></td></tr></table></figure>
+
+<p>这些配置是在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21iYWRvbGF0by9pVGVybTItQ29sb3ItU2NoZW1lcy90cmVlL21hc3Rlci93aW5kb3dzdGVybWluYWw=" title="https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal">iTerm2-Color-Schemes<i class="fa fa-external-link"></i></span>中复制的，大家可以根据自己的喜好定制。并在对应的终端开启主题，这里我直接默认使用该主题了。</p>
+<h3 id="2-5-安装zsh插件"><a href="#2-5-安装zsh插件" class="headerlink" title="2.5 安装zsh插件"></a>2.5 安装zsh插件</h3><p>参考<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDg2MzY2Mjk=" title="https://zhuanlan.zhihu.com/p/108636629">一些常用的zsh插件<i class="fa fa-external-link"></i></span>这篇文章，写的非常详细了。</p>
 ]]></content>
       <categories>
         <category>windows</category>
       </categories>
+  </entry>
+  <entry>
+    <title>(转)Controller接收参数的几种常用方式</title>
+    <url>/2018/09/03/springboot/web%E7%AC%94%E8%AE%B0/(%E8%BD%AC)Controller%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="第一类：请求路径参数"><a href="#第一类：请求路径参数" class="headerlink" title="第一类：请求路径参数"></a>第一类：请求路径参数</h1><h2 id="1、-RequestParam"><a href="#1、-RequestParam" class="headerlink" title="1、@RequestParam"></a>1、@RequestParam</h2><p>获取查询参数。即url?name=这种形式</p>
+<h2 id="2、-PathVariable-REST风格"><a href="#2、-PathVariable-REST风格" class="headerlink" title="2、@PathVariable REST风格"></a>2、@PathVariable REST风格</h2><p>获取路径参数。即url/{id}这种形式。</p>
+<a id="more"></a>
+
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>GET</p>
+<p><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDgwL2RlbW8vMTIzP25hbWU9c3VraV9yb25n" title="http://localhost:8080/demo/123?name=suki_rong">http://localhost:8080/demo/123?name=suki_rong<i class="fa fa-external-link"></i></span></p>
+<p>对应的java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/demo/&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo</span><span class="params">(@PathVariable(name = <span class="string">"id"</span>)</span> String id, @<span class="title">RequestParam</span><span class="params">(name = <span class="string">"name"</span>)</span> String name) </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"id="</span>+id);</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"name="</span>+name);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p>id=123</p>
+<p>name=suki_rong</p>
+<h1 id="第二类：Body参数"><a href="#第二类：Body参数" class="headerlink" title="第二类：Body参数"></a>第二类：Body参数</h1><p>因为是POST请求，这里用Postman的截图结合代码说明</p>
+<h2 id="1、-RequestBody"><a href="#1、-RequestBody" class="headerlink" title="1、@RequestBody"></a>1、@RequestBody</h2><h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><p><img src="/2018/09/03/springboot/web%E7%AC%94%E8%AE%B0/(%E8%BD%AC)Controller%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/t1.png" alt="t1"></p>
+<p>对应的java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(path = <span class="string">"/demo1"</span>) </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">(@RequestBody Person person)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(person.toString());</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p>name:suki_rong;</p>
+<p>age=18;</p>
+<p>hobby:programing</p>
+<p>也可以是这样</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(path = <span class="string">"/demo1"</span>) </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">(@RequestBody Map&lt;String, String&gt; person)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(person.get(<span class="string">"name"</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p>suki_rong</p>
+<h2 id="2、无注解-对应form-data"><a href="#2、无注解-对应form-data" class="headerlink" title="2、无注解 对应form-data"></a>2、无注解 对应form-data</h2><h3 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h3><p><img src="/2018/09/03/springboot/web%E7%AC%94%E8%AE%B0/(%E8%BD%AC)Controller%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/t2.png" alt="t2"></p>
+<p>对应的java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(path = <span class="string">"/demo2"</span>) </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo2</span><span class="params">(Person person)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(person.toString());</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>输出结果：</p>
+<p>name:suki_rong;</p>
+<p>age=18;</p>
+<p>hobby:programing</p>
+<h2 id="Person类"><a href="#Person类" class="headerlink" title="Person类"></a>Person类</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">long</span> id; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String hobby; </span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123; </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"name:"</span>+name+<span class="string">";age="</span>+age+<span class="string">";hobby:"</span>+hobby; </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// getters and setters</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="第三类：请求头参数以及Cookie"><a href="#第三类：请求头参数以及Cookie" class="headerlink" title="第三类：请求头参数以及Cookie"></a>第三类：请求头参数以及Cookie</h1><h2 id="1、-RequestHeader"><a href="#1、-RequestHeader" class="headerlink" title="1、@RequestHeader"></a>1、@RequestHeader</h2><h2 id="2、-CookieValue"><a href="#2、-CookieValue" class="headerlink" title="2、@CookieValue"></a>2、@CookieValue</h2><h3 id="例子-3"><a href="#例子-3" class="headerlink" title="例子"></a>例子</h3><p>java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/demo3"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo3</span><span class="params">(@RequestHeader(name = <span class="string">"myHeader"</span>)</span> String myHeader, </span></span><br><span class="line"><span class="function">@<span class="title">CookieValue</span><span class="params">(name = <span class="string">"myCookie"</span>)</span> String myCookie) </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"myHeader="</span> + myHeader); </span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"myCookie="</span> + myCookie); </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以这样</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/demo3"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo3</span><span class="params">(HttpServletRequest request)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">    System.out.println(request.getHeader(<span class="string">"myHeader"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (Cookie cookie : request.getCookies()) &#123; </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"myCookie"</span>.equals(cookie.getName())) &#123; </span><br><span class="line"></span><br><span class="line">        System.out.println(cookie.getValue());</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>转载自: <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1a2lfcm9uZy9hcnRpY2xlL2RldGFpbHMvODA0NDU4ODA=" title="https://blog.csdn.net/suki_rong/article/details/80445880">SpringBoot Controller接收参数的几种常用方式<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Spring Boot</category>
+      </categories>
       <tags>
-        <tag>cmder</tag>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -2149,67 +2073,6 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/hellopost"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">hellopost</span><span class="params">(@ApiParam(<span class="string">"用户实体"</span>)</span> @RequestBody User u1) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> u1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="上两种方法对比"><a href="#上两种方法对比" class="headerlink" title="上两种方法对比"></a>上两种方法对比</h3><p>个人感觉<code>@ApiParam</code>注解对于测试api更加灵活好用。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(转)Controller接收参数的几种常用方式</title>
-    <url>/2018/09/03/springboot/web%E7%AC%94%E8%AE%B0/(%E8%BD%AC)Controller%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="第一类：请求路径参数"><a href="#第一类：请求路径参数" class="headerlink" title="第一类：请求路径参数"></a>第一类：请求路径参数</h1><h2 id="1、-RequestParam"><a href="#1、-RequestParam" class="headerlink" title="1、@RequestParam"></a>1、@RequestParam</h2><p>获取查询参数。即url?name=这种形式</p>
-<h2 id="2、-PathVariable-REST风格"><a href="#2、-PathVariable-REST风格" class="headerlink" title="2、@PathVariable REST风格"></a>2、@PathVariable REST风格</h2><p>获取路径参数。即url/{id}这种形式。</p>
-<a id="more"></a>
-
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>GET</p>
-<p><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDgwL2RlbW8vMTIzP25hbWU9c3VraV9yb25n" title="http://localhost:8080/demo/123?name=suki_rong">http://localhost:8080/demo/123?name=suki_rong<i class="fa fa-external-link"></i></span></p>
-<p>对应的java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/demo/&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo</span><span class="params">(@PathVariable(name = <span class="string">"id"</span>)</span> String id, @<span class="title">RequestParam</span><span class="params">(name = <span class="string">"name"</span>)</span> String name) </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"id="</span>+id);</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"name="</span>+name);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<p>id=123</p>
-<p>name=suki_rong</p>
-<h1 id="第二类：Body参数"><a href="#第二类：Body参数" class="headerlink" title="第二类：Body参数"></a>第二类：Body参数</h1><p>因为是POST请求，这里用Postman的截图结合代码说明</p>
-<h2 id="1、-RequestBody"><a href="#1、-RequestBody" class="headerlink" title="1、@RequestBody"></a>1、@RequestBody</h2><h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><p><img src="/2018/09/03/springboot/web%E7%AC%94%E8%AE%B0/(%E8%BD%AC)Controller%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/t1.png" alt="t1"></p>
-<p>对应的java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(path = <span class="string">"/demo1"</span>) </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">(@RequestBody Person person)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(person.toString());</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<p>name:suki_rong;</p>
-<p>age=18;</p>
-<p>hobby:programing</p>
-<p>也可以是这样</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(path = <span class="string">"/demo1"</span>) </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">(@RequestBody Map&lt;String, String&gt; person)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(person.get(<span class="string">"name"</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<p>suki_rong</p>
-<h2 id="2、无注解-对应form-data"><a href="#2、无注解-对应form-data" class="headerlink" title="2、无注解 对应form-data"></a>2、无注解 对应form-data</h2><h3 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h3><p><img src="/2018/09/03/springboot/web%E7%AC%94%E8%AE%B0/(%E8%BD%AC)Controller%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/t2.png" alt="t2"></p>
-<p>对应的java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(path = <span class="string">"/demo2"</span>) </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo2</span><span class="params">(Person person)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(person.toString());</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输出结果：</p>
-<p>name:suki_rong;</p>
-<p>age=18;</p>
-<p>hobby:programing</p>
-<h2 id="Person类"><a href="#Person类" class="headerlink" title="Person类"></a>Person类</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">long</span> id; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String hobby; </span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123; </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"name:"</span>+name+<span class="string">";age="</span>+age+<span class="string">";hobby:"</span>+hobby; </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// getters and setters</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="第三类：请求头参数以及Cookie"><a href="#第三类：请求头参数以及Cookie" class="headerlink" title="第三类：请求头参数以及Cookie"></a>第三类：请求头参数以及Cookie</h1><h2 id="1、-RequestHeader"><a href="#1、-RequestHeader" class="headerlink" title="1、@RequestHeader"></a>1、@RequestHeader</h2><h2 id="2、-CookieValue"><a href="#2、-CookieValue" class="headerlink" title="2、@CookieValue"></a>2、@CookieValue</h2><h3 id="例子-3"><a href="#例子-3" class="headerlink" title="例子"></a>例子</h3><p>java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/demo3"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo3</span><span class="params">(@RequestHeader(name = <span class="string">"myHeader"</span>)</span> String myHeader, </span></span><br><span class="line"><span class="function">@<span class="title">CookieValue</span><span class="params">(name = <span class="string">"myCookie"</span>)</span> String myCookie) </span>&#123; </span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"myHeader="</span> + myHeader); </span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"myCookie="</span> + myCookie); </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>也可以这样</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/demo3"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo3</span><span class="params">(HttpServletRequest request)</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">    System.out.println(request.getHeader(<span class="string">"myHeader"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (Cookie cookie : request.getCookies()) &#123; </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"myCookie"</span>.equals(cookie.getName())) &#123; </span><br><span class="line"></span><br><span class="line">        System.out.println(cookie.getValue());</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>转载自: <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1a2lfcm9uZy9hcnRpY2xlL2RldGFpbHMvODA0NDU4ODA=" title="https://blog.csdn.net/suki_rong/article/details/80445880">SpringBoot Controller接收参数的几种常用方式<i class="fa fa-external-link"></i></span></p>
-</blockquote>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -2627,5 +2490,123 @@
         <tag>Spring Boot</tag>
         <tag>跨域访问</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>(转)TCP三次握手四次挥手</title>
+    <url>/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>本文转载于<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F6Y3N1" title="https://blog.csdn.net/qzcsu">小书go<i class="fa fa-external-link"></i></span>的<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F6Y3N1L2FydGljbGUvZGV0YWlscy83Mjg2MTg5MQ==" title="https://blog.csdn.net/qzcsu/article/details/72861891">两张动图-彻底明白TCP的三次握手与四次挥手<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<h2 id="背景描述"><a href="#背景描述" class="headerlink" title="背景描述"></a>背景描述</h2><blockquote>
+<p>通过上一篇中网络模型中的<span class="exturl" data-url="aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXpjc3UvYXJ0aWNsZS9kZXRhaWxzLzcyODU5NDMx" title="http://blog.csdn.net/qzcsu/article/details/72859431">IP层的介绍<i class="fa fa-external-link"></i></span>，我们知道网络层，可以实现两个主机之间的通信。但是这并不具体，因为，真正进行通信的实体是在主机中的进程，是一个主机中的一个进程与另外一个主机中的一个进程在交换数据。IP协议虽然能把数据报文送到目的主机，但是并没有交付给主机的具体应用进程。而端到端的通信才应该是应用进程之间的通信。</p>
+<p>UDP，在传送数据前不需要先建立连接，远地的主机在收到UDP报文后也不需要给出任何确认。虽然UDP不提供可靠交付，但是正是因为这样，省去和很多的开销，使得它的速度比较快，比如一些对实时性要求较高的服务，就常常使用的是UDP。对应的应用层的协议主要有 DNS,TFTP,DHCP,SNMP,NFS 等。</p>
+<p>TCP，提供面向连接的服务，在传送数据之前必须先建立连接，数据传送完成后要释放连接。因此TCP是一种可靠的的运输服务，但是正因为这样，不可避免的增加了许多的开销，比如确认，流量控制等。对应的应用层的协议主要有 SMTP,TELNET,HTTP,FTP 等。</p>
+</blockquote>
+<hr>
+<h3 id="常用的熟知端口号"><a href="#常用的熟知端口号" class="headerlink" title="常用的熟知端口号"></a>常用的熟知端口号</h3><table>
+<thead>
+<tr>
+<th>应用程序</th>
+<th>FTP</th>
+<th>TFTP</th>
+<th>TELNET</th>
+<th>SMTP</th>
+<th>DNS</th>
+<th>HTTP</th>
+<th>SSH</th>
+<th>MYSQL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>熟知端口</td>
+<td>21,20</td>
+<td>69</td>
+<td>23</td>
+<td>25</td>
+<td>53</td>
+<td>80</td>
+<td>22</td>
+<td>3306</td>
+</tr>
+<tr>
+<td>传输层协议</td>
+<td>TCP</td>
+<td>UDP</td>
+<td>TCP</td>
+<td>TCP</td>
+<td>UDP</td>
+<td>TCP</td>
+<td>TCP</td>
+<td>TCP</td>
+</tr>
+</tbody></table>
+<hr>
+<a id="more"></a>
+
+<h2 id="TCP的概述"><a href="#TCP的概述" class="headerlink" title="TCP的概述"></a>TCP的概述</h2><blockquote>
+<p>TCP把连接作为最基本的对象，每一条TCP连接都有两个端点，这种断点我们叫作套接字（socket），它的定义为端口号拼接到IP地址即构成了套接字，例如，若IP地址为192.3.4.16 而端口号为80，那么得到的套接字为192.3.4.16:80。</p>
+</blockquote>
+<h3 id="TCP报文首部"><a href="#TCP报文首部" class="headerlink" title="TCP报文首部"></a>TCP报文首部</h3><ol>
+<li>源端口和目的端口，各占2个字节，分别写入源端口和目的端口；</li>
+<li>序号，占4个字节，TCP连接中传送的字节流中的每个字节都按顺序编号。例如，一段报文的序号字段值是 301 ，而携带的数据共有100字段，显然下一个报文段（如果还有的话）的数据序号应该从401开始；</li>
+<li>确认号，占4个字节，是期望收到对方下一个报文的第一个数据字节的序号。例如，B收到了A发送过来的报文，其序列号字段是501，而数据长度是200字节，这表明B正确的收到了A发送的到序号700为止的数据。因此，B期望收到A的下一个数据序号是701，于是B在发送给A的确认报文段中把确认号置为701；</li>
+<li>数据偏移，占4位，它指出TCP报文的数据距离TCP报文段的起始处有多远；</li>
+<li>保留，占6位，保留今后使用，但目前应都位0；</li>
+<li>紧急URG，当URG=1，表明紧急指针字段有效。告诉系统此报文段中有紧急数据；</li>
+<li>确认ACK，仅当ACK=1时，确认号字段才有效。TCP规定，在连接建立后所有报文的传输都必须把ACK置1；</li>
+<li>推送PSH，当两个应用进程进行交互式通信时，有时在一端的应用进程希望在键入一个命令后立即就能收到对方的响应，这时候就将PSH=1；</li>
+<li>复位RST，当RST=1，表明TCP连接中出现严重差错，必须释放连接，然后再重新建立连接；</li>
+<li>同步SYN，在连接建立时用来同步序号。当SYN=1，ACK=0，表明是连接请求报文，若同意连接，则响应报文中应该使SYN=1，ACK=1；</li>
+<li>终止FIN，用来释放连接。当FIN=1，表明此报文的发送方的数据已经发送完毕，并且要求释放；</li>
+<li>窗口，占2字节，指的是通知接收方，发送本报文你需要有多大的空间来接受；</li>
+<li>检验和，占2字节，校验首部和数据这两部分；</li>
+<li>紧急指针，占2字节，指出本报文段中的紧急数据的字节数；</li>
+<li>选项，长度可变，定义一些其他的可选的参数。</li>
+</ol>
+<h3 id="TCP连接的建立（三次握手）"><a href="#TCP连接的建立（三次握手）" class="headerlink" title="TCP连接的建立（三次握手）"></a>TCP连接的建立（三次握手）</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA3MjA1NzA5MzY3?x-oss-process=image/format,png" alt="这里写图片描述"></p>
+<blockquote>
+<p><strong>最开始的时候客户端和服务器都是处于CLOSED状态。主动打开连接的为客户端，被动打开连接的是服务器。</strong></p>
+</blockquote>
+<ol>
+<li>TCP服务器进程先创建传输控制块TCB，时刻准备接受客户进程的连接请求，此时服务器就进入了LISTEN（监听）状态；</li>
+<li>TCP客户进程也是先创建传输控制块TCB，然后向服务器发出连接请求报文，这是报文首部中的同部位SYN=1，同时选择一个初始序列号 seq=x ，此时，TCP客户端进程进入了 SYN-SENT（同步已发送状态）状态。TCP规定，SYN报文段（SYN=1的报文段）不能携带数据，但需要消耗掉一个序号。</li>
+<li>TCP服务器收到请求报文后，如果同意连接，则发出确认报文。确认报文中应该 ACK=1，SYN=1，确认号是ack=x+1，同时也要为自己初始化一个序列号 seq=y，此时，TCP服务器进程进入了SYN-RCVD（同步收到）状态。这个报文也不能携带数据，但是同样要消耗一个序号。</li>
+<li>TCP客户进程收到确认后，还要向服务器给出确认。确认报文的ACK=1，ack=y+1，自己的序列号seq=x+1，此时，TCP连接建立，客户端进入ESTABLISHED（已建立连接）状态。TCP规定，ACK报文段可以携带数据，但是如果不携带数据则不消耗序号。</li>
+<li>当服务器收到客户端的确认后也进入ESTABLISHED状态，此后双方就可以开始通信了。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA1MTEwNDA1NjY2?x-oss-process=image/format,png" alt="三次握手"></li>
+</ol>
+<h4 id="为什么TCP客户端最后还要发送一次确认呢？"><a href="#为什么TCP客户端最后还要发送一次确认呢？" class="headerlink" title="为什么TCP客户端最后还要发送一次确认呢？"></a>为什么TCP客户端最后还要发送一次确认呢？</h4><blockquote>
+<p>一句话，主要防止已经失效的连接请求报文突然又传送到了服务器，从而产生错误。</p>
+<p>如果使用的是两次握手建立连接，假设有这样一种场景，客户端发送了第一个请求连接并且没有丢失，只是因为在网络结点中滞留的时间太长了，由于TCP的客户端迟迟没有收到确认报文，以为服务器没有收到，此时重新向服务器发送这条报文，此后客户端和服务器经过两次握手完成连接，传输数据，然后关闭连接。此时此前滞留的那一次请求连接，网络通畅了到达了服务器，这个报文本该是失效的，但是，两次握手的机制将会让客户端和服务器再次建立连接，这将导致不必要的错误和资源的浪费。</p>
+<p>如果采用的是三次握手，就算是那一次失效的报文传送过来了，服务端接受到了那条失效报文并且回复了确认报文，但是客户端不会再次发出确认。由于服务器收不到确认，就知道客户端并没有请求连接。</p>
+</blockquote>
+<h3 id="TCP连接的释放（四次挥手）"><a href="#TCP连接的释放（四次挥手）" class="headerlink" title="TCP连接的释放（四次挥手）"></a>TCP连接的释放（四次挥手）</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA3MjA1NzU2MjU1?x-oss-process=image/format,png" alt="这里写图片描述"></p>
+<blockquote>
+<p>数据传输完毕后，双方都可释放连接。最开始的时候，客户端和服务器都是处于ESTABLISHED状态，然后客户端主动关闭，服务器被动关闭。</p>
+</blockquote>
+<ol>
+<li>客户端进程发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN=1，其序列号为seq=u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入FIN-WAIT-1（终止等待1）状态。 TCP规定，FIN报文段即使不携带数据，也要消耗一个序号。</li>
+<li>服务器收到连接释放报文，发出确认报文，ACK=1，ack=u+1，并且带上自己的序列号seq=v，此时，服务端就进入了CLOSE-WAIT（关闭等待）状态。TCP服务器通知高层的应用进程，客户端向服务器的方向就释放了，这时候处于半关闭状态，即客户端已经没有数据要发送了，但是服务器若发送数据，客户端依然要接受。这个状态还要持续一段时间，也就是整个CLOSE-WAIT状态持续的时间。</li>
+<li>客户端收到服务器的确认请求后，此时，客户端就进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文（在这之前还需要接受服务器发送的最后的数据）。</li>
+<li>服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，FIN=1，ack=u+1，由于在半关闭状态，服务器很可能又发送了一些数据，假定此时的序列号为seq=w，此时，服务器就进入了LAST-ACK（最后确认）状态，等待客户端的确认。</li>
+<li>客户端收到服务器的连接释放报文后，必须发出确认，ACK=1，ack=w+1，而自己的序列号是seq=u+1，此时，客户端就进入了TIME-WAIT（时间等待）状态。注意此时TCP连接还没有释放，必须经过2∗ *∗MSL（最长报文段寿命）的时间后，当客户端撤销相应的TCB后，才进入CLOSED状态。</li>
+<li>服务器只要收到了客户端发出的确认，立即进入CLOSED状态。同样，撤销TCB后，就结束了这次的TCP连接。可以看到，服务器结束TCP连接的时间要比客户端早一些。</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA2MDg0ODUxMjcy?x-oss-process=image/format,png" alt="四次挥手"></p>
+<h4 id="为什么客户端最后还要等待2MSL？"><a href="#为什么客户端最后还要等待2MSL？" class="headerlink" title="为什么客户端最后还要等待2MSL？"></a>为什么客户端最后还要等待2MSL？</h4><blockquote>
+<p>MSL（Maximum Segment Lifetime），TCP允许不同的实现可以设置不同的MSL值。</p>
+<p>第一，保证客户端发送的最后一个ACK报文能够到达服务器，因为这个ACK报文可能丢失，站在服务器的角度看来，我已经发送了FIN+ACK报文请求断开了，客户端还没有给我回应，应该是我发送的请求断开报文它没有收到，于是服务器又会重新发送一次，而客户端就能在这个2MSL时间段内收到这个重传的报文，接着给出回应报文，并且会重启2MSL计时器。</p>
+<p>第二，防止类似与“三次握手”中提到了的“已经失效的连接请求报文段”出现在本连接中。客户端发送完最后一个确认报文后，在这个2MSL时间中，就可以使本连接持续的时间内所产生的所有报文段都从网络中消失。这样新的连接中不会出现旧连接的请求报文。</p>
+</blockquote>
+<blockquote>
+<p>为什么建立连接是三次握手，关闭连接确是四次挥手呢？</p>
+<p>建立连接的时候， 服务器在LISTEN状态下，收到建立连接请求的SYN报文后，把ACK和SYN放在一个报文里发送给客户端。<br>而关闭连接时，服务器收到对方的FIN报文时，仅仅表示对方不再发送数据了但是还能接收数据，而自己也未必全部数据都发送给对方了，所以己方可以立即关闭，也可以发送一些数据给对方后，再发送FIN报文给对方来表示同意现在关闭连接，因此，己方ACK和FIN一般都会分开发送，从而导致多了一次。</p>
+</blockquote>
+<h4 id="如果已经建立了连接，但是客户端突然出现故障了怎么办？"><a href="#如果已经建立了连接，但是客户端突然出现故障了怎么办？" class="headerlink" title="如果已经建立了连接，但是客户端突然出现故障了怎么办？"></a>如果已经建立了连接，但是客户端突然出现故障了怎么办？</h4><blockquote>
+<p>TCP还设有一个保活计时器，显然，客户端如果出现故障，服务器不能一直等下去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时器，时间通常是设置为2小时，若两小时还没有收到客户端的任何数据，服务器就会发送一个探测报文段，以后每隔75秒发送一次。若一连发送10个探测报文仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
   </entry>
 </search>

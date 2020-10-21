@@ -25,7 +25,7 @@
   <meta name="description" content="本文转载于小书go的两张动图-彻底明白TCP的三次握手与四次挥手  背景描述 通过上一篇中网络模型中的IP层的介绍，我们知道网络层，可以实现两个主机之间的通信。但是这并不具体，因为，真正进行通信的实体是在主机中的进程，是一个主机中的一个进程与另外一个主机中的一个进程在交换数据。IP协议虽然能把数据报文送到目的主机，但是并没有交付给主机的具体应用进程。而端到端的通信才应该是应用进程之间的通信。 U">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(转)TCP三次握手四次挥手">
-<meta property="og:url" content="https://www.lclong.top/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/index.html">
+<meta property="og:url" content="https://www.lclong.top/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
 <meta property="og:description" content="本文转载于小书go的两张动图-彻底明白TCP的三次握手与四次挥手  背景描述 通过上一篇中网络模型中的IP层的介绍，我们知道网络层，可以实现两个主机之间的通信。但是这并不具体，因为，真正进行通信的实体是在主机中的进程，是一个主机中的一个进程与另外一个主机中的一个进程在交换数据。IP协议虽然能把数据报文送到目的主机，但是并没有交付给主机的具体应用进程。而端到端的通信才应该是应用进程之间的通信。 U">
 <meta property="og:locale" content="zh_CN">
@@ -34,12 +34,12 @@
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA3MjA1NzU2MjU1?x-oss-process=image/format,png">
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA2MDg0ODUxMjcy?x-oss-process=image/format,png">
 <meta property="article:published_time" content="2020-10-01T11:27:03.000Z">
-<meta property="article:modified_time" content="2020-10-02T07:19:14.071Z">
+<meta property="article:modified_time" content="2020-10-21T07:40:21.706Z">
 <meta property="article:author" content="Zlatanlong">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcwNjA3MjA1NzA5MzY3?x-oss-process=image/format,png">
 
-<link rel="canonical" href="https://www.lclong.top/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+<link rel="canonical" href="https://www.lclong.top/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
 
 
 <script id="page-configurations">
@@ -135,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">33</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">32</span></a>
 
   </li>
         <li class="menu-item menu-item-aboutme">
@@ -191,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -222,7 +222,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-02 15:19:14" itemprop="dateModified" datetime="2020-10-02T15:19:14+08:00">2020-10-02</time>
+                <time title="修改时间：2020-10-21 15:40:21" itemprop="dateModified" datetime="2020-10-21T15:40:21+08:00">2020-10-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -237,7 +237,7 @@
             </span>
 
           
-            <span id="/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" class="post-meta-item leancloud_visitors" data-flag-title="(转)TCP三次握手四次挥手" title="阅读次数">
+            <span id="/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" class="post-meta-item leancloud_visitors" data-flag-title="(转)TCP三次握手四次挥手" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -252,8 +252,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -329,6 +329,8 @@
 </tr>
 </tbody></table>
 <hr>
+<a id="more"></a>
+
 <h2 id="TCP的概述"><a href="#TCP的概述" class="headerlink" title="TCP的概述"></a>TCP的概述</h2><blockquote>
 <p>TCP把连接作为最基本的对象，每一条TCP连接都有两个端点，这种断点我们叫作套接字（socket），它的定义为端口号拼接到IP地址即构成了套接字，例如，若IP地址为192.3.4.16 而端口号为80，那么得到的套接字为192.3.4.16:80。</p>
 </blockquote>
@@ -407,7 +409,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.lclong.top/2020/10/01/go4it/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="(转)TCP三次握手四次挥手">https://www.lclong.top/2020/10/01/go4it/(转)TCP三次握手四次挥手/</a>
+    <a href="https://www.lclong.top/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="(转)TCP三次握手四次挥手">https://www.lclong.top/2020/10/01/计算机/计算机网络/(转)TCP三次握手四次挥手/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -428,8 +430,8 @@
       <i class="fa fa-chevron-left"></i> windows下找到linux的感觉
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/10/08/go4it/%E9%9D%A2%E8%AF%95%E5%90%84%E7%A7%8D%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="next" title="go4it/面试各种知识点">
-      go4it/面试各种知识点 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" rel="next" title="Anaconda修改清华镜像源(全)">
+      Anaconda修改清华镜像源(全) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -506,7 +508,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
