@@ -18,6 +18,8 @@ categories:
 - [OpenDDS 3.16](https://opendds.org/downloads.html)
 - 离线环境需要：[ACE/TAO 2.2a patch 19 or later](http://download.objectcomputing.com/TAO-2.2a_patches/?M=D)
 
+<!--more-->
+
 ## 二、安装步骤
 
 ### 1. 首先解压源码：
