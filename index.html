@@ -118,17 +118,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">29</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">30</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">18</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">33</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
 
   </li>
         <li class="menu-item menu-item-aboutme">
@@ -283,6 +283,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">使用JS将MySQL数据库表信息导出Excel</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-12 11:39:42 / 修改时间：14:08:45" itemprop="dateCreated datePublished" datetime="2021-04-12T11:39:42+08:00">2021-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E4%B8%9C%E8%A5%BF/" itemprop="url" rel="index">
+                    <span itemprop="name">小东西</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用JS将MySQL数据库表信息导出Excel" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="使用JS将MySQL数据库表信息导出Excel"><a href="#使用JS将MySQL数据库表信息导出Excel" class="headerlink" title="使用JS将MySQL数据库表信息导出Excel"></a>使用JS将MySQL数据库表信息导出Excel</h1><h2 id="完成效果："><a href="#完成效果：" class="headerlink" title="完成效果："></a>完成效果：</h2><p><img src="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/image-20210412114322955.png" alt="效果图"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/07/opendds/OpenDDS_Install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -307,10 +419,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-07 11:05:52 / 修改时间：11:08:46" itemprop="dateCreated datePublished" datetime="2021-04-07T11:05:52+08:00">2021-04-07</time>
+              <time title="创建时间：2021-04-07 11:05:52" itemprop="dateCreated datePublished" datetime="2021-04-07T11:05:52+08:00">2021-04-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-12 14:09:17" itemprop="dateModified" datetime="2021-04-12T14:09:17+08:00">2021-04-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -372,34 +490,19 @@
           <h1 id="OpenDDS-安装并配置Java"><a href="#OpenDDS-安装并配置Java" class="headerlink" title="OpenDDS 安装并配置Java"></a>OpenDDS 安装并配置Java</h1><p>本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式</p>
 <h2 id="一、环境要求"><a href="#一、环境要求" class="headerlink" title="一、环境要求"></a>一、环境要求</h2><ul>
 <li>VS2017 / <strong>VS2019</strong> 作为OpenDDS的项目生成</li>
-<li>Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of <span class="exturl" data-url="aHR0cHM6Ly9zdHJhd2JlcnJ5cGVybC5jb20=" title="https://strawberryperl.com">Straweberry Perl<i class="fa fa-external-link"></i></span>.）</li>
+<li>Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of <a href="https://strawberryperl.com" target="_blank" rel="noopener">Straweberry Perl</a>.）</li>
 <li>jdk1.5以上 推荐使用1.8  实际上在安装过程中只用到了<strong>%JAVA_HOME%\include\jni.h</strong>与<strong>%JAVA_HOME%\include%JAVA_PLATFORM%\jni_md.h</strong>两个文件。</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9vcGVuZGRzLm9yZy9kb3dubG9hZHMuaHRtbA==" title="https://opendds.org/downloads.html">OpenDDS 3.16<i class="fa fa-external-link"></i></span></li>
-<li>离线环境需要：<span class="exturl" data-url="aHR0cDovL2Rvd25sb2FkLm9iamVjdGNvbXB1dGluZy5jb20vVEFPLTIuMmFfcGF0Y2hlcy8/TT1E" title="http://download.objectcomputing.com/TAO-2.2a_patches/?M=D">ACE/TAO 2.2a patch 19 or later<i class="fa fa-external-link"></i></span></li>
+<li><a href="https://opendds.org/downloads.html" target="_blank" rel="noopener">OpenDDS 3.16</a></li>
+<li>离线环境需要：<a href="http://download.objectcomputing.com/TAO-2.2a_patches/?M=D" target="_blank" rel="noopener">ACE/TAO 2.2a patch 19 or later</a></li>
 </ul>
-<h2 id="二、安装步骤"><a href="#二、安装步骤" class="headerlink" title="二、安装步骤"></a>二、安装步骤</h2><h3 id="1-首先解压源码："><a href="#1-首先解压源码：" class="headerlink" title="1. 首先解压源码："></a>1. 首先解压源码：</h3><p>假设OpenDDS解压到<strong>E:\OpenDDS-3.16</strong></p>
-<p>如果是离线环境，还需要将<strong>ACE/TAO 2.2a patch 19</strong>压缩包下的文件夹<strong>ACE_wrappers</strong></p>
-<h3 id="2-生成解决方案"><a href="#2-生成解决方案" class="headerlink" title="2. 生成解决方案"></a>2. 生成解决方案</h3><p>启动<strong>VS的开发人员命令行</strong>，定位到<strong>E:\OpenDDS-3.16</strong>下，输入 <strong>configure</strong> 命令（如果要开启<strong>Java</strong>支持，需要使用 <strong>configure –java</strong>），等待命令执行完毕</p>
-<p>此时程序自动生成了<strong>DDS_TAOv2.sln</strong>文件和<strong>setenv.cmd</strong>文件，在命令行执行<strong>setenv.cmd</strong>设置环境变量，然后使用<code>devenv DDS_TAOv2.sln</code>命令打开新生成的<strong>sln</strong>文件，这样可以保留环境变量、重定项目目标，然后编译源码并等待操作完成。如果是<strong>64</strong>位系统，也需要编译为<strong>64</strong>位版本（把Win32换成<strong>x64</strong>）</p>
-<h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h3><p>新建环境变量： </p>
-<p><strong>DDS_ROOT = E:\OpenDDS-3.16</strong> </p>
-<p><strong>ACE_ROOT = E:\OpenDDS-3.16\ACE_wrappers</strong> </p>
-<p>并将</p>
-<ul>
-<li>%DDS_ROOT%\bin</li>
-<li>%DDS_ROOT%\lib</li>
-<li>%ACE_ROOT%\bin</li>
-<li>%ACE_ROOT%\lib</li>
-</ul>
-<p>添加到<strong>path</strong>变量中。</p>
-<h3 id="4-运行测试"><a href="#4-运行测试" class="headerlink" title="4. 运行测试"></a>4. 运行测试</h3><p>OpenDDS自带了很多实例，存放在<strong>%DDS_ROOT%\examples和%DDS_ROOT%\tests\DCPS</strong>下（<strong>Java</strong>示例在<strong>%DDS_ROOT%\java\tests</strong>下）</p>
-<p>随便挑一个输入<strong>perl run_test.pl</strong>运行perl脚本，能正常收发数据即可</p>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><ul>
-<li>Java实例会有很多JNI的输出，长得和异常信息差不多，但实际上没有出错，只要最后提示<strong>test passed</strong>就是成功的</li>
-<li>第三步编译OpenDDS时候经常会出现找不到文件的错误，大多数和环境变量有关系，configure后生成的解决方案对文件的链接出错，在命令行中执行<strong>setenv.cmd</strong>设置环境变量，然后使用<code>devenv DDS_**.sln</code>命令打开新生成的<strong>sln</strong>文件</li>
-<li>可能会提示缺少 jni_md.h，该文件位于 <strong>%JAVA_HOME%\include\win32</strong> 目录下，复制到 <strong>%OPENDDS_HOME%\java\idl2jni\runtime</strong> 目录下即可</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/07/opendds/OpenDDS_Install/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -966,10 +1069,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-30 00:09:55 / 修改时间：13:48:04" itemprop="dateCreated datePublished" datetime="2020-08-30T00:09:55+08:00">2020-08-30</time>
+              <time title="创建时间：2020-08-30 00:09:55" itemprop="dateCreated datePublished" datetime="2020-08-30T00:09:55+08:00">2020-08-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-09 11:33:06" itemprop="dateModified" datetime="2021-04-09T11:33:06+08:00">2021-04-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -1028,7 +1137,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用mvn下载老版本的node，然后使用老版本的node运行。</p>
+          <p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用nvm,下载老版本的node，然后使用老版本的node运行。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/#more" rel="contents">
@@ -1297,134 +1406,6 @@
   
   
   
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git与Git相关命令</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-17 12:41:03" itemprop="dateCreated datePublished" datetime="2020-03-17T12:41:03+08:00">2020-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-28 16:18:20" itemprop="dateModified" datetime="2020-03-28T16:18:20+08:00">2020-03-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/" class="post-meta-item leancloud_visitors" data-flag-title="Git与Git相关命令" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>738</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h1><blockquote>
-<p><a href="http://iissnan.com/progit/html/zh/ch2_6.html" target="_blank" rel="noopener">Pro Git 中文版</a></p>
-</blockquote>
-<h2 id="最常用"><a href="#最常用" class="headerlink" title="最常用"></a>最常用</h2><p><code>git status</code></p>
-<p><code>git add .</code></p>
-<p><code>git commit -m &quot;balabala&quot;</code></p>
-<p>git commit -amend 将此次更新文件并入到上次commit的记录中，不新添加commit</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-
-<p>如果上一次提交没提交完，这个命令可以把当前文件添加到上一次提交中。</p>
-<p>git push`</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/17/Git%E4%B8%8EGit%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
   </div>
 
   
@@ -1497,20 +1478,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1574,7 +1555,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">144k</span>
+    <span title="站点总字数">147k</span>
 </div>
   <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.1
   </div>

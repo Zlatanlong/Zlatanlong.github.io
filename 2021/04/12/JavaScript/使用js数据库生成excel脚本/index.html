@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="WTTWi2XnJ5">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="使用JS将MySQL数据库表信息导出Excel完成效果：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用JS将MySQL数据库表信息导出Excel">
+<meta property="og:url" content="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/index.html">
+<meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
+<meta property="og:description" content="使用JS将MySQL数据库表信息导出Excel完成效果：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/image-20210412114322955.png">
+<meta property="article:published_time" content="2021-04-12T03:39:42.290Z">
+<meta property="article:modified_time" content="2021-04-12T06:08:45.773Z">
+<meta property="article:author" content="Zlatanlong">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/image-20210412114322955.png">
+
+<link rel="canonical" href="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>使用JS将MySQL数据库表信息导出Excel | Zlatanlong's T-blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zlatanlong's T-blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Lakers is Championship!</h1>
+      
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">30</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">19</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-aboutme">
+
+    <a href="/aboutme/" rel="section"><i class="fa fa-fw fa-user"></i>博主</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          使用JS将MySQL数据库表信息导出Excel
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-12 11:39:42 / 修改时间：14:08:45" itemprop="dateCreated datePublished" datetime="2021-04-12T11:39:42+08:00">2021-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E4%B8%9C%E8%A5%BF/" itemprop="url" rel="index">
+                    <span itemprop="name">小东西</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用JS将MySQL数据库表信息导出Excel" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="使用JS将MySQL数据库表信息导出Excel"><a href="#使用JS将MySQL数据库表信息导出Excel" class="headerlink" title="使用JS将MySQL数据库表信息导出Excel"></a>使用JS将MySQL数据库表信息导出Excel</h1><h2 id="完成效果："><a href="#完成效果：" class="headerlink" title="完成效果："></a>完成效果：</h2><p><img src="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/image-20210412114322955.png" alt="效果图"></p>
+<a id="more"></a>
+
+<h2 id="0、依赖："><a href="#0、依赖：" class="headerlink" title="0、依赖："></a>0、依赖：</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"dependencies": &#123;</span><br><span class="line">    "knex": "^0.21.5",</span><br><span class="line">    "mysql": "^2.18.1",</span><br><span class="line">    "xlsx": "^0.16.9",</span><br><span class="line">    "xlsx-style": "^0.8.13"</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里使用knex处理数据库，直接用mysql包也可以</p>
+<p>xlsx就是大名鼎鼎的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NoZWV0SlMvc2hlZXRqcw==" title="https://github.com/SheetJS/sheetjs">sheet.js<i class="fa fa-external-link"></i></span>，可以非常好的处理excel的文本内容，但是对于样式的修改需要pro版本</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Byb3RvYmkvanMteGxzeA==" title="https://github.com/protobi/js-xlsx">xlsx-style<i class="fa fa-external-link"></i></span>是根据xlsx开发的处理xlsx样式的开源工具</p>
+<p>使用npm工具并将三个依赖导入，就不过多赘述了</p>
+<h2 id="1、使用第三方工具"><a href="#1、使用第三方工具" class="headerlink" title="1、使用第三方工具"></a>1、使用第三方工具</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> knex = <span class="built_in">require</span>(<span class="string">'knex'</span>)(&#123;</span><br><span class="line">  client: <span class="string">'mysql'</span>,</span><br><span class="line">  connection: &#123;</span><br><span class="line">    host: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    user: <span class="string">'root'</span>,</span><br><span class="line">    password: <span class="string">'123456'</span>,</span><br><span class="line">    database: <span class="string">'information_schema'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将两个进行区分，处理时用xlsx提供的函数，导出时用xlsx-style提供的函数</span></span><br><span class="line"><span class="keyword">const</span> XLSX = <span class="built_in">require</span>(<span class="string">'xlsx'</span>)</span><br><span class="line"><span class="keyword">const</span> XLSX_STYLE = <span class="built_in">require</span>(<span class="string">'xlsx-style'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、获取数据库中字段信息"><a href="#2、获取数据库中字段信息" class="headerlink" title="2、获取数据库中字段信息"></a>2、获取数据库中字段信息</h2><p>数据库中相关信息 都在<code>information_schema</code>表中，写一个简单的sql获取就可以了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> asyncGetData = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">await</span> knex(<span class="string">'COLUMNS'</span>)</span><br><span class="line">    .where(&#123;</span><br><span class="line">      <span class="comment">// 需要导出的数据库名</span></span><br><span class="line">      TABLE_SCHEMA: <span class="string">'oa'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .select(<span class="string">'TABLE_NAME as 表名'</span>,</span><br><span class="line">      <span class="string">'COLUMN_NAME as 字段名'</span>,</span><br><span class="line">      <span class="string">'DATA_TYPE as 数据类型'</span>,</span><br><span class="line">      <span class="string">'CHARACTER_MAXIMUM_LENGTH as 字符长度'</span>,</span><br><span class="line">      <span class="string">'NUMERIC_PRECISION as 数字长度'</span>,</span><br><span class="line">      <span class="string">'NUMERIC_SCALE as 小数位数'</span>,</span><br><span class="line">      <span class="string">'IS_NULLABLE as 允许空'</span>,</span><br><span class="line">      <span class="string">'EXTRA as 自增策略'</span>,</span><br><span class="line">      <span class="string">'COLUMN_DEFAULT as 默认值'</span>,</span><br><span class="line">      <span class="string">'COLUMN_COMMENT as 备注'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、创建workBook与workSheet"><a href="#3、创建workBook与workSheet" class="headerlink" title="3、创建workBook与workSheet"></a>3、创建workBook与workSheet</h2><p>workBook对象是xlsx用来操作的基本对象，workSheet对应xlsx文件中的每个表；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> workBook = XLSX.utils.book_new()</span><br><span class="line"><span class="keyword">const</span> workSheet = &#123; <span class="string">'!merges'</span>: [], <span class="string">'!cols'</span>: [&#123; <span class="attr">wch</span>: <span class="number">18</span> &#125;, &#123; <span class="attr">wch</span>: <span class="number">18</span> &#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123; <span class="attr">wch</span>: <span class="number">14</span> &#125;, &#123;&#125;, &#123; <span class="attr">wch</span>: <span class="number">50</span> &#125;] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>workSheet中</p>
+<ul>
+<li><p>!merges 数组中每个对象表示合并单元格的情况，管理如下对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	s: &#123; <span class="attr">r</span>: startRow, <span class="attr">c</span>: <span class="number">0</span> &#125;,</span><br><span class="line">	e: &#123; <span class="attr">r</span>: endRow, <span class="attr">c</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>s: start 开始的坐标</p>
+<p>e: end 结束的坐标</p>
+</li>
+<li><p>!cols表示每列属性，这里对一些列设置了宽度</p>
+</li>
+</ul>
+<h2 id="4、-对获取到的数据进行处理"><a href="#4、-对获取到的数据进行处理" class="headerlink" title="4、 对获取到的数据进行处理"></a>4、 对获取到的数据进行处理</h2><p>a.  将数组按照<strong>表名</strong>分组，存储到data对象中</p>
+<p>b.  遍历data对象，使用<strong>sheet_add_json()</strong>添加到sheet末尾</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">asyncGetData().then(</span><br><span class="line">  res =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> data = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; res.length; i++) &#123;</span><br><span class="line">      <span class="keyword">const</span> element = res[i]</span><br><span class="line">      <span class="keyword">if</span> (element[<span class="string">'允许空'</span>] === <span class="string">'YES'</span>) element[<span class="string">'允许空'</span>] = <span class="string">''</span></span><br><span class="line">      <span class="keyword">if</span> (element[<span class="string">'字符长度'</span>] === <span class="literal">null</span>) element[<span class="string">'字符长度'</span>] = <span class="string">''</span></span><br><span class="line">      <span class="keyword">if</span> (element[<span class="string">'数字长度'</span>] === <span class="literal">null</span>) element[<span class="string">'数字长度'</span>] = <span class="string">''</span></span><br><span class="line">      <span class="keyword">if</span> (element[<span class="string">'小数位数'</span>] === <span class="literal">null</span>) element[<span class="string">'小数位数'</span>] = <span class="string">''</span></span><br><span class="line">      <span class="keyword">if</span> (element[<span class="string">'默认值'</span>] === <span class="literal">null</span>) element[<span class="string">'默认值'</span>] = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (!data[element.表名]) &#123;</span><br><span class="line">        data[element.表名] = [element]</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        data[element.表名].push(element)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置每次合并的开始和结束行数</span></span><br><span class="line">    <span class="keyword">let</span> startRow = <span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> endRow = <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> data) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">Object</span>.hasOwnProperty.call(data, key)) &#123;</span><br><span class="line">        <span class="keyword">const</span> table = data[key]</span><br><span class="line">        startRow = endRow + <span class="number">2</span></span><br><span class="line">        endRow = startRow + table.length - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        XLSX.utils.sheet_add_json(workSheet, table, &#123; <span class="attr">origin</span>: <span class="number">-1</span> &#125;)</span><br><span class="line"></span><br><span class="line">        workSheet[<span class="string">'!merges'</span>].push(&#123;</span><br><span class="line">          s: &#123; <span class="attr">r</span>: startRow, <span class="attr">c</span>: <span class="number">0</span> &#125;,</span><br><span class="line">          e: &#123; <span class="attr">r</span>: endRow, <span class="attr">c</span>: <span class="number">0</span> &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        workSheet[<span class="string">'A'</span> + (startRow + <span class="number">1</span>)].s = &#123;</span><br><span class="line">          alignment: &#123; <span class="attr">vertical</span>: <span class="string">'center'</span> &#125;,</span><br><span class="line">          font: &#123; <span class="attr">bold</span>: <span class="literal">true</span>, <span class="attr">color</span>: &#123; <span class="attr">rgb</span>: <span class="string">'00C0504D'</span> &#125; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">Object</span>.keys(table[<span class="number">0</span>]).length; i++) &#123;</span><br><span class="line">          workSheet[<span class="string">`<span class="subst">$&#123;<span class="built_in">String</span>.fromCharCode(<span class="number">65</span> + i)&#125;</span><span class="subst">$&#123;startRow&#125;</span>`</span>].s = &#123;</span><br><span class="line">            font: &#123; <span class="attr">bold</span>: <span class="literal">true</span>, <span class="attr">name</span>: <span class="string">'仿宋'</span>, <span class="attr">color</span>: &#123; <span class="attr">rgb</span>: <span class="string">'004F96D3'</span> &#125; &#125;,</span><br><span class="line">            fill: &#123; <span class="attr">bgColor</span>: &#123; <span class="attr">indexed</span>: <span class="number">64</span> &#125;, <span class="attr">fgColor</span>: &#123; <span class="attr">rgb</span>: <span class="string">"F2F2F2"</span> &#125; &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    XLSX.utils.book_append_sheet(workBook, workSheet, <span class="string">"Entity Definition"</span>);</span><br><span class="line"></span><br><span class="line">    XLSX_STYLE.writeFile(workBook, <span class="string">'out.xlsx'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"----------输出成功！---------"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+      
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Zlatanlong
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" title="使用JS将MySQL数据库表信息导出Excel">https://www.lclong.top/2021/04/12/JavaScript/使用js数据库生成excel脚本/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/07/opendds/OpenDDS_Install/" rel="prev" title="OpenDDS 安装并配置Java">
+      <i class="fa fa-chevron-left"></i> OpenDDS 安装并配置Java
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/9999/02/13/hometop/" rel="next" title="How you doing?">
+      How you doing? <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用JS将MySQL数据库表信息导出Excel"><span class="nav-number">1.</span> <span class="nav-text">使用JS将MySQL数据库表信息导出Excel</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#完成效果："><span class="nav-number">1.1.</span> <span class="nav-text">完成效果：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0、依赖："><span class="nav-number">1.2.</span> <span class="nav-text">0、依赖：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、使用第三方工具"><span class="nav-number">1.3.</span> <span class="nav-text">1、使用第三方工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、获取数据库中字段信息"><span class="nav-number">1.4.</span> <span class="nav-text">2、获取数据库中字段信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、创建workBook与workSheet"><span class="nav-number">1.5.</span> <span class="nav-text">3、创建workBook与workSheet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、-对获取到的数据进行处理"><span class="nav-number">1.6.</span> <span class="nav-text">4、 对获取到的数据进行处理</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zlatanlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Zlatanlong</p>
+  <div class="site-description" itemprop="description">生活就像巧克力🍫</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3psYXRhbmxvbmc=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zlatanlong"><i class="fa fa-fw fa-github"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxvbmctdHhnY0Bmb3htYWlsLmNvbQ==" title="E-Mail → mailto:long-txgc@foxmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      关注列表
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9sZWZsYWNvbi5naXRodWIuaW8v" title="https:&#x2F;&#x2F;leflacon.github.io&#x2F;">leflacon</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9ib2Jib3NzLmdpdGh1Yi5pby8=" title="https:&#x2F;&#x2F;bobboss.github.io&#x2F;">BobBoss</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cDovL29wdGltaXN0aWNhdC54eXovdXNlcj91c2VySWQ9bHpkY2w=" title="http:&#x2F;&#x2F;optimisticat.xyz&#x2F;user?userId&#x3D;lzdcl">lzdcl</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zlatanlong</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">147k</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'H5inyassVpcpItLTuMJH9aBg-gzGzoHsz',
+      appKey     : 'mBzB6QB3deD6zw8YEIKVQdzz',
+      placeholder: "快来说两句吧。。。",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
