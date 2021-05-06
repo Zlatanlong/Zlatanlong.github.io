@@ -118,17 +118,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">30</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">31</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">19</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">22</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">36</span></a>
 
   </li>
         <li class="menu-item menu-item-aboutme">
@@ -265,6 +265,252 @@
 <hr>
 <p>欢迎各位网友来到的我的博客，</p>
 <p>这个博客用来记录一些开发中遇到的问题，和相关的分享~🥳</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/05/06/springboot/jwt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/06/springboot/jwt/" class="post-title-link" itemprop="url">Spring Boot 整合 Security 实现 JWT</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-06 16:39:38 / 修改时间：16:43:05" itemprop="dateCreated datePublished" datetime="2021-05-06T16:39:38+08:00">2021-05-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring-Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring Security</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring-Security/Spring-Boot/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring Boot</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/05/06/springboot/jwt/" class="post-meta-item leancloud_visitors" data-flag-title="Spring Boot 整合 Security 实现 JWT" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/05/06/springboot/jwt/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/06/springboot/jwt/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>10k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>26 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://github.com/zlatanlong/springboot-study/tree/master/sb-09-jwt" target="_blank" rel="noopener">项目代码 已经加入到Github Spring Boot Study学习项目中</a></p>
+<h2 id="一、TokenProvider"><a href="#一、TokenProvider" class="headerlink" title="一、TokenProvider"></a>一、TokenProvider</h2><p>对于JWT本身的学习可以参照百度到的内容，在项目中使用时，我们主要需要两个方法，一个是创建token，一个是解析token。我们保存的token相当于Spring Security中当前认证信息的一种序列化。</p>
+<ol>
+<li><p>继承<strong>InitializingBean</strong>类，主要为了初始化一些配置项的参数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="keyword">byte</span>[] keyBytes = Decoders.BASE64.decode(jwtProperties.getBase64Secret());</span><br><span class="line">    <span class="keyword">this</span>.key = Keys.hmacShaKeyFor(keyBytes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>jwtProperties.getBase64Secret()</strong>实际是从配置项中获取一段面膜，生成的token会用这个密码加密。</p>
+</li>
+<li><p>创建token</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">createToken</span><span class="params">(Authentication authentication)</span> </span>&#123;</span><br><span class="line">    String authorities = authentication.getAuthorities().stream()</span><br><span class="line">            .map(GrantedAuthority::getAuthority)</span><br><span class="line">            .collect(Collectors.joining(<span class="string">","</span>));</span><br><span class="line"></span><br><span class="line">	Date validity = <span class="keyword">new</span> Date(<span class="keyword">new</span> Date().getTime() + jwtProperties.getTokenValidityInSeconds());</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> Jwts.builder()</span><br><span class="line">            .signWith(key, SignatureAlgorithm.HS512)</span><br><span class="line">            .claim(AUTHORITIES_KEY, authorities)</span><br><span class="line">            .setSubject(authentication.getName())</span><br><span class="line">            .setExpiration(validity)</span><br><span class="line">            .compact();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解析token</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Authentication <span class="title">getAuthentication</span><span class="params">(String token)</span> </span>&#123;</span><br><span class="line">    Claims claims = Jwts.parser()</span><br><span class="line">            .setSigningKey(key)</span><br><span class="line">            .parseClaimsJws(token)</span><br><span class="line">            .getBody();</span><br><span class="line">    Collection&lt;? extends GrantedAuthority&gt; authorities =</span><br><span class="line">            Arrays.stream(claims.get(AUTHORITIES_KEY).toString().split(<span class="string">","</span>))</span><br><span class="line">                    .map(SimpleGrantedAuthority::<span class="keyword">new</span>)</span><br><span class="line">                    .collect(Collectors.toList());</span><br><span class="line">    User principal = <span class="keyword">new</span> User(claims.getSubject(), <span class="string">"******"</span>, authorities);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> UsernamePasswordAuthenticationToken(principal, token, authorities);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/06/springboot/jwt/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/24/%E7%AE%97%E6%B3%95/kmp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/24/%E7%AE%97%E6%B3%95/kmp/" class="post-title-link" itemprop="url">简单理解KMP代码</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-20 11:30:00" itemprop="dateModified" datetime="2021-04-20T11:30:00+08:00">2021-04-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/24/%E7%AE%97%E6%B3%95/kmp/" class="post-meta-item leancloud_visitors" data-flag-title="简单理解KMP代码" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/24/%E7%AE%97%E6%B3%95/kmp/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/%E7%AE%97%E6%B3%95/kmp/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>925</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天的每日一题是<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaW1wbGVtZW50LXN0cnN0ci8=" title="https://leetcode-cn.com/problems/implement-strstr/">28. 实现 strStr()<i class="fa fa-external-link"></i></span>，这竟然是一道简单题，好吧学习一下KMP算法，对于KMP算法过程的讲解，在leetcode题解中<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaW1wbGVtZW50LXN0cnN0ci9zb2x1dGlvbi9zaHVhLWNodWFuLWxjLXNodWFuZy1iYWktcG8tc3UtamllLWZhLWttLXRiODYv" title="https://leetcode-cn.com/problems/implement-strstr/solution/shua-chuan-lc-shuang-bai-po-su-jie-fa-km-tb86/">【宫水三叶】简单题学 KMP 算法<i class="fa fa-external-link"></i></span>的图解，还有知乎的回答<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIxOTIzMDIxL2Fuc3dlci8xMDMyNjY1NDg2" title="https://www.zhihu.com/question/21923021/answer/1032665486">如何更好地理解和掌握 KMP 算法? - 阮行止的回答 - 知乎<i class="fa fa-external-link"></i></span>已经颇为详细，我这里只是简单对代码进行一下简述，方便理解(bèi sòng)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">kmp</span><span class="params">(String ss, String pp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pp.isEmpty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = ss.length(), m = pp.length();</span><br><span class="line">    	<span class="comment">// 前面加一个空格，后面匹配时下标表示个数，同时避免 j = next[j-1] 时 j-1=-1</span></span><br><span class="line">        ss = <span class="string">" "</span> + ss;</span><br><span class="line">        pp = <span class="string">" "</span> + pp;</span><br><span class="line">        <span class="keyword">char</span>[] s = ss.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] p = pp.toCharArray();</span><br><span class="line">        <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[m + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 下面两个过程很像，求next其实就是自己和自己匹配，</span></span><br><span class="line"><span class="comment">         * 无论如何 匹配失败 j=next[j];</span></span><br><span class="line"><span class="comment">         * 失败条件是(j &gt; 0 &amp;&amp; 数组[i] != p[j + 1])</span></span><br><span class="line"><span class="comment">         * 成功时将j向前移</span></span><br><span class="line"><span class="comment">         * 每次都要进行的是：</span></span><br><span class="line"><span class="comment">         *  求next： 对next数组进行赋值</span></span><br><span class="line"><span class="comment">         *  匹配： 判断是否匹配</span></span><br><span class="line"><span class="comment">         *  i++： 这一步在for循环中进行</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * 求next自己与自己匹配，只有1位时不考虑，所以i从2开始</span></span><br><span class="line"><span class="comment">         * 匹配时 i 从 1开始</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 求next过程</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= m; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = next[j];</span><br><span class="line">            <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j++;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 匹配过程</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = next[j];</span><br><span class="line">            <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j++;</span><br><span class="line">            <span class="keyword">if</span> (j == m) <span class="keyword">return</span> i - m;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -1159,253 +1405,6 @@
   
   
   
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/04/11/Java/Java%E4%B8%AD%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0(%E8%A1%8C%E4%B8%BA)%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/11/Java/Java%E4%B8%AD%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0(%E8%A1%8C%E4%B8%BA)%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Java中传递函数(行为)的两种方式</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-11 15:06:17 / 修改时间：15:29:18" itemprop="dateCreated datePublished" datetime="2020-04-11T15:06:17+08:00">2020-04-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/04/11/Java/Java%E4%B8%AD%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0(%E8%A1%8C%E4%B8%BA)%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="Java中传递函数(行为)的两种方式" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2020/04/11/Java/Java%E4%B8%AD%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0(%E8%A1%8C%E4%B8%BA)%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/11/Java/Java%E4%B8%AD%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0(%E8%A1%8C%E4%B8%BA)%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="开门见山："><a href="#开门见山：" class="headerlink" title="开门见山："></a>开门见山：</h2><ol>
-<li>接收一个接口，传参接口的实现</li>
-<li>使用jdk8的Function类进行接收</li>
-</ol>
-<p>在spring boot的项目中，为了对前端传递的参数进行判断，一个比较好的方法对每一个接受的json对应一个接受的实体类，判断传递的各个字段是否完整可以通过对实体类添加<code>@NotNull</code>注解。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SysRole</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@TableId</span>(type = IdType.AUTO)</span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull</span>(message = <span class="string">"角色名不能为空"</span>)</span><br><span class="line">    <span class="keyword">private</span> String roleName;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后在controller的方法中中添加如下参数：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/add"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> Result <span class="title">add</span><span class="params">(@RequestBody @Valid SysRole role, BindingResult result)</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/11/Java/Java%E4%B8%AD%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0(%E8%A1%8C%E4%B8%BA)%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/" class="post-title-link" itemprop="url">Mybatis Plus的使用</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-17 13:48:28" itemprop="dateCreated datePublished" datetime="2020-03-17T13:48:28+08:00">2020-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-30 23:56:20" itemprop="dateModified" datetime="2020-03-30T23:56:20+08:00">2020-03-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/Mybatis/" itemprop="url" rel="index">
-                    <span itemprop="name">Mybatis</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/" class="post-meta-item leancloud_visitors" data-flag-title="Mybatis Plus的使用" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Mybatis-Plus"><a href="#Mybatis-Plus" class="headerlink" title="Mybatis Plus"></a>Mybatis Plus</h1><p>mybatis plus 在 mybatis 基础上没有改变其本身，并做了增强。</p>
-<p><a href="https://github.com/baomidou/mybatis-plus-samples" target="_blank" rel="noopener">官方提供在Github的mybatis-plus-samples</a></p>
-<p><a href="https://mp.baomidou.com/" target="_blank" rel="noopener">参考：MP官网</a></p>
-<p><img src="/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/relationship-with-mybatis.png" alt="官方宣传图"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/17/springboot/mybatis-plus%E7%AC%94%E8%AE%B0/mybatis-plus/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
   </div>
 
   
@@ -1478,20 +1477,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1555,7 +1554,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">147k</span>
+    <span title="站点总字数">158k</span>
 </div>
   <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.1
   </div>
