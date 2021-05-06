@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.lclong.top
+url: https://lclong.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -99,11 +99,12 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: 
     gitee: git@gitee.com:zlatanlong/zlatanlong.git,master
     github: git@github.com:Zlatanlong/Zlatanlong.github.io.git,master
     coding: git@e.coding.net:zlatanlong/myblog.git,master
+- type: baidu_url_submitter
 
 # wordcounts
 symbols_count_time:
@@ -119,3 +120,9 @@ leancloud_counter_security:
   app_key: mBzB6QB3deD6zw8YEIKVQdzz
   username: # Will be asked while deploying if is left blank
   password: # Recommmended to be left blank. Will be asked while deploying if is left blank
+
+baidu_url_submit:
+  count: 100                 # 提交最新的多少个链接
+  host: lclong.top           # 在百度站长平台中添加的域名
+  token: qUyXX0Y4fKy6Ahj8    # 秘钥
+  path: baidu_urls.txt

@@ -25,7 +25,7 @@ categories:
    }
    ```
 
-   **jwtProperties.getBase64Secret()**实际是从配置项中获取一段面膜，生成的token会用这个密码加密。
+   **jwtProperties.getBase64Secret()**实际是从配置项中获取一段密码，生成的token会用这个密码加密。
 
 2. 创建token
 
