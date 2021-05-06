@@ -13,19 +13,19 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin Sans:300,300italic,400,400italic,700,700italic|Lobster:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="作为一个做 SPA 起家的框架，Vue 的开发学习曲线较为平缓，相对来说，开发体验属于上乘。但不少初学者会发现，自己的站点，随随便便打包文件就有 10M ！难以置信，其实这跟 Vue 的性能没有太大关系，我们可以通过配置文件来大大改善这一情况。 减少打包后文件体积的方法：  采用懒加载 启用 Gzip 压缩 将依赖库挂到 CDN 上 减少不必要的库依赖">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(转)vue打包压缩体积">
-<meta property="og:url" content="https://www.lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/index.html">
+<meta property="og:url" content="https://lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
 <meta property="og:description" content="作为一个做 SPA 起家的框架，Vue 的开发学习曲线较为平缓，相对来说，开发体验属于上乘。但不少初学者会发现，自己的站点，随随便便打包文件就有 10M ！难以置信，其实这跟 Vue 的性能没有太大关系，我们可以通过配置文件来大大改善这一情况。 减少打包后文件体积的方法：  采用懒加载 启用 Gzip 压缩 将依赖库挂到 CDN 上 减少不必要的库依赖">
 <meta property="og:locale" content="zh_CN">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="Vue.js">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/">
+<link rel="canonical" href="https://lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/">
 
 
 <script id="page-configurations">
@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -345,7 +345,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/" title="(转)vue打包压缩体积">https://www.lclong.top/2018/09/13/(转)vue打包压缩体积/</a>
+    <a href="https://lclong.top/2018/09/13/(%E8%BD%AC)vue%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E4%BD%93%E7%A7%AF/" title="(转)vue打包压缩体积">https://lclong.top/2018/09/13/(转)vue打包压缩体积/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！

@@ -13,29 +13,29 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin Sans:300,300italic,400,400italic,700,700italic|Lobster:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。 终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。  下载cmder，在cmder官网下载就可以，因为已经有git了，所以下载min版本即可。 因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现Cmder Here这个功能">
+  <meta name="description" content="最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用nvm,下载老版本的node，然后使用老版本的node运行。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cmder的使用">
-<meta property="og:url" content="https://www.lclong.top/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="使用nvm管理node版本">
+<meta property="og:url" content="https://lclong.top/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
-<meta property="og:description" content="更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。 终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。  下载cmder，在cmder官网下载就可以，因为已经有git了，所以下载min版本即可。 因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现Cmder Here这个功能">
+<meta property="og:description" content="最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用nvm,下载老版本的node，然后使用老版本的node运行。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-30T06:13:10.337Z">
-<meta property="article:modified_time" content="2020-08-30T06:28:42.730Z">
+<meta property="article:published_time" content="2021-04-24T06:11:56.692Z">
+<meta property="article:modified_time" content="2021-04-09T03:33:06.623Z">
 <meta property="article:author" content="Zlatanlong">
-<meta property="article:tag" content="cmder">
+<meta property="article:tag" content="nvm">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.lclong.top/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/">
+<link rel="canonical" href="https://lclong.top/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>cmder的使用 | Zlatanlong's T-blog</title>
+  <title>使用nvm管理node版本 | Zlatanlong's T-blog</title>
   
 
 
@@ -187,7 +187,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -200,7 +200,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          cmder的使用
+          使用nvm管理node版本
         </h2>
 
         <div class="post-meta">
@@ -210,24 +210,30 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-30 14:13:10 / 修改时间：14:28:42" itemprop="dateCreated datePublished" datetime="2020-08-30T14:13:10+08:00">2020-08-30</time>
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-09 11:33:06" itemprop="dateModified" datetime="2021-04-09T11:33:06+08:00">2021-04-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="cmder的使用" title="阅读次数">
+            <span id="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用nvm管理node版本" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -242,8 +248,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -253,14 +259,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>672</span>
+              <span>1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -272,18 +278,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
-<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
+        <p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用nvm,下载老版本的node，然后使用老版本的node运行。</p>
+<a id="more"></a>
+
 <ol>
-<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
-<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
-<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
-<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
-</ol>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NvcmV5YnV0bGVyL252bS13aW5kb3dzL3JlbGVhc2Vz" title="https://github.com/coreybutler/nvm-windows/releases">nvm-windows下载<i class="fa fa-external-link"></i></span> nvm实际上只能在linux/mac系统上运行，如果windows系统需要下载这个nvm-setup.zip，安装时会自动配好环境变量。</p>
 </li>
-<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
- 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
-<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
+<li><p>安装nvm 直接安装即可，第一个目录是以后个版本nodejs的安装目录，第二个目录实际上是第一个目录的快捷方式.</p>
+</li>
+</ol>
+<p>更改setting.txt文件，修改nodejs的镜像和npm的镜像,注意这里阿里淘宝镜像源已经都更新为<strong>https</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root: D:\env\nvm</span><br><span class="line">path: D:\env\nvm\nodejs</span><br><span class="line">node_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>通过nvm安装node<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nvm -v // 查看nvm版本</span><br><span class="line">nvm install 8.12.0 // 下载指定版本 </span><br><span class="line">nvm install latest安装最新版本</span><br><span class="line">nvm use 8.12.0 // 使用指定版本</span><br><span class="line">nvm ls // 查看已经安装的nodejs版本</span><br><span class="line">node -v // 查看nodejs版本</span><br></pre></td></tr></table></figure></li>
+<li>安装全局npm<br>　　安装node的时候，npm其实也已经一起安装了。因为nvm可以管理多个版本的node，如果每次添加一个node版本都要安装一堆的包很麻烦,如果有一个npm可以让各个版本的node共用，就不会这么麻烦了，这就是为什么我们要配置一个全局的npm的原因。简单的三步就可以配置一个全局的npm。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  npm config <span class="built_in">set</span> prefix <span class="string">"D:\env\nvm"</span>//配置用npm下载包时全局安装的包路径</span><br><span class="line">2.  npm install npm -g//安装全局npm,不同的node都使用这个npm，想更新全局的npm的话首先删除全局路径(就是上一行命令的地址,可以使用npm config ls查看)下的npm,再执行一次这个命令即可</span><br><span class="line">3.  在用户变量中添加 NPM_HOME=D:\env\nvm，path中添加%NPM-HOME%</span><br></pre></td></tr></table></figure></li>
 </ol>
 
     </div>
@@ -302,7 +310,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.lclong.top/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" title="cmder的使用">https://www.lclong.top/2020/08/30/windows系统工具/cmder的使用/</a>
+    <a href="https://lclong.top/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" title="使用nvm管理node版本">https://lclong.top/2021/04/24/npm/使用nvm管理node版本/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -314,7 +322,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/cmder/" rel="tag"><i class="fa fa-tag"></i> cmder</a>
+              <a href="/tags/nvm/" rel="tag"><i class="fa fa-tag"></i> nvm</a>
           </div>
 
         
@@ -323,12 +331,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" rel="prev" title="使用nvm管理node版本">
-      <i class="fa fa-chevron-left"></i> 使用nvm管理node版本
+    <a href="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" rel="prev" title="使用JS将MySQL数据库表信息导出Excel">
+      <i class="fa fa-chevron-left"></i> 使用JS将MySQL数据库表信息导出Excel
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" rel="next" title="windows下找到linux的感觉">
-      windows下找到linux的感觉 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/04/24/opendds/OpenDDS_Install/" rel="next" title="OpenDDS 安装并配置Java">
+      OpenDDS 安装并配置Java <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>

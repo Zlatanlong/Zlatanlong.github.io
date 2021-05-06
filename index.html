@@ -13,26 +13,26 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin Sans:300,300italic,400,400italic,700,700italic|Lobster:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="生活就像巧克力🍫">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Zlatanlong&#39;s T-blog">
-<meta property="og:url" content="https://www.lclong.top/index.html">
+<meta property="og:url" content="https://lclong.top/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
 <meta property="og:description" content="生活就像巧克力🍫">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Zlatanlong">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.lclong.top/">
+<link rel="canonical" href="https://lclong.top/">
 
 
 <script id="page-configurations">
@@ -184,7 +184,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/9999/02/13/hometop/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/9999/02/13/hometop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -283,7 +283,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/05/06/springboot/jwt/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/05/06/springboot/jwt/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -309,7 +309,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-06 16:39:38 / 修改时间：16:43:05" itemprop="dateCreated datePublished" datetime="2021-05-06T16:39:38+08:00">2021-05-06</time>
+              <time title="创建时间：2021-05-06 16:39:38 / 修改时间：17:06:32" itemprop="dateCreated datePublished" datetime="2021-05-06T16:39:38+08:00">2021-05-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -381,7 +381,7 @@
 <li><p>继承<strong>InitializingBean</strong>类，主要为了初始化一些配置项的参数。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="keyword">byte</span>[] keyBytes = Decoders.BASE64.decode(jwtProperties.getBase64Secret());</span><br><span class="line">    <span class="keyword">this</span>.key = Keys.hmacShaKeyFor(keyBytes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>jwtProperties.getBase64Secret()</strong>实际是从配置项中获取一段面膜，生成的token会用这个密码加密。</p>
+<p><strong>jwtProperties.getBase64Secret()</strong>实际是从配置项中获取一段密码，生成的token会用这个密码加密。</p>
 </li>
 <li><p>创建token</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">createToken</span><span class="params">(Authentication authentication)</span> </span>&#123;</span><br><span class="line">    String authorities = authentication.getAuthorities().stream()</span><br><span class="line">            .map(GrantedAuthority::getAuthority)</span><br><span class="line">            .collect(Collectors.joining(<span class="string">","</span>));</span><br><span class="line"></span><br><span class="line">	Date validity = <span class="keyword">new</span> Date(<span class="keyword">new</span> Date().getTime() + jwtProperties.getTokenValidityInSeconds());</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> Jwts.builder()</span><br><span class="line">            .signWith(key, SignatureAlgorithm.HS512)</span><br><span class="line">            .claim(AUTHORITIES_KEY, authorities)</span><br><span class="line">            .setSubject(authentication.getName())</span><br><span class="line">            .setExpiration(validity)</span><br><span class="line">            .compact();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -416,7 +416,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/24/%E7%AE%97%E6%B3%95/kmp/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/%E7%AE%97%E6%B3%95/kmp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -529,7 +529,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -543,119 +543,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">使用JS将MySQL数据库表信息导出Excel</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-04-12 11:39:42 / 修改时间：14:16:25" itemprop="dateCreated datePublished" datetime="2021-04-12T11:39:42+08:00">2021-04-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E4%B8%9C%E8%A5%BF/" itemprop="url" rel="index">
-                    <span itemprop="name">小东西</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用JS将MySQL数据库表信息导出Excel" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="使用JS将MySQL数据库表信息导出Excel"><a href="#使用JS将MySQL数据库表信息导出Excel" class="headerlink" title="使用JS将MySQL数据库表信息导出Excel"></a>使用JS将MySQL数据库表信息导出Excel</h1><h2 id="完成效果："><a href="#完成效果：" class="headerlink" title="完成效果："></a>完成效果：</h2><p><img src="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/image-20210412114322955.png" alt="效果图"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2021/04/07/opendds/OpenDDS_Install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/07/opendds/OpenDDS_Install/" class="post-title-link" itemprop="url">OpenDDS 安装并配置Java</a>
+            <a href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-title-link" itemprop="url">windows下找到linux的感觉</a>
         </h2>
 
         <div class="post-meta">
@@ -666,14 +554,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-04-07 11:05:52" itemprop="dateCreated datePublished" datetime="2021-04-07T11:05:52+08:00">2021-04-07</time>
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-12 14:09:17" itemprop="dateModified" datetime="2021-04-12T14:09:17+08:00">2021-04-12</time>
+                <time title="修改时间：2020-10-21 15:29:58" itemprop="dateModified" datetime="2020-10-21T15:29:58+08:00">2020-10-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -681,14 +569,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenDDS/" itemprop="url" rel="index">
-                    <span itemprop="name">OpenDDS</span>
+                  <a href="/categories/windows/" itemprop="url" rel="index">
+                    <span itemprop="name">windows</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2021/04/07/opendds/OpenDDS_Install/" class="post-meta-item leancloud_visitors" data-flag-title="OpenDDS 安装并配置Java" title="阅读次数">
+            <span id="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-meta-item leancloud_visitors" data-flag-title="windows下找到linux的感觉" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -703,8 +591,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2021/04/07/opendds/OpenDDS_Install/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/07/opendds/OpenDDS_Install/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -714,14 +602,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>5.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>14 分钟</span>
             </span>
 
         </div>
@@ -733,17 +621,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="OpenDDS-安装并配置Java"><a href="#OpenDDS-安装并配置Java" class="headerlink" title="OpenDDS 安装并配置Java"></a>OpenDDS 安装并配置Java</h1><p>本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式</p>
-<h2 id="一、环境要求"><a href="#一、环境要求" class="headerlink" title="一、环境要求"></a>一、环境要求</h2><ul>
-<li>VS2017 / <strong>VS2019</strong> 作为OpenDDS的项目生成</li>
-<li>Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of <a href="https://strawberryperl.com" target="_blank" rel="noopener">Straweberry Perl</a>.）</li>
-<li>jdk1.5以上 推荐使用1.8  实际上在安装过程中只用到了<strong>%JAVA_HOME%\include\jni.h</strong>与<strong>%JAVA_HOME%\include%JAVA_PLATFORM%\jni_md.h</strong>两个文件。</li>
-<li><a href="https://opendds.org/downloads.html" target="_blank" rel="noopener">OpenDDS 3.16</a></li>
-<li>离线环境需要：<a href="http://download.objectcomputing.com/TAO-2.2a_patches/?M=D" target="_blank" rel="noopener">ACE/TAO 2.2a patch 19 or later</a></li>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。</p>
+<ul>
+<li>WSL 适用于linux的windows子系统</li>
+<li>升级到wsl2</li>
+<li>windows terminal</li>
+<li>zsh</li>
 </ul>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/04/07/opendds/OpenDDS_Install/#more" rel="contents">
+              <a class="btn" href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -766,7 +653,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -780,7 +667,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" class="post-title-link" itemprop="url">Anaconda修改清华镜像源(全)</a>
+            <a href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">cmder的使用</a>
         </h2>
 
         <div class="post-meta">
@@ -790,10 +677,139 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-21 15:16:24 / 修改时间：15:29:28" itemprop="dateCreated datePublished" datetime="2020-10-21T15:16:24+08:00">2020-10-21</time>
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-30 14:28:42" itemprop="dateModified" datetime="2020-08-30T14:28:42+08:00">2020-08-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/windows/" itemprop="url" rel="index">
+                    <span itemprop="name">windows</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="cmder的使用" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>672</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
+<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
+<ol>
+<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
+<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
+<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
+<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
+ 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
+<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" class="post-title-link" itemprop="url">Anaconda修改清华镜像源(全)</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-21 15:29:28" itemprop="dateModified" datetime="2020-10-21T15:29:28+08:00">2020-10-21</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -807,7 +823,7 @@
             </span>
 
           
-            <span id="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" class="post-meta-item leancloud_visitors" data-flag-title="Anaconda修改清华镜像源(全)" title="阅读次数">
+            <span id="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" class="post-meta-item leancloud_visitors" data-flag-title="Anaconda修改清华镜像源(全)" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -822,8 +838,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -863,7 +879,7 @@
 <p>刚才在安装pytorch时候发现速度很慢。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/#more" rel="contents">
+              <a class="btn" href="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -886,7 +902,368 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/opendds/OpenDDS_Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/24/opendds/OpenDDS_Install/" class="post-title-link" itemprop="url">OpenDDS 安装并配置Java</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-12 14:09:17" itemprop="dateModified" datetime="2021-04-12T14:09:17+08:00">2021-04-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenDDS/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenDDS</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/24/opendds/OpenDDS_Install/" class="post-meta-item leancloud_visitors" data-flag-title="OpenDDS 安装并配置Java" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/24/opendds/OpenDDS_Install/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/opendds/OpenDDS_Install/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="OpenDDS-安装并配置Java"><a href="#OpenDDS-安装并配置Java" class="headerlink" title="OpenDDS 安装并配置Java"></a>OpenDDS 安装并配置Java</h1><p>本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式</p>
+<h2 id="一、环境要求"><a href="#一、环境要求" class="headerlink" title="一、环境要求"></a>一、环境要求</h2><ul>
+<li>VS2017 / <strong>VS2019</strong> 作为OpenDDS的项目生成</li>
+<li>Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of <a href="https://strawberryperl.com" target="_blank" rel="noopener">Straweberry Perl</a>.）</li>
+<li>jdk1.5以上 推荐使用1.8  实际上在安装过程中只用到了<strong>%JAVA_HOME%\include\jni.h</strong>与<strong>%JAVA_HOME%\include%JAVA_PLATFORM%\jni_md.h</strong>两个文件。</li>
+<li><a href="https://opendds.org/downloads.html" target="_blank" rel="noopener">OpenDDS 3.16</a></li>
+<li>离线环境需要：<a href="http://download.objectcomputing.com/TAO-2.2a_patches/?M=D" target="_blank" rel="noopener">ACE/TAO 2.2a patch 19 or later</a></li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/24/opendds/OpenDDS_Install/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" class="post-title-link" itemprop="url">使用nvm管理node版本</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-09 11:33:06" itemprop="dateModified" datetime="2021-04-09T11:33:06+08:00">2021-04-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用nvm管理node版本" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用nvm,下载老版本的node，然后使用老版本的node运行。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">使用JS将MySQL数据库表信息导出Excel</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-12 14:16:25" itemprop="dateModified" datetime="2021-04-12T14:16:25+08:00">2021-04-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E4%B8%9C%E8%A5%BF/" itemprop="url" rel="index">
+                    <span itemprop="name">小东西</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用JS将MySQL数据库表信息导出Excel" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="使用JS将MySQL数据库表信息导出Excel"><a href="#使用JS将MySQL数据库表信息导出Excel" class="headerlink" title="使用JS将MySQL数据库表信息导出Excel"></a>使用JS将MySQL数据库表信息导出Excel</h1><h2 id="完成效果："><a href="#完成效果：" class="headerlink" title="完成效果："></a>完成效果：</h2><p><img src="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/image-20210412114322955.png" alt="效果图"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/24/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -1028,365 +1405,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-title-link" itemprop="url">windows下找到linux的感觉</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-10 17:53:16" itemprop="dateCreated datePublished" datetime="2020-09-10T17:53:16+08:00">2020-09-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-21 15:29:58" itemprop="dateModified" datetime="2020-10-21T15:29:58+08:00">2020-10-21</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-meta-item leancloud_visitors" data-flag-title="windows下找到linux的感觉" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>14 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。</p>
-<ul>
-<li>WSL 适用于linux的windows子系统</li>
-<li>升级到wsl2</li>
-<li>windows terminal</li>
-<li>zsh</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">cmder的使用</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-08-30 14:13:10 / 修改时间：14:28:42" itemprop="dateCreated datePublished" datetime="2020-08-30T14:13:10+08:00">2020-08-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="cmder的使用" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/30/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>672</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
-<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
-<ol>
-<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
-<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
-<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
-<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
- 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
-<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lclong.top/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zlatanlong">
-      <meta itemprop="description" content="生活就像巧克力🍫">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zlatanlong's T-blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" class="post-title-link" itemprop="url">使用nvm管理node版本</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-30 00:09:55" itemprop="dateCreated datePublished" datetime="2020-08-30T00:09:55+08:00">2020-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-09 11:33:06" itemprop="dateModified" datetime="2021-04-09T11:33:06+08:00">2021-04-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" class="post-meta-item leancloud_visitors" data-flag-title="使用nvm管理node版本" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论次数：</span>
-    
-    <a title="valine" href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近在处理一个两年前的后端项目时，npm跑不起来，根据报错是版本依赖问题，要不更改node版本，要不更新npm依赖，有一串依赖需要更新。担心更新了新的依赖后，源代码也需要更改，所以考虑直接使用nvm,下载老版本的node，然后使用老版本的node运行。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
