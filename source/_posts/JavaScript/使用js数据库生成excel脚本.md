@@ -1,7 +1,7 @@
 ---
 title: 使用JS将MySQL数据库表信息导出Excel
-typora-copy-images-to: ./${filename}
-typora-root-url: ./${filename}
+typora-copy-images-to: ./使用js数据库生成excel脚本
+typora-root-url: ./使用js数据库生成excel脚本
 updated:
 tags:
   - JavaScript
@@ -13,7 +13,7 @@ categories:
 
 ## 完成效果：
 
-![效果图](/../使用js数据库生成excel脚本/image-20210412114322955.png)
+![效果图](/image-20210412114322955.png)
 
 <!--more-->
 
