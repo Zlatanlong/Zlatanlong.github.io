@@ -22,19 +22,19 @@
     var CONFIG = {"hostname":"lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="OpenDDS 安装并配置Java本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式 一、环境要求 VS2017 &#x2F; VS2019 作为OpenDDS的项目生成 Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of Straweberry Perl.） jdk1.5以上 推">
+  <meta name="description" content="今天的每日一题是28. 实现 strStr()，这竟然是一道简单题，好吧学习一下KMP算法，对于KMP算法过程的讲解，在leetcode题解中【宫水三叶】简单题学 KMP 算法的图解，还有知乎的回答如何更好地理解和掌握 KMP 算法? - 阮行止的回答 - 知乎已经颇为详细，我这里只是简单对代码进行一下简述，方便理解(bèi sòng)。 12345678910111213141516171819">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenDDS 安装并配置Java">
-<meta property="og:url" content="https://lclong.top/2021/04/24/opendds/OpenDDS_Install/index.html">
+<meta property="og:title" content="简单理解KMP代码">
+<meta property="og:url" content="https://lclong.top/2021/04/20/%E7%AE%97%E6%B3%95/kmp/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
-<meta property="og:description" content="OpenDDS 安装并配置Java本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式 一、环境要求 VS2017 &#x2F; VS2019 作为OpenDDS的项目生成 Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of Straweberry Perl.） jdk1.5以上 推">
+<meta property="og:description" content="今天的每日一题是28. 实现 strStr()，这竟然是一道简单题，好吧学习一下KMP算法，对于KMP算法过程的讲解，在leetcode题解中【宫水三叶】简单题学 KMP 算法的图解，还有知乎的回答如何更好地理解和掌握 KMP 算法? - 阮行止的回答 - 知乎已经颇为详细，我这里只是简单对代码进行一下简述，方便理解(bèi sòng)。 12345678910111213141516171819">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-24T06:11:56.701Z">
-<meta property="article:modified_time" content="2021-04-12T06:09:17.545Z">
+<meta property="article:published_time" content="2021-04-20T08:21:35.000Z">
+<meta property="article:modified_time" content="2021-05-10T11:10:43.567Z">
 <meta property="article:author" content="Zlatanlong">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lclong.top/2021/04/24/opendds/OpenDDS_Install/">
+<link rel="canonical" href="https://lclong.top/2021/04/20/%E7%AE%97%E6%B3%95/kmp/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>OpenDDS 安装并配置Java | Zlatanlong's T-blog</title>
+  <title>简单理解KMP代码 | Zlatanlong's T-blog</title>
   
 
 
@@ -186,7 +186,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/opendds/OpenDDS_Install/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/20/%E7%AE%97%E6%B3%95/kmp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -199,7 +199,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          OpenDDS 安装并配置Java
+          简单理解KMP代码
         </h2>
 
         <div class="post-meta">
@@ -210,14 +210,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+              <time title="创建时间：2021-04-20 16:21:35" itemprop="dateCreated datePublished" datetime="2021-04-20T16:21:35+08:00">2021-04-20</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-12 14:09:17" itemprop="dateModified" datetime="2021-04-12T14:09:17+08:00">2021-04-12</time>
+                <time title="修改时间：2021-05-10 19:10:43" itemprop="dateModified" datetime="2021-05-10T19:10:43+08:00">2021-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,14 +225,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenDDS/" itemprop="url" rel="index">
-                    <span itemprop="name">OpenDDS</span>
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2021/04/24/opendds/OpenDDS_Install/" class="post-meta-item leancloud_visitors" data-flag-title="OpenDDS 安装并配置Java" title="阅读次数">
+            <span id="/2021/04/20/%E7%AE%97%E6%B3%95/kmp/" class="post-meta-item leancloud_visitors" data-flag-title="简单理解KMP代码" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -247,8 +247,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2021/04/24/opendds/OpenDDS_Install/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/opendds/OpenDDS_Install/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/20/%E7%AE%97%E6%B3%95/kmp/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/20/%E7%AE%97%E6%B3%95/kmp/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -258,14 +258,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>925</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -277,38 +277,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="OpenDDS-安装并配置Java"><a href="#OpenDDS-安装并配置Java" class="headerlink" title="OpenDDS 安装并配置Java"></a>OpenDDS 安装并配置Java</h1><p>本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式</p>
-<h2 id="一、环境要求"><a href="#一、环境要求" class="headerlink" title="一、环境要求"></a>一、环境要求</h2><ul>
-<li>VS2017 / <strong>VS2019</strong> 作为OpenDDS的项目生成</li>
-<li>Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of <span class="exturl" data-url="aHR0cHM6Ly9zdHJhd2JlcnJ5cGVybC5jb20=" title="https://strawberryperl.com">Straweberry Perl<i class="fa fa-external-link"></i></span>.）</li>
-<li>jdk1.5以上 推荐使用1.8  实际上在安装过程中只用到了<strong>%JAVA_HOME%\include\jni.h</strong>与<strong>%JAVA_HOME%\include%JAVA_PLATFORM%\jni_md.h</strong>两个文件。</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9vcGVuZGRzLm9yZy9kb3dubG9hZHMuaHRtbA==" title="https://opendds.org/downloads.html">OpenDDS 3.16<i class="fa fa-external-link"></i></span></li>
-<li>离线环境需要：<span class="exturl" data-url="aHR0cDovL2Rvd25sb2FkLm9iamVjdGNvbXB1dGluZy5jb20vVEFPLTIuMmFfcGF0Y2hlcy8/TT1E" title="http://download.objectcomputing.com/TAO-2.2a_patches/?M=D">ACE/TAO 2.2a patch 19 or later<i class="fa fa-external-link"></i></span></li>
-</ul>
-<a id="more"></a>
+        <p>今天的每日一题是<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaW1wbGVtZW50LXN0cnN0ci8=" title="https://leetcode-cn.com/problems/implement-strstr/">28. 实现 strStr()<i class="fa fa-external-link"></i></span>，这竟然是一道简单题，好吧学习一下KMP算法，对于KMP算法过程的讲解，在leetcode题解中<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaW1wbGVtZW50LXN0cnN0ci9zb2x1dGlvbi9zaHVhLWNodWFuLWxjLXNodWFuZy1iYWktcG8tc3UtamllLWZhLWttLXRiODYv" title="https://leetcode-cn.com/problems/implement-strstr/solution/shua-chuan-lc-shuang-bai-po-su-jie-fa-km-tb86/">【宫水三叶】简单题学 KMP 算法<i class="fa fa-external-link"></i></span>的图解，还有知乎的回答<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIxOTIzMDIxL2Fuc3dlci8xMDMyNjY1NDg2" title="https://www.zhihu.com/question/21923021/answer/1032665486">如何更好地理解和掌握 KMP 算法? - 阮行止的回答 - 知乎<i class="fa fa-external-link"></i></span>已经颇为详细，我这里只是简单对代码进行一下简述，方便理解(bèi sòng)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">kmp</span><span class="params">(String ss, String pp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pp.isEmpty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = ss.length(), m = pp.length();</span><br><span class="line">    	<span class="comment">// 前面加一个空格，后面匹配时下标表示个数，同时避免 j = next[j-1] 时 j-1=-1</span></span><br><span class="line">        ss = <span class="string">" "</span> + ss;</span><br><span class="line">        pp = <span class="string">" "</span> + pp;</span><br><span class="line">        <span class="keyword">char</span>[] s = ss.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] p = pp.toCharArray();</span><br><span class="line">        <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[m + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 下面两个过程很像，求next其实就是自己和自己匹配，</span></span><br><span class="line"><span class="comment">         * 无论如何 匹配失败 j=next[j];</span></span><br><span class="line"><span class="comment">         * 失败条件是(j &gt; 0 &amp;&amp; 数组[i] != p[j + 1])</span></span><br><span class="line"><span class="comment">         * 成功时将j向前移</span></span><br><span class="line"><span class="comment">         * 每次都要进行的是：</span></span><br><span class="line"><span class="comment">         *  求next： 对next数组进行赋值</span></span><br><span class="line"><span class="comment">         *  匹配： 判断是否匹配</span></span><br><span class="line"><span class="comment">         *  i++： 这一步在for循环中进行</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * 求next自己与自己匹配，只有1位时不考虑，所以i从2开始</span></span><br><span class="line"><span class="comment">         * 匹配时 i 从 1开始</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 求next过程</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= m; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = next[j];</span><br><span class="line">            <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j++;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 匹配过程</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = next[j];</span><br><span class="line">            <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j++;</span><br><span class="line">            <span class="keyword">if</span> (j == m) <span class="keyword">return</span> i - m;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、安装步骤"><a href="#二、安装步骤" class="headerlink" title="二、安装步骤"></a>二、安装步骤</h2><h3 id="1-首先解压源码："><a href="#1-首先解压源码：" class="headerlink" title="1. 首先解压源码："></a>1. 首先解压源码：</h3><p>假设OpenDDS解压到<strong>E:\OpenDDS-3.16</strong></p>
-<p>如果是离线环境，还需要将<strong>ACE/TAO 2.2a patch 19</strong>压缩包下的文件夹<strong>ACE_wrappers</strong></p>
-<h3 id="2-生成解决方案"><a href="#2-生成解决方案" class="headerlink" title="2. 生成解决方案"></a>2. 生成解决方案</h3><p>启动<strong>VS的开发人员命令行</strong>，定位到<strong>E:\OpenDDS-3.16</strong>下，输入 <strong>configure</strong> 命令（如果要开启<strong>Java</strong>支持，需要使用 <strong>configure –java</strong>），等待命令执行完毕</p>
-<p>此时程序自动生成了<strong>DDS_TAOv2.sln</strong>文件和<strong>setenv.cmd</strong>文件，在命令行执行<strong>setenv.cmd</strong>设置环境变量，然后使用<code>devenv DDS_TAOv2.sln</code>命令打开新生成的<strong>sln</strong>文件，这样可以保留环境变量、重定项目目标，然后编译源码并等待操作完成。如果是<strong>64</strong>位系统，也需要编译为<strong>64</strong>位版本（把Win32换成<strong>x64</strong>）</p>
-<h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h3><p>新建环境变量： </p>
-<p><strong>DDS_ROOT = E:\OpenDDS-3.16</strong> </p>
-<p><strong>ACE_ROOT = E:\OpenDDS-3.16\ACE_wrappers</strong> </p>
-<p>并将</p>
-<ul>
-<li>%DDS_ROOT%\bin</li>
-<li>%DDS_ROOT%\lib</li>
-<li>%ACE_ROOT%\bin</li>
-<li>%ACE_ROOT%\lib</li>
-</ul>
-<p>添加到<strong>path</strong>变量中。</p>
-<h3 id="4-运行测试"><a href="#4-运行测试" class="headerlink" title="4. 运行测试"></a>4. 运行测试</h3><p>OpenDDS自带了很多实例，存放在<strong>%DDS_ROOT%\examples和%DDS_ROOT%\tests\DCPS</strong>下（<strong>Java</strong>示例在<strong>%DDS_ROOT%\java\tests</strong>下）</p>
-<p>随便挑一个输入<strong>perl run_test.pl</strong>运行perl脚本，能正常收发数据即可</p>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><ul>
-<li>Java实例会有很多JNI的输出，长得和异常信息差不多，但实际上没有出错，只要最后提示<strong>test passed</strong>就是成功的</li>
-<li>第三步编译OpenDDS时候经常会出现找不到文件的错误，大多数和环境变量有关系，configure后生成的解决方案对文件的链接出错，在命令行中执行<strong>setenv.cmd</strong>设置环境变量，然后使用<code>devenv DDS_**.sln</code>命令打开新生成的<strong>sln</strong>文件</li>
-<li>可能会提示缺少 jni_md.h，该文件位于 <strong>%JAVA_HOME%\include\win32</strong> 目录下，复制到 <strong>%OPENDDS_HOME%\java\idl2jni\runtime</strong> 目录下即可</li>
-</ul>
 
     </div>
 
@@ -326,7 +297,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lclong.top/2021/04/24/opendds/OpenDDS_Install/" title="OpenDDS 安装并配置Java">https://lclong.top/2021/04/24/opendds/OpenDDS_Install/</a>
+    <a href="https://lclong.top/2021/04/20/%E7%AE%97%E6%B3%95/kmp/" title="简单理解KMP代码">https://lclong.top/2021/04/20/算法/kmp/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -343,12 +314,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/24/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" rel="prev" title="使用nvm管理node版本">
-      <i class="fa fa-chevron-left"></i> 使用nvm管理node版本
+    <a href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" rel="prev" title="使用JS将MySQL数据库表信息导出Excel">
+      <i class="fa fa-chevron-left"></i> 使用JS将MySQL数据库表信息导出Excel
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" rel="next" title="Anaconda修改清华镜像源(全)">
-      Anaconda修改清华镜像源(全) <i class="fa fa-chevron-right"></i>
+    <a href="/2021/05/06/springboot/jwt/" rel="next" title="Spring Boot 实现 JWT">
+      Spring Boot 实现 JWT <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -409,7 +380,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenDDS-安装并配置Java"><span class="nav-number">1.</span> <span class="nav-text">OpenDDS 安装并配置Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、环境要求"><span class="nav-number">1.1.</span> <span class="nav-text">一、环境要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装步骤"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先解压源码："><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 首先解压源码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-生成解决方案"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 生成解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置环境变量"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-运行测试"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 运行测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意："><span class="nav-number">1.2.5.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

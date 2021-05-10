@@ -22,17 +22,19 @@
     var CONFIG = {"hostname":"lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="生活就像巧克力🍫">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zlatanlong&#39;s T-blog">
-<meta property="og:url" content="https://lclong.top/tags/nvm/index.html">
+  <meta name="description" content="OpenDDS 安装并配置Java本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式 一、环境要求 VS2017 &#x2F; VS2019 作为OpenDDS的项目生成 Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of Straweberry Perl.） jdk1.5以上 推">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenDDS 安装并配置Java">
+<meta property="og:url" content="https://lclong.top/2021/04/07/opendds/OpenDDS_Install/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
-<meta property="og:description" content="生活就像巧克力🍫">
+<meta property="og:description" content="OpenDDS 安装并配置Java本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式 一、环境要求 VS2017 &#x2F; VS2019 作为OpenDDS的项目生成 Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of Straweberry Perl.） jdk1.5以上 推">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-07T08:21:35.000Z">
+<meta property="article:modified_time" content="2021-05-10T11:07:52.331Z">
 <meta property="article:author" content="Zlatanlong">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lclong.top/tags/nvm/">
+<link rel="canonical" href="https://lclong.top/2021/04/07/opendds/OpenDDS_Install/">
 
 
 <script id="page-configurations">
@@ -40,11 +42,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>标签: nvm | Zlatanlong's T-blog</title>
+  <title>OpenDDS 安装并配置Java | Zlatanlong's T-blog</title>
   
 
 
@@ -179,53 +181,188 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">nvm
-          <small>标签</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/07/opendds/OpenDDS_Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Zlatanlong">
+      <meta itemprop="description" content="生活就像巧克力🍫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zlatanlong's T-blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          OpenDDS 安装并配置Java
         </h2>
-      </div>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-07 16:21:35" itemprop="dateCreated datePublished" datetime="2021-04-07T16:21:35+08:00">2021-04-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-10 19:07:52" itemprop="dateModified" datetime="2021-05-10T19:07:52+08:00">2021-05-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenDDS/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenDDS</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/07/opendds/OpenDDS_Install/" class="post-meta-item leancloud_visitors" data-flag-title="OpenDDS 安装并配置Java" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2021/04/07/opendds/OpenDDS_Install/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/07/opendds/OpenDDS_Install/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      <div class="collection-year">
-        <h2 class="collection-header">2020</h2>
-      </div>
+        <h1 id="OpenDDS-安装并配置Java"><a href="#OpenDDS-安装并配置Java" class="headerlink" title="OpenDDS 安装并配置Java"></a>OpenDDS 安装并配置Java</h1><p>本安装文档根据OpenDDS 3.16 的指导手册以及源码下README总结Windows下的安装方式</p>
+<h2 id="一、环境要求"><a href="#一、环境要求" class="headerlink" title="一、环境要求"></a>一、环境要求</h2><ul>
+<li>VS2017 / <strong>VS2019</strong> 作为OpenDDS的项目生成</li>
+<li>Perl5.32.1  作为OpenDDS示例的运行脚本（On Windows we recommend the use of <span class="exturl" data-url="aHR0cHM6Ly9zdHJhd2JlcnJ5cGVybC5jb20=" title="https://strawberryperl.com">Straweberry Perl<i class="fa fa-external-link"></i></span>.）</li>
+<li>jdk1.5以上 推荐使用1.8  实际上在安装过程中只用到了<strong>%JAVA_HOME%\include\jni.h</strong>与<strong>%JAVA_HOME%\include%JAVA_PLATFORM%\jni_md.h</strong>两个文件。</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9vcGVuZGRzLm9yZy9kb3dubG9hZHMuaHRtbA==" title="https://opendds.org/downloads.html">OpenDDS 3.16<i class="fa fa-external-link"></i></span></li>
+<li>离线环境需要：<span class="exturl" data-url="aHR0cDovL2Rvd25sb2FkLm9iamVjdGNvbXB1dGluZy5jb20vVEFPLTIuMmFfcGF0Y2hlcy8/TT1E" title="http://download.objectcomputing.com/TAO-2.2a_patches/?M=D">ACE/TAO 2.2a patch 19 or later<i class="fa fa-external-link"></i></span></li>
+</ul>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-        <div class="post-meta">
-          <time itemprop="dateCreated"
-                datetime="2020-08-30T16:21:35+08:00"
-                content="2020-08-30">
-            08-30
-          </time>
-        </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" itemprop="url">
-            <span itemprop="name">使用nvm管理node版本</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
+<h2 id="二、安装步骤"><a href="#二、安装步骤" class="headerlink" title="二、安装步骤"></a>二、安装步骤</h2><h3 id="1-首先解压源码："><a href="#1-首先解压源码：" class="headerlink" title="1. 首先解压源码："></a>1. 首先解压源码：</h3><p>假设OpenDDS解压到<strong>E:\OpenDDS-3.16</strong></p>
+<p>如果是离线环境，还需要将<strong>ACE/TAO 2.2a patch 19</strong>压缩包下的文件夹<strong>ACE_wrappers</strong></p>
+<h3 id="2-生成解决方案"><a href="#2-生成解决方案" class="headerlink" title="2. 生成解决方案"></a>2. 生成解决方案</h3><p>启动<strong>VS的开发人员命令行</strong>，定位到<strong>E:\OpenDDS-3.16</strong>下，输入 <strong>configure</strong> 命令（如果要开启<strong>Java</strong>支持，需要使用 <strong>configure –java</strong>），等待命令执行完毕</p>
+<p>此时程序自动生成了<strong>DDS_TAOv2.sln</strong>文件和<strong>setenv.cmd</strong>文件，在命令行执行<strong>setenv.cmd</strong>设置环境变量，然后使用<code>devenv DDS_TAOv2.sln</code>命令打开新生成的<strong>sln</strong>文件，这样可以保留环境变量、重定项目目标，然后编译源码并等待操作完成。如果是<strong>64</strong>位系统，也需要编译为<strong>64</strong>位版本（把Win32换成<strong>x64</strong>）</p>
+<h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h3><p>新建环境变量： </p>
+<p><strong>DDS_ROOT = E:\OpenDDS-3.16</strong> </p>
+<p><strong>ACE_ROOT = E:\OpenDDS-3.16\ACE_wrappers</strong> </p>
+<p>并将</p>
+<ul>
+<li>%DDS_ROOT%\bin</li>
+<li>%DDS_ROOT%\lib</li>
+<li>%ACE_ROOT%\bin</li>
+<li>%ACE_ROOT%\lib</li>
+</ul>
+<p>添加到<strong>path</strong>变量中。</p>
+<h3 id="4-运行测试"><a href="#4-运行测试" class="headerlink" title="4. 运行测试"></a>4. 运行测试</h3><p>OpenDDS自带了很多实例，存放在<strong>%DDS_ROOT%\examples和%DDS_ROOT%\tests\DCPS</strong>下（<strong>Java</strong>示例在<strong>%DDS_ROOT%\java\tests</strong>下）</p>
+<p>随便挑一个输入<strong>perl run_test.pl</strong>运行perl脚本，能正常收发数据即可</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><ul>
+<li>Java实例会有很多JNI的输出，长得和异常信息差不多，但实际上没有出错，只要最后提示<strong>test passed</strong>就是成功的</li>
+<li>第三步编译OpenDDS时候经常会出现找不到文件的错误，大多数和环境变量有关系，configure后生成的解决方案对文件的链接出错，在命令行中执行<strong>setenv.cmd</strong>设置环境变量，然后使用<code>devenv DDS_**.sln</code>命令打开新生成的<strong>sln</strong>文件</li>
+<li>可能会提示缺少 jni_md.h，该文件位于 <strong>%JAVA_HOME%\include\win32</strong> 目录下，复制到 <strong>%OPENDDS_HOME%\java\idl2jni\runtime</strong> 目录下即可</li>
+</ul>
 
     </div>
+
+    
+    
+    
+      
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Zlatanlong
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lclong.top/2021/04/07/opendds/OpenDDS_Install/" title="OpenDDS 安装并配置Java">https://lclong.top/2021/04/07/opendds/OpenDDS_Install/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" rel="prev" title="Anaconda修改清华镜像源(全)">
+      <i class="fa fa-chevron-left"></i> Anaconda修改清华镜像源(全)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/12/JavaScript/%E4%BD%BF%E7%94%A8js%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%9F%E6%88%90excel%E8%84%9A%E6%9C%AC/" rel="next" title="使用JS将MySQL数据库表信息导出Excel">
+      使用JS将MySQL数据库表信息导出Excel <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -272,6 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenDDS-安装并配置Java"><span class="nav-number">1.</span> <span class="nav-text">OpenDDS 安装并配置Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、环境要求"><span class="nav-number">1.1.</span> <span class="nav-text">一、环境要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装步骤"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先解压源码："><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 首先解压源码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-生成解决方案"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 生成解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置环境变量"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-运行测试"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 运行测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意："><span class="nav-number">1.2.5.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

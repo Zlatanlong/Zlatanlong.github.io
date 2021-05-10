@@ -22,20 +22,23 @@
     var CONFIG = {"hostname":"lclong.top","root":"/","scheme":"Gemini","version":"7.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":20,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。 终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。  下载cmder，在cmder官网下载就可以，因为已经有git了，所以下载min版本即可。 因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现Cmder Here这个功能">
+  <meta name="description" content="全部镜像源 参考Anaconda 镜像使用帮助，配置还是要看官网呀。  大家在安装anaconda之后都会配置镜像源，但是网上好多教程都只是配置 但这是不够的。 以下为半错配置。 12- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main- https:&#x2F;&#x2F;mirror">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cmder的使用">
-<meta property="og:url" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="Anaconda修改清华镜像源(全)">
+<meta property="og:url" content="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
-<meta property="og:description" content="更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。 终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。  下载cmder，在cmder官网下载就可以，因为已经有git了，所以下载min版本即可。 因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现Cmder Here这个功能">
+<meta property="og:description" content="全部镜像源 参考Anaconda 镜像使用帮助，配置还是要看官网呀。  大家在安装anaconda之后都会配置镜像源，但是网上好多教程都只是配置 但这是不够的。 以下为半错配置。 12- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main- https:&#x2F;&#x2F;mirror">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-24T06:11:56.856Z">
-<meta property="article:modified_time" content="2020-08-30T06:28:42.730Z">
+<meta property="og:image" content="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/TG0Z0%7B3NQI7%60T$IXJ@RIQUT.png">
+<meta property="og:image" content="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/suduganren.png">
+<meta property="og:image" content="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/image-20201021152433721.png">
+<meta property="article:published_time" content="2020-10-21T08:21:35.000Z">
+<meta property="article:modified_time" content="2021-05-10T11:11:11.489Z">
 <meta property="article:author" content="Zlatanlong">
-<meta property="article:tag" content="cmder">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/TG0Z0%7B3NQI7%60T$IXJ@RIQUT.png">
 
-<link rel="canonical" href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/">
+<link rel="canonical" href="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/">
 
 
 <script id="page-configurations">
@@ -47,7 +50,7 @@
   };
 </script>
 
-  <title>cmder的使用 | Zlatanlong's T-blog</title>
+  <title>Anaconda修改清华镜像源(全) | Zlatanlong's T-blog</title>
   
 
 
@@ -187,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -200,7 +203,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          cmder的使用
+          Anaconda修改清华镜像源(全)
         </h2>
 
         <div class="post-meta">
@@ -211,14 +214,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+              <time title="创建时间：2020-10-21 16:21:35" itemprop="dateCreated datePublished" datetime="2020-10-21T16:21:35+08:00">2020-10-21</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-30 14:28:42" itemprop="dateModified" datetime="2020-08-30T14:28:42+08:00">2020-08-30</time>
+                <time title="修改时间：2021-05-10 19:11:11" itemprop="dateModified" datetime="2021-05-10T19:11:11+08:00">2021-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,14 +229,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="cmder的使用" title="阅读次数">
+            <span id="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" class="post-meta-item leancloud_visitors" data-flag-title="Anaconda修改清华镜像源(全)" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -248,8 +251,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -259,14 +262,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>672</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -278,19 +281,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>更换了windows电脑，感觉有点开倒车，安装各种娱乐软件确实很爽，但是一到写代码各种环境又开始麻烦了。</p>
-<p>终端没有什么好的方案，wsl感觉需要学习成本，那么这里直接用cmder吧。感觉界面还可以。</p>
-<ol>
-<li>下载cmder，在<span class="exturl" data-url="aHR0cHM6Ly9jbWRlci5uZXQv" title="https://cmder.net/">cmder官网<i class="fa fa-external-link"></i></span>下载就可以，因为已经有git了，所以下载min版本即可。</li>
-<li>因为是win版本，所以要进行一些基本配置。一个是环境变量，一个是在任意位置右键出现<code>Cmder Here</code>这个功能。<ol>
-<li>在系统环境变量的path中增加Cmd.exe的路径（路径指它所在的文件夹）</li>
-<li>以管理员身份打开cmd，执行以下命令即可，完了以后在任意地方点击右键即可使用cmder<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 设置任意地方鼠标右键启动Cmder</span><br><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h1 id="全部镜像源"><a href="#全部镜像源" class="headerlink" title="全部镜像源"></a>全部镜像源</h1><blockquote>
+<p>参考<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2hlbHAvYW5hY29uZGEv" title="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">Anaconda 镜像使用帮助<i class="fa fa-external-link"></i></span>，配置还是要看官网呀。</p>
+</blockquote>
+<p>大家在安装anaconda之后都会配置镜像源，但是网上好多教程都只是配置</p>
+<p><strong>但这是不够的</strong>。</p>
+<p>以下为半错配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">- https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br></pre></td></tr></table></figure>
+
+<p>刚才在安装pytorch时候发现速度很慢。</p>
+<a id="more"></a>
+
+<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/TG0Z0%7B3NQI7%60T$IXJ@RIQUT.png" alt="img"></p>
+<p>回看之前的提示，pytorch的本体的源并不是清华的。</p>
+<p>下载速度感人。</p>
+<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/suduganren.png" alt="img"></p>
+<p>直接去清华镜像源网站上看看吧。</p>
+<p><img src="/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/image-20201021152433721.png" alt="image-20201021152433721"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda</span><br><span class="line">default_channels:</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;pro</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  msys2: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  bioconda: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  menpo: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  pytorch: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  simpleitk: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br></pre></td></tr></table></figure>
+
+<p>问题是这个channels的配置文件保存在哪那？各系统都可以通过修改用户目录下的 <code>.condarc</code> 文件。Windows 用户无法直接创建名为 <code>.condarc</code> 的文件，可先执行 <code>conda config --set show_channel_urls yes</code> 生成该文件之后再修改。</p>
+<ul>
+<li><p>Windows：<code>‪C:\Users\{你的用户名}\.condarc</code></p>
 </li>
-<li>vscode的配置，参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NtZGVyZGV2L2NtZGVyL3dpa2kvU2VhbWxlc3MtVlMtQ29kZS1JbnRlZ3JhdGlvbiN1c2UtY21kZXItZW1iZWRkZWQtZ2l0LWluLXZzY29kZQ==" title="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">cmder github上的说明<i class="fa fa-external-link"></i></span>,在setting.json加入。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [&quot;&#x2F;k&quot;, &quot;D:\\cmder\\vendor\\init.bat&quot;],</span><br></pre></td></tr></table></figure>
- 这个方式实际上是先打开windows的cmd，然后再通过<code>cmd \k D:\\cmder\\vendor\\init.bat</code>这个命令打开cmder。曲线救国。</li>
-<li>JetBrains家族软件的配置，这个等我用到了再整理。。。</li>
-</ol>
+<li><p>Linux/Mac：<code>~/.condarc</code></p>
+</li>
+</ul>
+<p>说白了还是用户文件下，编辑这个文件将内容粘贴即可。</p>
+<p>接着根据清华镜像源的说明。</p>
+<ul>
+<li><p>运行 <code>conda clean -i</code> 清除索引缓存，保证用的是镜像站提供的索引。</p>
+</li>
+<li><p>运行 <code>conda create -n myenv numpy</code> 测试一下吧。</p>
+</li>
+</ul>
 
     </div>
 
@@ -308,7 +332,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" title="cmder的使用">https://lclong.top/2021/04/24/windows系统工具/cmder的使用/</a>
+    <a href="https://lclong.top/2020/10/21/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" title="Anaconda修改清华镜像源(全)">https://lclong.top/2020/10/21/python/Anaconda修改清华镜像源(全)/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -318,10 +342,6 @@
 
 
       <footer class="post-footer">
-          
-          <div class="post-tags">
-              <a href="/tags/cmder/" rel="tag"><i class="fa fa-tag"></i> cmder</a>
-          </div>
 
         
 
@@ -329,12 +349,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/24/python/Anaconda%E4%BF%AE%E6%94%B9%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90(%E5%85%A8)/" rel="prev" title="Anaconda修改清华镜像源(全)">
-      <i class="fa fa-chevron-left"></i> Anaconda修改清华镜像源(全)
+    <a href="/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" rel="prev" title="(转)TCP三次握手四次挥手">
+      <i class="fa fa-chevron-left"></i> (转)TCP三次握手四次挥手
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" rel="next" title="windows下找到linux的感觉">
-      windows下找到linux的感觉 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/04/07/opendds/OpenDDS_Install/" rel="next" title="OpenDDS 安装并配置Java">
+      OpenDDS 安装并配置Java <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -395,6 +415,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#全部镜像源"><span class="nav-number">1.</span> <span class="nav-text">全部镜像源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -25,26 +25,26 @@
   <meta name="description" content="前言对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。  WSL 适用于linux的windows子系统 升级到wsl2 windows terminal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows下找到linux的感觉">
-<meta property="og:url" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/index.html">
+<meta property="og:url" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/index.html">
 <meta property="og:site_name" content="Zlatanlong&#39;s T-blog">
 <meta property="og:description" content="前言对于开发人员来说，mac系统无疑是最受欢迎的。但是由于某些原因，比如游戏，娱乐，qiong，我们不想舍弃windows带来的方便，又不想双设备进行开发时，在windows下开发也就难免了。为了提升windows环境下的开发，找到linux带给我们便利的感觉。可以使用以下工具，找到开发的幸福感。  WSL 适用于linux的windows子系统 升级到wsl2 windows terminal">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png">
 <meta property="og:image" content="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png">
-<meta property="og:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png">
-<meta property="article:published_time" content="2021-04-24T06:11:56.866Z">
-<meta property="article:modified_time" content="2020-10-21T07:29:58.439Z">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png">
+<meta property="og:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png">
+<meta property="article:published_time" content="2020-09-10T08:21:35.000Z">
+<meta property="article:modified_time" content="2021-05-10T11:13:47.521Z">
 <meta property="article:author" content="Zlatanlong">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png">
+<meta name="twitter:image" content="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png">
 
-<link rel="canonical" href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
+<link rel="canonical" href="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
 
 
 <script id="page-configurations">
@@ -196,7 +196,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
+    <link itemprop="mainEntityOfPage" href="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -220,14 +220,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-04-24 14:11:56" itemprop="dateCreated datePublished" datetime="2021-04-24T14:11:56+08:00">2021-04-24</time>
+              <time title="创建时间：2020-09-10 16:21:35" itemprop="dateCreated datePublished" datetime="2020-09-10T16:21:35+08:00">2020-09-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-21 15:29:58" itemprop="dateModified" datetime="2020-10-21T15:29:58+08:00">2020-10-21</time>
+                <time title="修改时间：2021-05-10 19:13:47" itemprop="dateModified" datetime="2021-05-10T19:13:47+08:00">2021-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -242,7 +242,7 @@
             </span>
 
           
-            <span id="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-meta-item leancloud_visitors" data-flag-title="windows下找到linux的感觉" title="阅读次数">
+            <span id="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" class="post-meta-item leancloud_visitors" data-flag-title="windows下找到linux的感觉" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -257,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -298,14 +298,14 @@
 
 <h2 id="1-安装WSl"><a href="#1-安装WSl" class="headerlink" title="1. 安装WSl"></a>1. 安装WSl</h2><p>WSL是在windows下进行开发，并使用linux中的bash等功能的最好的解决方案之一。</p>
 <h2 id="1-1-打开系统功能"><a href="#1-1-打开系统功能" class="headerlink" title="1.1 打开系统功能"></a>1.1 打开系统功能</h2><p><strong>控制面板\所有控制面板项\程序和功能</strong> 中选择 <strong>启用或者关闭Windows功能</strong></p>
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png" alt="image-20200912150736512"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150736512.png" alt="image-20200912150736512"></p>
 <p>然后勾选 <strong>适用于Linux的Windows子系统</strong> </p>
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png" alt="image-20200912150852217"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912150852217.png" alt="image-20200912150852217"></p>
 <p>经过系统一段时间的自动下载后，重启计算机。</p>
 <!-- more -->
 
 <h2 id="1-2-下载Ubuntu"><a href="#1-2-下载Ubuntu" class="headerlink" title="1.2 下载Ubuntu"></a>1.2 下载Ubuntu</h2><h3 id="1-2-1-下载"><a href="#1-2-1-下载" class="headerlink" title="1.2.1 下载"></a>1.2.1 下载</h3><p>直接在<strong>Microsoft store</strong>中搜索<strong>Ubuntu</strong>，并启动即可。我使用的是18.04版本。</p>
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png" alt="image-20200912151114333"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151114333.png" alt="image-20200912151114333"></p>
 <h3 id="1-2-2-设置新分发版"><a href="#1-2-2-设置新分发版" class="headerlink" title="1.2.2 设置新分发版"></a>1.2.2 设置新分发版</h3><p>首次启动新安装的 Linux 分发版时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，以便文件解压缩并存储到电脑上。 未来的所有启动时间应不到一秒。然后，需要为新的 Linux 分发版创建用户帐户和密码。</p>
 <p><img src="https://docs.microsoft.com/zh-cn/windows/wsl/media/ubuntuinstall.png" alt="Windows 控制台中的 Ubuntu 解包"></p>
 <h2 id="1-3-更新WSL到WSL2"><a href="#1-3-更新WSL到WSL2" class="headerlink" title="1.3 更新WSL到WSL2"></a>1.3 更新WSL到WSL2</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvd3NsMi1pbmRleA==" title="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-index">参考微软官方文档<i class="fa fa-external-link"></i></span></p>
@@ -326,7 +326,7 @@
 <h3 id="1-3-3-将分发版版本设置为-WSL-1-或-WSL-2"><a href="#1-3-3-将分发版版本设置为-WSL-1-或-WSL-2" class="headerlink" title="1.3.3 将分发版版本设置为 WSL 1 或 WSL 2"></a>1.3.3 将分发版版本设置为 WSL 1 或 WSL 2</h3><p>可打开 PowerShell 命令行并输入以下命令（仅在 <span class="exturl" data-url="bXMtc2V0dGluZ3M6d2luZG93c3VwZGF0ZQ==" title="ms-settings:windowsupdate">Windows 内部版本 18362 或更高版本<i class="fa fa-external-link"></i></span>中可用），检查分配给每个已安装的 Linux 分发版的 WSL 版本：<code>wsl -l -v</code></p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> -<span class="literal">-verbose</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png" alt="image-20200912151921601"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912151921601.png" alt="image-20200912151921601"></p>
 <p>若要将分发版设置为受某一 WSL 版本支持，请运行：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> &lt;distribution name&gt; &lt;versionNumber&gt;</span><br></pre></td></tr></table></figure>
 
@@ -369,15 +369,15 @@
 <h3 id="1-5-5-删除tar文件-可选"><a href="#1-5-5-删除tar文件-可选" class="headerlink" title="1.5.5 删除tar文件(可选)"></a>1.5.5 删除tar文件(可选)</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">del d:\ubuntu20.<span class="number">04</span>.tar</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-Windows-Terminal中使用WSL"><a href="#2-Windows-Terminal中使用WSL" class="headerlink" title="2. Windows Terminal中使用WSL"></a>2. Windows Terminal中使用WSL</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>直接在Microsoft Store中搜索并安装即可。</p>
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png" alt="image-20200912153621967"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153621967.png" alt="image-20200912153621967"></p>
 <p>安装后应该可以识别到wsl，如果没有识别，可以在设置中进行如下配置：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">"list":</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"guid"</span>: <span class="string">"&#123;c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40&#125;"</span>,</span><br><span class="line">                <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">"name"</span>: <span class="string">"Ubuntu-18.04"</span>,</span><br><span class="line">                <span class="attr">"source"</span>: <span class="string">"Windows.Terminal.Wsl"</span>,</span><br><span class="line">                <span class="attr">"startingDirectory"</span>: <span class="string">"//wsl$/Ubuntu-18.04/root"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            ...其他配置</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
 
 <p>这样就可以检测到wsl系统了，点击即可打开。</p>
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png" alt="image-20200912153808770"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912153808770.png" alt="image-20200912153808770"></p>
 <h3 id="2-2-配置zsh"><a href="#2-2-配置zsh" class="headerlink" title="2.2 配置zsh"></a>2.2 配置zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~$ sudo apt-get install zsh <span class="comment">#首先下载</span></span><br><span class="line">/mnt/c/Users/User$ <span class="built_in">which</span> zsh <span class="comment">#查看下载是否成功</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png" alt="image-20200912154357630"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912154357630.png" alt="image-20200912154357630"></p>
 <p>如果可以出现如下目录，即为安装成功。</p>
 <h3 id="2-3-配置oh-my-zsh"><a href="#2-3-配置oh-my-zsh" class="headerlink" title="2.3 配置oh my zsh"></a>2.3 配置oh my zsh</h3><p>根据<span class="exturl" data-url="aHR0cHM6Ly9vaG15ei5zaC8=" title="https://ohmyz.sh/">https://ohmyz.sh/<i class="fa fa-external-link"></i></span>官网，可以输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
@@ -392,7 +392,7 @@
 <p>将主题设置为：</p>
 <p>ZSH_THEME=”agnoster”</p>
 <p>将windows terminal的默认字体设置为<code>Cascadia Code PL</code>，就是开启powerline功能的意思，agnoster的箭头需要开启此功能。</p>
-<p><img src="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png" alt="image-20200912155336231"></p>
+<p><img src="/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/image-20200912155336231.png" alt="image-20200912155336231"></p>
 <p>并在下面schemes中添加如下配置：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">"schemes": [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Dark"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#002831"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#d11c24"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#738a05"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#a57706"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2176c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#c61c6f"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#259286"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#eae3cb"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#bd3613"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#475b62"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#536870"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#708284"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#5956ba"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#819090"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#fcf4dc"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#001e27"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#708284"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"name"</span>: <span class="string">"Solarized Darcula"</span>,</span><br><span class="line">          <span class="attr">"black"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"red"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"green"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"yellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"blue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"purple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"cyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"white"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"brightBlack"</span>: <span class="string">"#25292a"</span>,</span><br><span class="line">          <span class="attr">"brightRed"</span>: <span class="string">"#f24840"</span>,</span><br><span class="line">          <span class="attr">"brightGreen"</span>: <span class="string">"#629655"</span>,</span><br><span class="line">          <span class="attr">"brightYellow"</span>: <span class="string">"#b68800"</span>,</span><br><span class="line">          <span class="attr">"brightBlue"</span>: <span class="string">"#2075c7"</span>,</span><br><span class="line">          <span class="attr">"brightPurple"</span>: <span class="string">"#797fd4"</span>,</span><br><span class="line">          <span class="attr">"brightCyan"</span>: <span class="string">"#15968d"</span>,</span><br><span class="line">          <span class="attr">"brightWhite"</span>: <span class="string">"#d2d8d9"</span>,</span><br><span class="line">          <span class="attr">"background"</span>: <span class="string">"#3d3f41"</span>,</span><br><span class="line">          <span class="attr">"foreground"</span>: <span class="string">"#d2d8d9"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br></pre></td></tr></table></figure>
 
@@ -415,7 +415,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lclong.top/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" title="windows下找到linux的感觉">https://lclong.top/2021/04/24/windows系统工具/windows下找到linux的感觉/</a>
+    <a href="https://lclong.top/2020/09/10/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/windows%E4%B8%8B%E6%89%BE%E5%88%B0linux%E7%9A%84%E6%84%9F%E8%A7%89/" title="windows下找到linux的感觉">https://lclong.top/2020/09/10/windows系统工具/windows下找到linux的感觉/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -432,12 +432,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/24/windows%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/cmder%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="cmder的使用">
-      <i class="fa fa-chevron-left"></i> cmder的使用
+    <a href="/2020/08/30/npm/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86node%E7%89%88%E6%9C%AC/" rel="prev" title="使用nvm管理node版本">
+      <i class="fa fa-chevron-left"></i> 使用nvm管理node版本
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/04/24/%E7%AE%97%E6%B3%95/kmp/" rel="next" title="简单理解KMP代码">
-      简单理解KMP代码 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/10/01/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/(%E8%BD%AC)TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" rel="next" title="(转)TCP三次握手四次挥手">
+      (转)TCP三次握手四次挥手 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
