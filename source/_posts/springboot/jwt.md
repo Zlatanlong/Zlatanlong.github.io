@@ -1,5 +1,5 @@
 ---
-title: Spring Boot 整合 Security 实现 JWT
+title: Spring Boot 实现 JWT
 updated:
 tags:
   - Spring Boot

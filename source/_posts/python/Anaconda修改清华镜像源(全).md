@@ -2,6 +2,7 @@
 title: Anaconda修改清华镜像源(全)
 typora-copy-images-to: ./Anaconda修改清华镜像源(全)
 typora-root-url: ./Anaconda修改清华镜像源(全)
+date: 2020-10-21 16:21:35
 categories:
   - Python
 ---

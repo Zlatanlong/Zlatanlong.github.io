@@ -2,6 +2,7 @@
 title: 使用nvm管理node版本
 typora-copy-images-to: ../../source/assets
 typora-root-url: ../../source
+date: 2020-08-30 16:21:35
 updated:
 tags:
   - nvm

@@ -2,6 +2,7 @@
 title: 简单理解KMP代码
 typora-copy-images-to: ./img
 typora-root-url: ./img
+date: 2021-04-20 16:21:35
 categories:
   - 算法
 ---
